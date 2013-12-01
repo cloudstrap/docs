@@ -1,0 +1,83 @@
+/* Topnav */
+.startapp-navbar
+  background: #fff
+  border-top: 7px solid
+  border-bottom: 1px solid
+  border-color: purple_red
+
+.startapp-navbar .developers
+  color: purple_red
+  padding-left: 6px
+  text-shadow: none
+
+.navbar-inverse .navbar-nav > li > a
+  color: link_color
+  text-shadow: none
+  if_not_mobile padding-top 20px
+
+.navbar-inverse .navbar-nav > li > a
+  &:focus,&:hover
+    color: link_color
+    text-decoration: underline
+
+.navbar-toggle
+  background: purple_red
+
+.navbar-inverse .navbar-collapse
+.navbar-inverse .navbar-form
+.navbar-inverse .navbar-toggle
+  border-color: dark_purple_red
+
+  &:hover
+    border-color: transparent
+
+/* /Topnav */
+
+
+.bs-header
+  background: header_bg_color url(../img/header_bg.jpg) center center no-repeat
+  padding-top: 50px
+  max-height: 266px
+  text-shadow: 2px 2px 0 rgba(0,0,0,.15)
+  border-bottom: solid 1px dark_purple_red
+  if_desktop height 266px
+
+  & h1
+    margin-bottom: 25px
+    font-weight: 500
+    if_mobile font-size 26px
+    if_tablet margin-top 60px
+    if_tablet font-size 40px
+
+  & p
+    font-size: 21px
+    color: #333
+    font-weight: 200
+    background: #fff
+    padding: 10px
+    text-shadow: none
+    display: inline-block
+    if_desktop margin-right 50px
+    if_tablet font-size 16px
+    if_mobile font-size 13px
+
+
+/* Sidebar */
+.bs-sidebar .nav > .active > a
+.bs-sidebar .nav > .active:hover > a
+.bs-sidebar .nav > .active:focus > a
+  color: purple_red
+  border-color: purple_red
+
+.bs-sidenav
+   background-color: sidebar_gray
+
+.bs-sidebar .nav > li > a
+  &:hover
+    background-color: lighten(#DCE0E2, 30%)
+
+/* /Sidebar */
+
+h1[id]
+  margin-top: 0
+  padding-top: 0

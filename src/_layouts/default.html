@@ -1,44 +1,42 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{{ page.title }}</title>
-        <meta name="viewport" content="width=device-width">
+<html lang="en">
+  {% include head.html %}
+  <body>
+    <a class="sr-only" href="#content">Skip to main content</a>
 
-        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
+    <!-- Docs master nav -->
+    {% include nav-main.html %}
 
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
+    <!-- Docs page layout -->
+    <div class="bs-header" id="content">
+      <div class="container">
+        <h1>{% if page.header_title %}{{ page.header_title }}{% else %}{{ site.header_title }}{% endif %}</h1>
+        <p>{{ page.lead }}</p>
+      </div>
+    </div>
+    <!-- Callout for the old docs link -->
 
-    </head>
-    <body>
 
-        <div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-            <a class="extra" href="/">home</a>
-          </div>
-
-          {{ content }}
-
-          <div class="footer">
-            <div class="contact">
-              <p>
-                Your Name<br />
-                What You Are<br />
-                you@example.com
-              </p>
-            </div>
-            <div class="contact">
-              <p>
-                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
-                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
-              </p>
-            </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="bs-sidebar hidden-print" role="complementary">
+            <ul class="nav bs-sidenav">
+              {% if page.slug == "getting-started" %}
+                {% include nav-getting-started.html %}
+              {% endif %}
+            </ul>
           </div>
         </div>
+        <div class="col-md-9" role="main">
+          {{ content | toc_generate }}
+        </div>
+      </div>
+    </div>
 
-    </body>
+
+    <!-- JS and analytics only. -->
+    {% include footer.html %}
+
+  </body>
 </html>

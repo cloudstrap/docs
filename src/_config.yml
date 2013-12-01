@@ -1,3 +1,25 @@
-name: Your New Jekyll Site
+name: "Startapp.bg документация : startapp --help"
+timezone: Europe/Sofia
+permalink: /blog/:title.html
+
+header_title: "> app --help | more"
+header_lead: "Бърз поглед на <strong>Startapp</strong>, как да създаваме и управляваме нашите приложения."
+
 markdown: redcarpet
 pygments: true
+
+asset_pipeline:
+  bundle: false            # Default = true
+  compress: false          # Default = true
+  output_path: assets     # Default = assets
+  display_path: nil       # Default = nil
+  gzip: false             # Default = false
+
+#Table of content default label
+contentsLabel: "Съдържание"
+
+startapp:
+  groups: "https://groups.google.com/forum/#!forum/startapp-cloud"
+  support_email: "support@startapp.bg"
+  github: "https://github.com/startapp-cloud"
+  github_docs: "https://github.com/startapp-cloud/docs"
