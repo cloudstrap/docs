@@ -1,11 +1,15 @@
 ---
 layout: default
+
 title:  "> app --help | more"
 date:   2013-11-25 16:58:04
 permalink: /getting-started/
 header_title:  "> app --help | more"
+header_title_fontsize: big
 lead: "Бърз поглед на <strong>Startapp</strong>, как да създаваме и управляваме нашите приложения. "
 slug: getting-started
+keywords: "хостинг, php хостинг, python хостинг, ruby хостинг, nodejs хостинг"
+description: ""
 noToc: true
 ---
 
@@ -17,22 +21,22 @@ noToc: true
 
 {% page_header id="how-can-i-start" title="Как да започна?" %}
 
-<p class="lead">Startapp е лесна за използване полиглот cloud платформа за уеб апликаци базирана на извествната Open Source технология на <a href="http://openshift.github.io/">RedHat OpenShift</a>.</p>
+<p class="lead">За да можете да се гмурнете в дълбокото по най-бързия начин сме ви подготвили няколко много бързи примери, които ще ви спестят часове гугълване :)</p>
 
 <div class="row startapp-starters">
   <div class="col-xs-6 col-md-3">
-    <a class="thumbnail" href="/getting-started/startapp-with-php/">
+    <a class="thumbnail" href="/getting-started/startapp-with-php.html">
       <img src="/img/jumps/php.jpg" alt="PHP Хостинг">
     </a>
     <h4>Примери с PHP</h4>
-    <p>Nothing but the basics: compiled CSS and JavaScript along with a container.</p>
+    <p>Интересни примери с CakePHP, Codeigniter, Symfony, MySQL, MongoDB</p>
   </div>
   <div class="col-xs-6 col-md-3">
     <a class="thumbnail" href="/getting-started/startapp-with-ruby/">
       <img src="/img/jumps/ruby.jpg" alt="Ruby Хостинг">
     </a>
     <h4>Примери с Ruby</h4>
-    <p>Multiple examples of grid layouts with all four tiers, nesting, and more.</p>
+    <p>Интересни примери с Rails, Sinatra, PostgreSQL, MySQL, MongoDB</p>
   </div>
   <div class="clearfix visible-xs"></div>
   <div class="col-xs-6 col-md-3">
@@ -40,14 +44,14 @@ noToc: true
       <img src="/img/jumps/python.jpg" alt="Python Хостинг">
     </a>
     <h4>Примери с Python</h4>
-    <p>Multiple examples of grid layouts with all four tiers, nesting, and more.</p>
+    <p>Интересни примери с Django, WebPy, BottlePy, MySQL, MongoDB</p>
   </div>
   <div class="col-xs-6 col-md-3">
     <a class="thumbnail" href="/getting-started/startapp-with-nodejs/">
       <img src="/img/jumps/node.jpg" alt="NodeJS Хостинг">
     </a>
     <h4>Примери с NodeJS</h4>
-    <p>Multiple examples of grid layouts with all four tiers, nesting, and more.</p>
+    <p>Интересни примери с ExpressJS, MeteorJS, MySQL, MongoDB</p>
   </div>
 </div>
 
@@ -55,9 +59,9 @@ noToc: true
 
 Не можете да намерите отговорите на въпросите, които имате? Попитайте [Startapp общността в Google Groups]({{ site.startapp.groups }})
 
-{% page_header id="want-to-contribute" title="Искам да помагам! Как да го направя?" %}
+{% page_header id="want-to-contribute" title="Искам да помогна! Как да го направя?" %}
 
-<p class="lead">Много се радваме, когато хората са така добри и ни помагат в развиването на услугите ни.</p>
+<p class="lead">TODO: Много се радваме, когато хората са така добри и ни помагат в развиването на услугите ни.</p>
 
 ## Искам да помогна за документацията
 

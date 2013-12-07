@@ -1,0 +1,10 @@
+{% assign getting_pages = "PHP|Ruby|Python|NodeJS" | split: "|" %}
+
+{% for page in getting_pages %}
+  {% assign page_slug = {{page | downcase}} | prepend: "startapp-with-"  %}
+
+  {% if include.slug != page_slug %}
+    <li><a href="/getting-started/startapp-with-{{page | downcase}}.html">Стартиране с {{page}}</a></li>
+  {% endif %}
+{% endfor %}
+

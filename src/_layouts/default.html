@@ -8,7 +8,7 @@
     {% include nav-main.html %}
 
     <!-- Docs page layout -->
-    <div class="bs-header" id="content">
+    <div class="bs-header {% if page.header_title_fontsize %}{{ page.header_title_fontsize }}{% endif %}" id="content">
       <div class="container">
         <h1>{% if page.header_title %}{{ page.header_title }}{% else %}{{ site.header_title }}{% endif %}</h1>
         <p>{{ page.lead }}</p>
@@ -24,16 +24,19 @@
             <ul class="nav bs-sidenav">
               {% if page.slug == "getting-started" %}
                 {% include nav-getting-started.html %}
+              {% elsif page.slug == "startapp-with-php" %}
+                {% include nav-getting-started-with-php.html %}
+              {% elsif page.slug == "app-client-tools-install" %}
+                {% include nav-app-install.html %}
               {% endif %}
             </ul>
           </div>
         </div>
         <div class="col-md-9" role="main">
-          {{ content | toc_generate }}
+          {{ content }}
         </div>
       </div>
     </div>
-
 
     <!-- JS and analytics only. -->
     {% include footer.html %}

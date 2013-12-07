@@ -5,6 +5,9 @@ permalink: /blog/:title.html
 header_title: "> app --help | more"
 header_lead: "Бърз поглед на <strong>Startapp</strong>, как да създаваме и управляваме нашите приложения."
 
+keywords: ""
+description: ""
+
 markdown: redcarpet
 pygments: true
 
@@ -23,3 +26,4 @@ startapp:
   support_email: "support@startapp.bg"
   github: "https://github.com/startapp-cloud"
   github_docs: "https://github.com/startapp-cloud/docs"
+  github_docs_new_issue: "https://github.com/startapp-cloud/docs/issues/new"

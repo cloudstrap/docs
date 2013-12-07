@@ -55,7 +55,9 @@
         offset: {
           top: function () {
             var offsetTop      = $sideBar.offset().top
-            var sideBarMargin  = parseInt($sideBar.children(0).css('margin-top'), 10)
+            // var sideBarMargin  = parseInt($sideBar.children(0).css('margin-top'), 10)
+            //FIXME: make the calculation above correct
+            var sideBarMargin  = 79
             var navOuterHeight = $('.bs-docs-nav').height()
 
             return (this.top = offsetTop - navOuterHeight - sideBarMargin)

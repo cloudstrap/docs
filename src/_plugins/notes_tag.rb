@@ -11,7 +11,11 @@ module Jekyll
     end
 
     def render(context)
-      "<div class='bs-callout bs-callout-#{@type}' id='jquery-required'><h4>#{@title}</h4><p>#{super}</p></div>"
+      text = super
+      site = context.registers[:site]
+      converter = site.getConverterImpl(Jekyll::Converters::Markdown)
+
+      "<div class='bs-callout bs-callout-#{@type}' id='jquery-required'><h4>#{@title}</h4><p>#{converter.convert(text)}</p></div>"
     end
   end
 end

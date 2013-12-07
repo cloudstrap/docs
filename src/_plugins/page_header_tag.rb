@@ -2,8 +2,6 @@ module Jekyll
   class PageHeaderTag < Liquid::Tag
     include Liquid::StandardFilters
 
-
-
     def initialize(tag_name, opts, tokens)
       super
       options = /id=\"(.+)\" title=\"(.+)\"/.match opts
