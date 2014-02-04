@@ -9,6 +9,9 @@ keywords: ""
 description: ""
 
 markdown: redcarpet
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
+
 pygments: true
 
 asset_pipeline:
@@ -27,3 +30,4 @@ startapp:
   github: "https://github.com/startapp-cloud"
   github_docs: "https://github.com/startapp-cloud/docs"
   github_docs_new_issue: "https://github.com/startapp-cloud/docs/issues/new"
+  tools_page : "/getting-started/app-client-tools-install.html"
