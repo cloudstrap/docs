@@ -1,0 +1,84 @@
+<br />
+
+#### PostgreSQL ENV променливи
+
+<div class="table-responsive">
+    <table class="table table-bordered table-striped">
+      <colgroup>
+        <col class="col-xs-3">
+        <col class="col-xs-7">
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Име на променливата</th>
+          <th>Какво съдържа?</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td>
+            <code>OPENSHIFT_POSTGRESQL_DB_HOST</code>
+          </td>
+          <td>HOST/IP на PostgreSQL сървъра. <b>Важно:</b> Имайте в предвид, че ако приложенито не е скалируемо, IP адресът е локален за хост сървъра, което означава, че няма да може да бъде достъпен извън него. </td>
+        </tr>
+
+        <tr>
+          <td>
+            <code>OPENSHIFT_POSTGRESQL_DB_PORT</code>
+          </td>
+          <td>Порта на който работи PostgreSQL сървъра</td>
+        </tr>
+
+        <tr>
+          <td>
+            <code>OPENSHIFT_POSTGRESQL_DB_USERNAME</code>
+          </td>
+          <td>Потребилското име с което можете да достъпвате базата си</td>
+        </tr>
+
+        <tr>
+          <td>
+            <code>OPENSHIFT_POSTGRESQL_DB_PASSWORD</code>
+          </td>
+          <td>Паролата с която можете да достъпвате базата си</td>
+        </tr>
+
+        <tr>
+          <td>
+            <code>OPENSHIFT_POSTGRESQL_DB_PID</code>
+          </td>
+          <td>Пътя до PID файла на сървъра</td>
+        </tr>
+
+        <tr>
+          <td>
+            <code>OPENSHIFT_POSTGRESQL_DB_SOCKET_DIR</code>
+          </td>
+          <td>Пътя до сокет директорията на сървъра</td>
+        </tr>
+
+        <tr>
+          <td>
+            <code>OPENSHIFT_POSTGRESQL_DB_URL</code>
+          </td>
+          <td>URL до вашия PostgreSQL сървър от вида: postgresql://[user]:[pass]@[host]:[port]/</td>
+        </tr>
+
+        <tr>
+          <td>
+            <code>OPENSHIFT_POSTGRESQL_DB_LOG_DIR</code>
+          </td>
+          <td>Път до директорията в която се записват логовете на PostgreSQL</td>
+        </tr>
+
+        <tr>
+          <td>
+            <code>OPENSHIFT_POSTGRESQL_VERSION</code>
+          </td>
+          <td>Версията на инсталирания PostgreSQL във формат: <b>X.Y</b></td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>

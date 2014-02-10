@@ -480,7 +480,7 @@ mysql_close($link);
 
 Ако погледнете на последния ред пише следното:
 
-    $ mysql   127.0.0.1:3306  =>  127.12.225.130:3306
+    mysql   127.0.0.1:3306  =>  127.12.225.130:3306
 
 Което означава, че можете да достъпвате MySQL сървъра, който работи на Startapp.bg локалната си машина. Ето как:
 
@@ -518,6 +518,20 @@ URL: https://myphpapp-apps.startapp.bg/phpmyadmin/
 
     $ app cartridge add postgresql-8.4 -a myphpapp
 
+{% note info, Относно аргумента '-a myphpapp' %}
+Ако се намирате в директорията на приложението си, можете да пропускате аргумента '-a appname'!
+
+Което означава, че ако се намирате в HOME директорията си трябва да използвате следния синтаксис:
+
+    $ app cartridge add postgresql-8.4 -a <име-на-приложението>
+
+Ако обаче се намирате в директорията на вашето приложение:
+
+    cd /path/to/myphpapp
+    app cartridge add postgresql-8.4
+
+{%endnote%}
+
 {% highlight sh %}
 
 Adding postgresql-8.4 to application 'myphpapp' ... done
@@ -538,6 +552,117 @@ PostgreSQL 8.4 database added.  Please make note of these credentials:
 
 Connection URL: postgresql://$OPENSHIFT_POSTGRESQL_DB_HOST:$OPENSHIFT_POSTGRESQL_DB_PORT
 {% endhighlight %}
+
+
+Със добавянето на PostgreSQL към вашето приложение също така се добавят няколко ENV променливи, които казват какъв е хоста на базата, кой е порта, както и потребитлски имена и пароли.
+
+{% include env_vars/postgresql.html %}
+
+{% page_header id="how-to-access-postgresql-via-php" title="Достъпване на PostgreSQL през PHP" %}
+
+Ако се чудите за какво бяха тези PostgreSQL ENV променливи, които показхме отгоре и как можете да използвате във вашия PHP код, ето един прост пример как да се закачите за вашия чисто нов PostgreSQL сървър.
+
+{% highlight php %}
+<?php
+
+/* Можете да достъпвате ENV променливите по няколко начина
+ * Пример с getenv()
+ * $hostname = getenv('OPENSHIFT_POSTGRESQL_DB_HOST');
+ *
+ * Или можете да използвате глобалните променливи в PHP ($_SERVER or $_ENV)
+ * $hostname = $_SERVER['OPENSHIFT_POSTGRESQL_DB_HOST'];
+*/
+
+$host     = getenv('OPENSHIFT_POSTGRESQL_DB_HOST');
+$username = getenv('OPENSHIFT_POSTGRESQL_DB_USERNAME');
+$password = getenv('OPENSHIFT_POSTGRESQL_DB_PASSWORD');
+$db_name  = getenv('OPENSHIFT_APP_NAME');
+
+// Отваряне на конекция
+
+$conection = pg_connect("host=$host dbname=$db_name user=$username password=$password")
+    or die ("Could not connect to server\n");
+
+echo 'Connected successfully';
+
+// Затваряне на конекцията
+pg_close($connection);
+
+?>
+{% endhighlight %}
+
+<br />
+
+
+{% page_header id="how-to-access-postgresql-via-ssh" title="Достъпване на PostgreSQL през SSH" %}
+
+Първо трябва да се логнем на сървъра по SSH. Това става много лесно. Само изпълнете следната команда:
+
+    $ app ssh -a myphpapp
+
+След като се логнете на сървъра напишете:
+
+    $ psql
+
+И като резултат ще видите, това:
+
+    psql (8.4.18)
+    Type "help" for help.
+
+    myphpapp=# help
+    You are using psql, the command-line interface to PostgreSQL.
+    Type:  \copyright for distribution terms
+           \h for help with SQL commands
+           \? for help with psql commands
+           \g or terminate with semicolon to execute query
+           \q to quit
+    myphpapp=#
+
+Което означава, че вие сте в интерактивната конзола на PostgreSQL!
+
+<br />
+
+
+
+{% page_header id="how-to-access-postgresql-via-devpc" title="Достъпване на PostgreSQL. през работната ви машина/лаптоп" %}
+
+    $ app port-forward -a myphpapp
+
+Като резултат от тази команда ще видите следното:
+
+    hecking available ports ... done
+    Forwarding ports ...
+    Address already in use - bind(2) while forwarding port 8080. Trying local port 8081
+
+    To connect to a service running on OpenShift, use the Local address
+
+    Service    Local                OpenShift
+    ---------- --------------- ---- --------------------
+    httpd      127.0.0.1:8080   =>  127.12.225.129:8080
+    httpd      127.0.0.1:8081   =>  127.12.225.131:8080
+    postgresql 127.0.0.1:5432   =>  127.12.225.133:5432
+
+    Press CTRL-C to terminate port forwarding
+
+Ако погледнете на последния ред пише следното:
+
+    postgresql 127.0.0.1:5432   =>  127.12.225.133:5432
+
+Което означава, че можете да достъпвате MySQL сървъра, който работи на Startapp.bg локалната си машина. Ето как:
+
+    $ psql -h 127.0.0.1 -p 5432 -U <username> -W <database>
+
+След като изпълните тази команда, PostgreSQL ще поиска да си напишете вашата парола:
+
+  Password for user <username>:
+
+Напишете паролата си и натиснете `ENTER`.
+
+Ако сте забравили вашите `username` и `password` можете да ги видите така:
+
+    $ app show myphpapp
+
+<br />
 
 <br />
 
@@ -678,9 +803,6 @@ $database = $mongo->$db_name;
 
     $ app show myphpapp
 
-<br />
-
-
 
 <br />
 
@@ -708,5 +830,11 @@ $database = $mongo->$db_name;
 
 #### Подробна информация за инсталиране и конфигуриране на CakePHP [можете да получите тук](#)
 
+
+<br />
+
+{% page_header id="help" title="Помощ" %}
+
+Ако имате проблеми с изпълнението на примерите от тази страница не се колебайте да ги споделите тук: [Проблеми при инсталация на PHP приложение](https://groups.google.com/forum/#!topic/startapp-cloud/QuERFCzlk3E)
 
 <br />
