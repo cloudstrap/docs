@@ -1,0 +1,76 @@
+<br />
+
+#### MySQL ENV променливи
+
+<div class="table-responsive">
+    <table class="table table-bordered table-striped">
+      <colgroup>
+        <col class="col-xs-3">
+        <col class="col-xs-7">
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Име на променливата</th>
+          <th>Какво съдържа?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <code>OPENSHIFT_MYSQL_DIR</code>
+          </td>
+          <td>Пътя в който MySQL съхранява данните си.</td>
+        </tr>
+
+        <tr>
+          <td>
+            <code>OPENSHIFT_MYSQL_DB_HOST</code>
+          </td>
+          <td>HOST/IP на MySQL сървъра. <b>Важно:</b> Имайте в предвид, че ако приложенито не е скалируемо, IP адресът е локален за хост сървъра, което означава, че няма да може да бъде достъпен извън него. </td>
+        </tr>
+
+        <tr>
+          <td>
+            <code>OPENSHIFT_MYSQL_DB_PORT</code>
+          </td>
+          <td>Порта на който работи MySQL сървъра</td>
+        </tr>
+
+        <tr>
+          <td>
+            <code>OPENSHIFT_MYSQL_DB_USERNAME</code>
+          </td>
+          <td>Потребилското име с което можете да достъпвате базата си</td>
+        </tr>
+
+        <tr>
+          <td>
+            <code>OPENSHIFT_MYSQL_DB_PASSWORD</code>
+          </td>
+          <td>Паролата с която можете да достъпвате базата си</td>
+        </tr>
+
+        <tr>
+          <td>
+            <code>OPENSHIFT_MYSQL_DB_SOCKET</code>
+          </td>
+          <td>Пътя до сокет файла на сървъра</td>
+        </tr>
+
+        <tr>
+          <td>
+            <code>OPENSHIFT_MYSQL_DB_URL</code>
+          </td>
+          <td>URL до вашия MySQL сървър от вида: mysql://[user]:[pass]@[host]:[port]/</td>
+        </tr>
+
+        <tr>
+          <td>
+            <code>OPENSHIFT_MYSQL_DB_LOG_DIR</code>
+          </td>
+          <td>Път до директорията в която се записват логовете на MySQL</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>

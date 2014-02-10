@@ -4,60 +4,593 @@ layout: document
 title:  "> app --help | more"
 date:   2013-11-25 16:58:04
 header_title:  '> app create &lt;app&gt; with php'
-lead: "За PHP нинджи! Качване на PHP проложения в <strong>Startapp</strong> клауда за 5 минути"
+lead: "За PHP нинджи! Качване на PHP проложения в <strong>Startapp</strong> cloud за 5 минути"
 slug: startapp-with-php
 keywords: "хостинг, php хостинг, python хостинг, ruby хостинг, nodejs хостинг"
 description: ""
 noToc: true
 ---
 
-{% page_header id="quickstart-php" title="Бързо стартиране с <code>PHP</code>" %}
+{% page_header id="quickstart-php" title="Бързо стартиране с PHP" %}
 
 {% include customer-requirements.html %}
 
-{% page_header id="fast-create-php-app" title="Бърза инсталация" %}
+{% page_header id="fast-create-php-app" title="Бързи инструкции" %}
 
-Противно на всеобщото вярване, Lorem Ipsum не е просто случаен текст. Неговите корени са в класическата Латинска литература от 45г.пр.Хр., което прави преди повече от 2000 години. Richard McClintock, професор по Латински от колежа Hampden-Sydney College във Вирджиния, изучавайки една от най-неясните латински думи "consectetur" в един от пасажите на Lorem Ipsum, и търсейки цитати на думата в класическата литература, открива точния източник. Lorem Ipsum е намерен в секции 1.10.32 и 1.10.33 от "de Finibus Bonorum et Malorum"(Крайностите на Доброто и Злото) от Цицерон, написан през 45г.пр.Хр. Тази книга е трактат по теория на етиката, много популярна през Ренесанса. Първият ред на Lorem Ipsum идва от ред, намерен в секция 1.10.32.
+Създаването на `php` приложения в Startapp е изключително лесно и в повечето случаи е само с 1 ред код:
 
-Стандартният отрязък от Lorem Ipsum, използван от 1500 г. насам, е поместен по-долу за тези, които се интересуват. Секции 1.10.32 и 1.10.33 от "de Finibus Bonorum et Malorum" на Цицерон също са поместени в оригиналния им формат, заедно с превода им на английски език, направен от H. Rackham през 1914г.
-
-Съществуват много вариации на пасажа Lorem Ipsum, но повечето от тях са променени по един или друг начин чрез добавяне на смешни думи или разбъркване на думите, което не изглежда много достоверно. Ако искате да използвате пасаж от Lorem Ipsum, трябва да сте сигурни, че в него няма смущаващи или нецензурни думи. Всички Lorem Ipsum генератори в Интернет използват предефинирани пасажи, който се повтарят, което прави този този генератор първия истински такъв. Той използва речник от над 200 латински думи, комбинирани по подходящ начин като изречения, за да генерират истински Lorem Ipsum пасажи. Оттук следва, че генерираният Lorem Ipsum пасаж не съдържа повторения, смущаващи, нецензурни и всякакви неподходящи думи.
-
-{% page_header id="create-php-app-in-details" title="Подробна инсталация Добавяне в съществуващ проект" %}
+    $ app create myphpapp php
 
 
-Противно на всеобщото вярване, Lorem Ipsum не е просто случаен текст. Неговите корени са в класическата Латинска литература от 45г.пр.Хр., което прави преди повече от 2000 години. Richard McClintock, професор по Латински от колежа Hampden-Sydney College във Вирджиния, изучавайки една от най-неясните латински думи "consectetur" в един от пасажите на Lorem Ipsum, и търсейки цитати на думата в класическата литература, открива точния източник. Lorem Ipsum е намерен в секции 1.10.32 и 1.10.33 от "de Finibus Bonorum et Malorum"(Крайностите на Доброто и Злото) от Цицерон, написан през 45г.пр.Хр. Тази книга е трактат по теория на етиката, много популярна през Ренесанса. Първият ред на Lorem Ipsum идва от ред, намерен в секция 1.10.32.
+Ако искате вашето приложение да иползва база данни ... примерно `MySQL`:
 
-Стандартният отрязък от Lorem Ipsum, използван от 1500 г. насам, е поместен по-долу за тези, които се интересуват. Секции 1.10.32 и 1.10.33 от "de Finibus Bonorum et Malorum" на Цицерон също са поместени в оригиналния им формат, заедно с превода им на английски език, направен от H. Rackham през 1914г.
+    # Налични бази данни:
+    # mongodb-2.2, mysql-5.1, postgresql-8.4, postgresql-9.2
 
-Съществуват много вариации на пасажа Lorem Ipsum, но повечето от тях са променени по един или друг начин чрез добавяне на смешни думи или разбъркване на думите, което не изглежда много достоверно. Ако искате да използвате пасаж от Lorem Ipsum, трябва да сте сигурни, че в него няма смущаващи или нецензурни думи. Всички Lorem Ipsum генератори в Интернет използват предефинирани пасажи, който се повтарят, което прави този този генератор първия истински такъв. Той използва речник от над 200 латински думи, комбинирани по подходящ начин като изречения, за да генерират истински Lorem Ipsum пасажи. Оттук следва, че генерираният Lorem Ipsum пасаж не съдържа повторения, смущаващи, нецензурни и всякакви неподходящи думи.
-
-
-{% page_header id="create-codeigniter-app" title="Инсталиране на <code>Codeigniter</code>" %}
+    $ app cartridge add mysql-5.1 -a myphpapp
 
 
-Противно на всеобщото вярване, Lorem Ipsum не е просто случаен текст. Неговите корени са в класическата Латинска литература от 45г.пр.Хр., което прави преди повече от 2000 години. Richard McClintock, професор по Латински от колежа Hampden-Sydney College във Вирджиния, изучавайки една от най-неясните латински думи "consectetur" в един от пасажите на Lorem Ipsum, и търсейки цитати на думата в класическата литература, открива точния източник. Lorem Ipsum е намерен в секции 1.10.32 и 1.10.33 от "de Finibus Bonorum et Malorum"(Крайностите на Доброто и Злото) от Цицерон, написан през 45г.пр.Хр. Тази книга е трактат по теория на етиката, много популярна през Ренесанса. Първият ред на Lorem Ipsum идва от ред, намерен в секция 1.10.32.
+Тези две команди създават вашия виртуален сървър инсталират и конфигурират PHP, MySQL и Git хранилището за вашето приложение. Отворете браузъра си и вижте дали приложението работи:
 
-Стандартният отрязък от Lorem Ipsum, използван от 1500 г. насам, е поместен по-долу за тези, които се интересуват. Секции 1.10.32 и 1.10.33 от "de Finibus Bonorum et Malorum" на Цицерон също са поместени в оригиналния им формат, заедно с превода им на английски език, направен от H. Rackham през 1914г.
+    http://myphpapp-MyDomain.startapp.bg/
 
-Съществуват много вариации на пасажа Lorem Ipsum, но повечето от тях са променени по един или друг начин чрез добавяне на смешни думи или разбъркване на думите, което не изглежда много достоверно. Ако искате да използвате пасаж от Lorem Ipsum, трябва да сте сигурни, че в него няма смущаващи или нецензурни думи. Всички Lorem Ipsum генератори в Интернет използват предефинирани пасажи, който се повтарят, което прави този този генератор първия истински такъв. Той използва речник от над 200 латински думи, комбинирани по подходящ начин като изречения, за да генерират истински Lorem Ipsum пасажи. Оттук следва, че генерираният Lorem Ipsum пасаж не съдържа повторения, смущаващи, нецензурни и всякакви неподходящи думи.
+Ако искаме да бъдем малко по-фешън можем да заменим горните 2 команди само с 1:
 
+    $ app create myphpapp with php and mysql-5.1
 
-{% page_header id="create-cakephp-app" title="Инсталиране на <code>CakePHP</code>" %}
-
-
-Противно на всеобщото вярване, Lorem Ipsum не е просто случаен текст. Неговите корени са в класическата Латинска литература от 45г.пр.Хр., което прави преди повече от 2000 години. Richard McClintock, професор по Латински от колежа Hampden-Sydney College във Вирджиния, изучавайки една от най-неясните латински думи "consectetur" в един от пасажите на Lorem Ipsum, и търсейки цитати на думата в класическата литература, открива точния източник. Lorem Ipsum е намерен в секции 1.10.32 и 1.10.33 от "de Finibus Bonorum et Malorum"(Крайностите на Доброто и Злото) от Цицерон, написан през 45г.пр.Хр. Тази книга е трактат по теория на етиката, много популярна през Ренесанса. Първият ред на Lorem Ipsum идва от ред, намерен в секция 1.10.32.
-
-Стандартният отрязък от Lorem Ipsum, използван от 1500 г. насам, е поместен по-долу за тези, които се интересуват. Секции 1.10.32 и 1.10.33 от "de Finibus Bonorum et Malorum" на Цицерон също са поместени в оригиналния им формат, заедно с превода им на английски език, направен от H. Rackham през 1914г.
-
-Съществуват много вариации на пасажа Lorem Ipsum, но повечето от тях са променени по един или друг начин чрез добавяне на смешни думи или разбъркване на думите, което не изглежда много достоверно. Ако искате да използвате пасаж от Lorem Ipsum, трябва да сте сигурни, че в него няма смущаващи или нецензурни думи. Всички Lorem Ipsum генератори в Интернет използват предефинирани пасажи, който се повтарят, което прави този този генератор първия истински такъв. Той използва речник от над 200 латински думи, комбинирани по подходящ начин като изречения, за да генерират истински Lorem Ipsum пасажи. Оттук следва, че генерираният Lorem Ipsum пасаж не съдържа повторения, смущаващи, нецензурни и всякакви неподходящи думи.
+Това е!
 
 
-{% page_header id="create-symfony-app" title="Инсталиране на <code>Symfony</code>" %}
+{% page_header id="create-php-app-in-details" title="Подробни инструкции" %}
 
 
-Противно на всеобщото вярване, Lorem Ipsum не е просто случаен текст. Неговите корени са в класическата Латинска литература от 45г.пр.Хр., което прави преди повече от 2000 години. Richard McClintock, професор по Латински от колежа Hampden-Sydney College във Вирджиния, изучавайки една от най-неясните латински думи "consectetur" в един от пасажите на Lorem Ipsum, и търсейки цитати на думата в класическата литература, открива точния източник. Lorem Ipsum е намерен в секции 1.10.32 и 1.10.33 от "de Finibus Bonorum et Malorum"(Крайностите на Доброто и Злото) от Цицерон, написан през 45г.пр.Хр. Тази книга е трактат по теория на етиката, много популярна през Ренесанса. Първият ред на Lorem Ipsum идва от ред, намерен в секция 1.10.32.
+### Създаване на ново приложение
 
-Стандартният отрязък от Lorem Ipsum, използван от 1500 г. насам, е поместен по-долу за тези, които се интересуват. Секции 1.10.32 и 1.10.33 от "de Finibus Bonorum et Malorum" на Цицерон също са поместени в оригиналния им формат, заедно с превода им на английски език, направен от H. Rackham през 1914г.
+Създаването на `php` приложения в Startapp е изключително лесно и в повечето случаи е само с 1 ред код:
 
-Съществуват много вариации на пасажа Lorem Ipsum, но повечето от тях са променени по един или друг начин чрез добавяне на смешни думи или разбъркване на думите, което не изглежда много достоверно. Ако искате да използвате пасаж от Lorem Ipsum, трябва да сте сигурни, че в него няма смущаващи или нецензурни думи. Всички Lorem Ipsum генератори в Интернет използват предефинирани пасажи, който се повтарят, което прави този този генератор първия истински такъв. Той използва речник от над 200 латински думи, комбинирани по подходящ начин като изречения, за да генерират истински Lorem Ipsum пасажи. Оттук следва, че генерираният Lorem Ipsum пасаж не съдържа повторения, смущаващи, нецензурни и всякакви неподходящи думи.
+    $ app create myphpapp php
+
+{% note info, Относно myphpapp! %}
+Ако се чудите дали това `myphpapp` е нещо вълшебно, отговорът е НЕ това е просто името на на нашето ново приложение :) Което означава, че синтаксисът е следния:
+
+    $ app create <име-на-приложението> <език>
+
+Това означава също, че навсякъде в примера където използваме `myphpapp` имайте предвид, че там стои името на вашето приложение.
+
+{%endnote%}
+
+След като напишете тази команда на екрана ви ще се изпише нещо такова:
+
+{% highlight sh %}
+Using php-5.3 (PHP 5.3) for 'php'
+
+Application Options
+-------------------
+Domain:     demos
+Cartridges: php-5.3
+Gear Size:  default
+Scaling:    no
+
+Creating application 'myphpapp' ... done
+
+
+Waiting for your DNS name to be available ...
+    retry # 1 - Waiting for DNS: myphpapp-demos.startapp.bg
+    retry # 2 - Waiting for DNS: myphpapp-demos.startapp.bg
+    retry # 3 - Waiting for DNS: myphpapp-demos.startapp.bg
+    retry # 4 - Waiting for DNS: myphpapp-demos.startapp.bg
+done
+
+Cloning into 'myphpapp'...
+The authenticity of host 'myphpapp-demos.startapp.bg (93.123.32.34)' can't be established.
+RSA key fingerprint is e2:4c:39:1a:d1:d1:1c:cc:66:2a:bf:43:42:56:c4:26.
+Are you sure you want to continue connecting (yes/no)?
+{% endhighlight %}
+
+Последните няколко реда ви казват, вашето приложение е създадено и е готово да бъде клонирано на вашата вашия компютър.
+
+Ако искате да го клонирате напишете:
+
+    yes
+
+и натиснете `ENTER`.
+
+Ако сте направили това на екрана ви ще бъдат изписани следните неща:
+
+{% highlight sh %}
+Warning: Permanently added 'myphpapp-demos.startapp.bg' (RSA) to the list of known hosts.
+Checking connectivity... done
+
+Your application 'myphpapp' is now available.
+
+  URL:        http://myphpapp-demos.startapp.bg/
+  SSH to:     52debd81bfbf5aa4ca000482@myphpapp-demos.startapp.bg
+  Git remote: ssh://52debd81bfbf5aa4ca000482@myphpapp-demos.startapp.bg/~/git/myphpapp.git/
+  Cloned to:  /private/tmp/myphpapp
+
+Run 'app show-app myphpapp' for more details about your app.
+{% endhighlight %}
+
+### Отваряне в браузъра
+
+За да видите вашия сайт отворете с браузър URL-то което по-горе е изписано след `URL:`, в нашия случай:
+
+    http://myphpapp-demos.startapp.bg/
+
+### SSH достъп
+
+Всички приложения в Startapp.bg идват с SSH достъп. За да се логнете на сървъра през SSH използвайте адреса изписан след `SSH to:` в този пример той е :
+
+    ssh 52debd81bfbf5aa4ca000482@myphpapp-demos.startapp.bg
+
+{% note warning, Внимание! %}
+Този пример е валиден за Mac OS и Linux. Ако използвате Windows трябва да имате инсталирано [Putty](/getting-started/using-putty-examples.html). Ако не знаете как да инсталирате и използвате [Putty](/getting-started/using-putty-examples.html), можете да разгледате [примера тук](/getting-started/using-putty-examples.html)
+{% endnote %}
+
+### Git хранилище
+Всяко приложение в Startapp.bg се съхранява в отделно Git хранилище. Адресът на хранилището на вашето приложение може да го видите веднага след "Git remote:", което в този конкретен случай е :
+
+    ssh://52debd81bfbf5aa4ca000482@myphpapp-demos.startapp.bg/~/git/myphpapp.git/
+
+Което означава, че ако иксаме да клонираме нашето приложение/сайт някъде другаде а не там където го е направило автоматично startapp tools, трябва само да изпълним следните команди:
+
+    cd /path/to/my/working/dir
+    git clone ssh://52debd81bfbf5aa4ca000482@myphpapp-demos.startapp.bg/~/git/myphpapp.git/
+
+Това е!
+
+<br />
+
+{% page_header id="file-structure" title="Файлова структура на PHP приложението" %}
+
+След като създадете вашето ново PHP приложение и го клонирате на компютъра си, ще видите следните файлове и директории.
+
+<div class="table-responsive">
+    <table class="table table-bordered table-striped">
+      <colgroup>
+        <col class="col-xs-3">
+        <col class="col-xs-7">
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Път</th>
+          <th>За какво е?</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td>
+            <code>php/</code>
+          </td>
+          <td>Това е document root-а на приложението. Вашият код трябва да бъде тук.</td>
+        </tr>
+
+        <tr>
+          <td>
+            <code>php/index.php</code>
+          </td>
+          <td>Стандартен index като на всяко PHP приложение</td>
+        </tr>
+
+        <tr>
+          <td>
+            <code>libs/</code>
+          </td>
+          <td>Място за допълнителни библиотеки</td>
+        </tr>
+
+        <tr>
+          <td>
+            <code>misc/</code>
+          </td>
+          <td>Място за PHP код който не е достъпен от крайни потребители</td>
+        </tr>
+
+        <tr>
+          <td>
+            <code>deplist.txt</code>
+          </td>
+          <td>Списък от PEAR пакети които да бъдат инсталирани *1</td>
+        </tr>
+
+        <tr>
+          <td>
+            <code>.openshift/</code>
+          </td>
+          <td>Директория за специфични скриптове. Може и никога да не ви се наложи да пипате в нея, но тя е задължителна.</td>
+        </tr>
+
+        <tr>
+          <td>
+            <code>.openshift/action_hooks/</code>
+          </td>
+          <td>Виж документацията за Action Hooks *2</td>
+        </tr>
+
+        <tr>
+          <td>
+            <code>.openshift/markers/</code>
+          </td>
+          <td>Виж наличните Маркери по-долу.</td>
+        </tr>
+
+        <tr>
+          <td>
+            <code>.git/</code>
+          </td>
+          <td>Това локалното ви Git хранилище. <br /><b>Важно: </b>Не го изтривайте, ако искате да ви работи приложението.</td>
+        </tr>
+
+
+
+      </tbody>
+    </table>
+  </div>
+
+{% note warning, Важно! %}
+Startapp търси в директориите `php` и `libs` когато сервиеа вашето приложение на клиентите. Файлът **index.php** (който се намира в директория **php**) ще поеме всички requests от root URL-а на вашето приложение. Разбира се може да си създавате и други директории, ако желате, с цел по-добра огранизация на вашето приложение или поради друга ваша причина.
+{% endnote %}
+
+<br />
+
+{% page_header id="deployment" title="Как да правим промени по кода и как да ги качим в клауда?" %}
+
+Файлът който трябва да промерним е `index.php` и се намира тук:
+
+    $ cd /път/до/myphpapp/php/
+
+Можете да го редактирате с предпочитан от вас текстов редактор или през командния ред както е в този пример.
+
+След като се намираме вече в `/път/до/myphpapp/php/` трябва да изпълним следния код (copy/paste) и натискаме `ENTER`:
+
+{% highlight html %}
+cat <<EOF> index.php
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Welcome to Startapp</title>
+
+  <style>
+    body {
+      background: #fafafa;
+      font-family: "Helvetica Neue",Helvetica,"Liberation Sans",Arial;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+    .change {
+      display: table;
+      margin: 0 auto;
+      padding: 10px;
+      background: #fff;
+      border-left: solid 1px #ccc;
+    }
+  </style>
+
+</head>
+<body>
+  <div class="change">
+    <h1>Вашата първа промяна в Startapp.bg</h1>
+  </div>
+</body>
+</html>
+EOF
+
+{% endhighlight %}
+
+
+За да проверим дали сме променили успешно `index.php` файла изпълняваме следната команда:
+
+    git status
+
+Ако всичко е минало нормално, резултатът от тази команда трябва да е нещо подобно на това:
+
+    # On branch master
+    # Changes not staged for commit:
+    #   (use "git add <file>..." to update what will be committed)
+    #   (use "git checkout -- <file>..." to discard changes in working directory)
+    #
+    # modified:   index.php
+    #
+    no changes added to commit (use "git add" and/or "git commit -a")
+
+Браво! Трудната част мина успешно :) Сега остана само да запишем промените в `Git` и да ги качим на сървъра. За целта трябва да изпълним следните команди:
+
+    git commit -am "Change content of index.php"
+    git push
+
+Резултатът от `git push` трябва да е нещо подобно на това:
+
+    Counting objects: 7, done.
+    Delta compression using up to 8 threads.
+    Compressing objects: 100% (4/4), done.
+    Writing objects: 100% (4/4), 419 bytes | 0 bytes/s, done.
+    Total 4 (delta 2), reused 0 (delta 0)
+    remote: Stopping PHP cartridge
+    remote: Waiting for stop to finish
+    remote: Stopping PHPMyAdmin cartridge
+    remote: Waiting for stop to finish
+    remote: Stopping MySQL cartridge
+    remote: Building git ref 'master', commit 2463db6
+    remote: Building PHP cartridge
+    remote: Preparing build for deployment
+    remote: Deployment id is 2df9d963
+    remote: Activating deployment
+    remote: Starting PHPMyAdmin cartridge
+    remote: Starting MySQL cartridge
+    remote: Starting PHP cartridge
+    remote: Result: success
+    remote: Activation status: success
+    remote: Deployment completed with status: success
+    To ssh://52debd81bfbf5aa4ca000482@myphpapp-demos.startapp.bg/~/git/myphpapp.git/
+       22f27f1..2463db6  master -> master
+
+Това е! Можете да отворите URL на приложението си и да се насладите на промените, които току що направихте :)
+
+{% note info, За любопитните! %}
+За по-любитните от вас, на които прави впечатление след като написахте `git push` се случиха няколко интересни неща:
+
+- Stopping PHP cartridge
+- Stopping MySQL cartridge
+- Activating deployment
+- Starting MySQL cartridge
+- Starting PHP cartridge
+
+Това е нормалното поведение на всеки един deploy процес в Startapp. Хубавото обаче, че това част от поведението на deployment процеса и начина по-който работи вашето проложение може да бъде променяно! Това става благодарение на така наречените **Маркери**, за които можете да намерите информация малко по-долу!
+{% endnote %}
+
+<br />
+
+{% include markers.html slug=page.slug %}
+
+{% page_header id="add-mysql-to-app" title="Добавяне на MySQL към PHP приложение" %}
+
+    $ app cartridge add mysql-5.1 -a myphpapp
+
+{% note info, Относно аргумента '-a myphpapp' %}
+Ако се намирате в директорията на приложението си, можете да пропускате аргумента '-a appname'!
+
+Което ще рече, че ако се намирате в HOME директорията си трябва да използвате следния синтаксис:
+
+    $ app cartridge add mysql-5.1 -a <име-на-приложението>
+
+Ако обаче се намирате в директорията на вашето приложение:
+
+    cd /path/to/myphpapp
+    app cartridge add mysql-5.1
+
+{%endnote%}
+
+{% highlight sh %}
+Adding mysql-5.1 to application 'myphpapp' ... done
+
+mysql-5.1 (MySQL 5.1)
+---------------------
+  Gears:          Located with php-5.3
+  Connection URL: mysql://$OPENSHIFT_MYSQL_DB_HOST:$OPENSHIFT_MYSQL_DB_PORT/
+  Database Name:  myphpapp
+  Password:       gBq1wGX1sKAi
+  Username:       adminrWaKHZ3
+
+MySQL 5.1 database added.  Please make note of these credentials:
+
+       Root User: adminrWaKHZ3
+   Root Password: gBq1wGX1sKAi
+   Database Name: myphpapp
+
+Connection URL: mysql://$OPENSHIFT_MYSQL_DB_HOST:$OPENSHIFT_MYSQL_DB_PORT/
+
+You can manage your new MySQL database by also embedding phpmyadmin.
+The phpmyadmin username and password will be the same as the MySQL credentials above.
+{% endhighlight %}
+
+Със добавянето на MySQL към вашето приложение също така се добавят няколко ENV променливи, които казват какъв е хоста на базата, кой е порта, както и потребитлски имена и пароли.
+
+{% include env_vars/mysql.html %}
+
+{% page_header id="how-to-access-mysql-via-php" title="Достъпване на МySQL през PHP" %}
+
+Ако се чудите за какво бяха тези MySQL ENV променливи, които показхме отгоре и как можете да използвате във вашия PHP код, ето един прост пример как да се закачите за вашия чисто нов MySQL сървър.
+
+{% highlight php %}
+<?php
+
+/* Можете да достъпвате ENV променливите по няколко начина
+ * Пример с getenv()
+ * $hostname = getenv('OPENSHIFT_MYSQL_DB_HOST');
+ *
+ * Или можете да използвате глобалните променливи в PHP ($_SERVER or $_ENV)
+ * $$hostname = $_SERVER['OPENSHIFT_MYSQL_DB_HOST'];
+*/
+
+$host     = getenv('OPENSHIFT_MYSQL_DB_HOST');
+$username = getenv('OPENSHIFT_MYSQL_DB_USERNAME');
+$password = getenv('OPENSHIFT_MYSQL_DB_PASSWORD');
+$db_name  = getenv('OPENSHIFT_APP_NAME');
+
+// Отваряне на конекция
+$link = mysql_connect($host, $username, $password)
+    or die('Could not connect: ' . mysql_error());
+
+echo 'Connected successfully';
+
+// Името на базата данни винаги е името на самото приложение
+// Ако вашето приложение се казва myphpapp, тогава трябва да заместите <app-name> с myphpapp
+mysql_select_db($db_name) or die('Could not select database');
+
+// Затваряне на конекцията
+mysql_close($link);
+
+?>
+{% endhighlight %}
+
+<br />
+
+{% page_header id="how-to-access-mysql-via-ssh" title="Достъпване на МySQL през SSH" %}
+
+Първо трябва да се логнем на сървъра по SSH. Това става много лесно. Само изпълнете следната команда:
+
+    $ app ssh -a myphpapp
+
+След като се логнете на сървъра напишете:
+
+    $ mysql
+
+И като резултат ще видите, това:
+
+    Welcome to the MySQL monitor.  Commands end with ; or \g.
+    Your MySQL connection id is 3
+    Server version: 5.1.71 Source distribution
+
+    Copyright (c) 2000, 2013, Oracle and/or its affiliates. All rights reserved.
+
+    Oracle is a registered trademark of Oracle Corporation and/or its
+    affiliates. Other names may be trademarks of their respective
+    owners.
+
+    Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+    mysql>
+
+Което означава, че вие сте в интерактивната конзола на MySQL!
+
+<br />
+
+{% page_header id="how-to-access-mysql-via-devpc" title="Достъпване на МySQL през работната ви машина/лаптоп" %}
+
+    $ app port-forward -a myphpapp
+
+Като резултат от тази команда ще видите следното:
+
+    Checking available ports ... done
+    Forwarding ports ...
+    Address already in use - bind(2) while forwarding port 8080. Trying local port 8081
+
+    To connect to a service running on OpenShift, use the Local address
+
+    Service Local               OpenShift
+    ------- -------------- ---- -------------------
+    httpd   127.0.0.1:8080  =>  127.12.225.129:8080
+    httpd   127.0.0.1:8081  =>  127.12.225.131:8080
+    mysql   127.0.0.1:3306  =>  127.12.225.130:3306
+
+    Press CTRL-C to terminate port forwarding
+
+Ако погледнете на последния ред пише следното:
+
+    $ mysql   127.0.0.1:3306  =>  127.12.225.130:3306
+
+Което означава, че можете да достъпвате MySQL сървъра, който работи на Startapp.bg локалната си машина. Ето как:
+
+    $ mysql -h 127.0.0.1 -P 3306 -u<username> -p<password>
+
+Ако сте забравили вашите `username` и `password` можете да ги видите така:
+
+    $ app show myphpapp
+
+<br />
+
+{% page_header id="add-phpmyadmin-to-app" title="Добавяне на phpMyAdmin към PHP приложение" %}
+
+    $ app cartridge add phpmyadmin -a myphpapp
+
+{% highlight sh %}
+Using phpmyadmin-4 (phpMyAdmin 4.0) for 'phpmyadmin'
+Adding phpmyadmin-4 to application 'myphpapp' ... done
+
+phpmyadmin-4 (phpMyAdmin 4.0)
+-----------------------------
+  Gears:          Located with php-5.3, mysql-5.1
+  Connection URL: https://myphpapp-apps.startapp.bg/phpmyadmin/
+
+Please make note of these MySQL credentials again:
+  Root User: adminH3N4yWf
+  Root Password: 7nxXBwI9aV_m
+URL: https://myphpapp-apps.startapp.bg/phpmyadmin/
+{% endhighlight %}
+
+<br />
+
+
+{% page_header id="add-postgresql-to-app" title="PostgreSQL и PHP" %}
+
+    $ app cartridge add postgresql-8.4 -a myphpapp
+
+{% highlight sh %}
+
+Adding postgresql-8.4 to application 'myphpapp' ... done
+
+postgresql-8.4 (PostgreSQL 8.4)
+-------------------------------
+  Gears:          Located with php-5.3
+  Connection URL: postgresql://$OPENSHIFT_POSTGRESQL_DB_HOST:$OPENSHIFT_POSTGRESQL_DB_PORT
+  Database Name:  myphpapp
+  Password:       jBeeIbXSTGsw
+  Username:       adminfj66lmx
+
+PostgreSQL 8.4 database added.  Please make note of these credentials:
+
+   Root User: adminfj66lmx
+   Root Password: jBeeIbXSTGsw
+   Database Name: myphpapp
+
+Connection URL: postgresql://$OPENSHIFT_POSTGRESQL_DB_HOST:$OPENSHIFT_POSTGRESQL_DB_PORT
+{% endhighlight %}
+
+<br />
+
+{% page_header id="add-mongo-to-app" title="MongoDB и PHP" %}
+
+    $ app cartridge add mongodb-2.2 -a myphpapp
+
+{% highlight sh %}
+
+Adding mongodb-2.2 to application 'myphpapp' ... done
+
+mongodb-2.2 (MongoDB 2.2)
+-------------------------
+  Gears:          Located with php-5.3
+  Connection URL: mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT/
+  Database Name:  myphpapp
+  Password:       jgSb9c7sGcMi
+  Username:       admin
+
+MongoDB 2.2 database added.  Please make note of these credentials:
+
+   Root User:     admin
+   Root Password: jgSb9c7sGcMi
+   Database Name: myphpapp
+
+Connection URL: mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT/
+{% endhighlight %}
+
+<br />
+
+{% page_header id="create-codeigniter-app" title="Инсталиране на Codeigniter" %}
+
+
+Благодарение на **Startapp Quickstarts** можете да инсталирате Codeigniter само с една команда:
+
+    app create myciapp codeigniter
+
+Тази команда, автоматично ще инсталира Codeigniter, също така ще създаде автоматично MySQL база данни за вас.
+
+#### Подробна информация за инсталиране и конфигуриране на Codeigniter [можете да получите тук](#)
+
+
+<br />
+
+{% page_header id="create-cakephp-app" title="Инсталиране на CakePHP" %}
+
+Благодарение на **Startapp Quickstarts** можете да инсталирате CakePHP само с една команда:
+
+    app create mycakeapp cakephp
+
+Тази команда, автоматично ще инсталира CakePHP, също така ще създаде автоматично MySQL база данни за вас.
+
+#### Подробна информация за инсталиране и конфигуриране на CakePHP [можете да получите тук](#)
+
+
+<br />

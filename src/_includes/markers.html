@@ -1,0 +1,35 @@
+{% page_header id="markers" title="Маркери" %}
+
+Маркерът представлява празен файл с определено име. Маркерите се използват с цел да променяте поведенето на системата според вашите нужди.
+
+
+#### Добавяне на маркер
+---
+
+Създаването на маркер е много лесно. Само трябва да направите следното:
+
+    cd /path/to/my/project
+    touch .openshift/markers/<име-на-маркера>
+
+Понеже маркерът е част от вашето приложение, трябва да го добавите в Git:
+
+    git add .openshift/markers/*
+    git commit -m "Add <marker-name>"
+
+От следващия път в който изпълните `git push` системата ще провери кои активните маркери и ще направи това което сте и казали чрез тях.
+
+
+#### Премахване на маркер
+---
+
+За да премахнете определен маркер просто напишете следните команди:
+
+    cd /path/to/my/project
+    git rm .openshift/markers/<име-на-маркера>
+    git commit -m "Remove <marker-name>"
+
+{% assign current_lang = include.slug | split: "startapp-with-" %}
+
+{% if include.slug == "startapp-with-php" %}
+{% include markers/php.html %}
+{% endif %}

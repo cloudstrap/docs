@@ -7,24 +7,15 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="{{ page.base_url }}" class="navbar-brand"><img src="/img/logo.png" alt="{{ site.name }}"/><span class="developers">/ developers</span></a>
+      <a href="{{ site.baseurl }}" class="navbar-brand"><img src="/img/logo.png" alt="{{ site.name }}"/><span class="developers">/ developers</span></a>
     </div>
     <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
       <ul class="nav navbar-nav navbar-right">
         <li{% if page.slug == "about" %} class="active"{% endif %}>
-          <a href="/getting-started/">Първи стъпки</a>
+          <a href="/">Начало</a>
         </li>
         <li{% if page.slug == "about" %} class="active"{% endif %}>
-          <a href="{{ page.base_url }}about">Работа с приложения</a>
-        </li>
-        <li{% if page.slug == "about" %} class="active"{% endif %}>
-          <a href="{{ page.base_url }}about">Quickstarts</a>
-        </li>
-        <li{% if page.slug == "about" %} class="active"{% endif %}>
-          <a href="{{ page.base_url }}about">Нещо друго</a>
-        </li>
-        <li{% if page.slug == "about-startapp" %} class="active"{% endif %}>
-          <a href="/about-startapp">За StartApp</a>
+          <a href="/">Какво е Startapp?</a>
         </li>
       </ul>
     </nav>
