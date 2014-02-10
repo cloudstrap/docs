@@ -833,6 +833,81 @@ $database = $mongo->$db_name;
 
 <br />
 
+{% page_header id="add-composer" title="Добавяне на Composer" %}
+
+За да можете да изпозлвате Composer на Startapp, трябва да направите следното:
+
+Влезте във директорията на проекта си:
+
+    $ cd /път/до/myphpapp/
+
+Изпълнете следния код (copy/paste) и натиснете `ENTER`:
+
+{% highlight sh %}
+cat > .openshift/action_hooks/deploy << "EOF"
+#!/bin/bash
+# This deploy hook gets executed after dependencies are resolved and the
+# build hook has been run but before the application has been started back
+# up again.  This script gets executed directly, so it could be python, php,
+# ruby, etc.
+
+export COMPOSER_HOME="$OPENSHIFT_DATA_DIR/.composer"
+
+if [ ! -f "$OPENSHIFT_DATA_DIR/composer.phar" ]; then
+    curl -s https://getcomposer.org/installer | /usr/bin/php -- --install-dir=$OPENSHIFT_DATA_DIR
+else
+  /usr/bin/php $OPENSHIFT_DATA_DIR/composer.phar self-update
+fi
+
+# Install phars if composer.json exists
+if [ -f "$OPENSHIFT_REPO_DIR/composer.json" ]; then
+  ( unset GIT_DIR ; cd $OPENSHIFT_REPO_DIR ; /usr/bin/php $OPENSHIFT_DATA_DIR/composer.phar install )
+fi
+EOF
+{% endhighlight %}
+
+Този скрипт ни направи нов файл `.openshift/action_hooks/deploy`, който се изпълнява вски път след като push-вате промени към сървъра.
+
+За да заработи този скрипт трябва да го направим изпълним:
+
+    chmod +x .openshift/action_hooks/deploy
+
+Остана да го добавим в `Git` и да го качин на сървъра:
+
+    git add .openshift/action_hooks/deploy
+    git commit -am "Enable Composer"
+    git push
+
+Сега вече Comsposer е инсталиран!
+
+### Добавяне на composer.json
+
+За да инсталирате пакети с Comsposer е необходимо да създадете `composer.json` файл тук `/път/до/myphpapp/composer.json` и да опишете, кои пакети искате да ви бъдат инсталирани.
+
+Създаваме `composer.json`
+
+    cd /път/до/myphpapp/
+    cat <<EOF> composer.json
+    {
+        "require": {
+            "monolog/monolog": "1.0.*"
+        }
+    }
+    EOF
+
+Добавяме го в `Git`
+
+    git add composer.json
+    git commit -am "Add composer.json"
+
+Качваме го на сървъра
+
+    git push
+
+Това е! Приятна работа с Composer!
+
+<br />
+
 {% page_header id="help" title="Помощ" %}
 
 Ако имате проблеми с изпълнението на примерите от тази страница не се колебайте да ги споделите тук: [Проблеми при инсталация на PHP приложение](https://groups.google.com/forum/#!topic/startapp-cloud/QuERFCzlk3E)
