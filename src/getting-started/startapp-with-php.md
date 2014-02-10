@@ -352,7 +352,7 @@ EOF
 {% note info, Относно аргумента '-a myphpapp' %}
 Ако се намирате в директорията на приложението си, можете да пропускате аргумента '-a appname'!
 
-Което ще рече, че ако се намирате в HOME директорията си трябва да използвате следния синтаксис:
+Което означава, че ако се намирате в HOME директорията си трябва да използвате следния синтаксис:
 
     $ app cartridge add mysql-5.1 -a <име-на-приложението>
 
@@ -545,6 +545,20 @@ Connection URL: postgresql://$OPENSHIFT_POSTGRESQL_DB_HOST:$OPENSHIFT_POSTGRESQL
 
     $ app cartridge add mongodb-2.2 -a myphpapp
 
+{% note info, Относно аргумента '-a myphpapp' %}
+Ако се намирате в директорията на приложението си, можете да пропускате аргумента '-a appname'!
+
+Което означава, че ако се намирате в HOME директорията си трябва да използвате следния синтаксис:
+
+    $ app cartridge add mongodb-2.2 -a <име-на-приложението>
+
+Ако обаче се намирате в директорията на вашето приложение:
+
+    cd /path/to/myphpapp
+    app cartridge add mongodb-2.2
+
+{%endnote%}
+
 {% highlight sh %}
 
 Adding mongodb-2.2 to application 'myphpapp' ... done
@@ -565,6 +579,108 @@ MongoDB 2.2 database added.  Please make note of these credentials:
 
 Connection URL: mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT/
 {% endhighlight %}
+
+Със добавянето на MongoDB към вашето приложение също така се добавят няколко ENV променливи, които казват какъв е хоста на базата, кой е порта, както и потребитлски имена и пароли.
+
+{% include env_vars/mongodb.html %}
+
+{% page_header id="how-to-access-mongodb-via-php" title="Достъпване на MongoDB през PHP" %}
+
+Ако се чудите за какво бяха тези MongoDB ENV променливи, които показхме отгоре и как можете да използвате във вашия PHP код, ето един прост пример как да се закачите за вашия чисто нов MongoDB сървър.
+
+{% highlight php %}
+<?php
+
+/* Можете да достъпвате ENV променливите по няколко начина
+ * Пример с getenv()
+ * $hostname = getenv('OPENSHIFT_MONGODB_DB_HOST');
+ *
+ * Или можете да използвате глобалните променливи в PHP ($_SERVER or $_ENV)
+ * $$hostname = $_SERVER['OPENSHIFT_MONGODB_DB_HOST'];
+*/
+
+$host     = getenv('OPENSHIFT_MONGODB_DB_HOST');
+$username = getenv('OPENSHIFT_MONGODB_DB_USERNAME');
+$password = getenv('OPENSHIFT_MONGODB_DB_PASSWORD');
+$port     = getenv('OPENSHIFT_MONGODB_DB_PORT');
+$db_name  = getenv('OPENSHIFT_APP_NAME');
+
+
+// Отваряне на конекция
+$uri = "mongodb://" . $username . ":" . $password . "@" . $host . ":" . $port;
+$mongo = new Mongo($uri);
+
+// Името на базата данни винаги е името на самото приложение
+// Ако вашето приложение се казва myphpapp, тогава трябва да заместите <app-name> с myphpapp
+$database = $mongo->$db_name;
+
+?>
+{% endhighlight %}
+
+<br />
+
+{% page_header id="how-to-access-mongodb-via-ssh" title="Достъпване на MongoDB през SSH" %}
+
+Първо трябва да се логнем на сървъра по SSH. Това става много лесно. Само изпълнете следната команда:
+
+    $ app ssh -a myphpapp
+
+След като се логнете на сървъра напишете:
+
+    $ mongo
+
+И като резултат ще видите, това:
+
+    MongoDB shell version: 2.4.6
+    connecting to: 127.12.225.132:27017/admin
+    Welcome to the MongoDB shell.
+    For interactive help, type "help".
+    For more comprehensive documentation, see
+      http://docs.mongodb.org/
+    Questions? Try the support group
+      http://groups.google.com/group/mongodb-user
+    >
+
+Което означава, че вие сте в интерактивната конзола на MongoDB!
+
+<br />
+
+{% page_header id="how-to-access-mongodb-via-devpc" title="Достъпване на MongoDB през работната ви машина/лаптоп" %}
+
+    $ app port-forward -a myphpapp
+
+Като резултат от тази команда ще видите следното:
+
+    Checking available ports ... done
+    Forwarding ports ...
+    Address already in use - bind(2) while forwarding port 8080. Trying
+    local port 8081
+
+    To connect to a service running on OpenShift, use the Local address
+
+    Service Local                OpenShift
+    ------- --------------- ---- --------------------
+    httpd   127.0.0.1:8080   =>  127.12.225.129:8080
+    httpd   127.0.0.1:8081   =>  127.12.225.131:8080
+    mongodb 127.0.0.1:27017  =>  127.12.225.132:27017
+
+    Press CTRL-C to terminate port forwarding
+
+Ако погледнете на последния ред пише следното:
+
+    mongodb 127.0.0.1:27017  =>  127.12.225.132:27017
+
+Което означава, че можете да достъпвате MongoDB сървъра, който работи на Startapp.bg локалната си машина. Ето как:
+
+    $ mongo 127.0.0.1:27017/<database> --username <username> --password <password>
+
+Ако сте забравили вашите `username` и `password` можете да ги видите така:
+
+    $ app show myphpapp
+
+<br />
+
+
 
 <br />
 
