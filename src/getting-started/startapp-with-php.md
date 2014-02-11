@@ -411,17 +411,16 @@ $password = getenv('OPENSHIFT_MYSQL_DB_PASSWORD');
 $db_name  = getenv('OPENSHIFT_APP_NAME');
 
 // Отваряне на конекция
-$link = mysql_connect($host, $username, $password)
-    or die('Could not connect: ' . mysql_error());
+$link = new mysqli($host, $username, $password, $db_name);
+
+if ($mysqli->connect_errno) {
+    echo "Cound not connect: " . $mysqli->connect_error;
+}
 
 echo 'Connected successfully';
 
-// Името на базата данни винаги е името на самото приложение
-// Ако вашето приложение се казва myphpapp, тогава трябва да заместите <app-name> с myphpapp
-mysql_select_db($db_name) or die('Could not select database');
-
 // Затваряне на конекцията
-mysql_close($link);
+$link->close();
 
 ?>
 {% endhighlight %}
