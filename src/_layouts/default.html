@@ -24,8 +24,13 @@
             <ul class="nav bs-sidenav">
               {% if page.slug == "getting-started" %}
                 {% include nav-getting-started.html %}
+
               {% elsif page.slug == "startapp-with-php" %}
                 {% include nav-getting-started-with-php.html %}
+
+              {% elsif page.slug == "startapp-with-php-quick" %}
+                {% include nav-getting-started-with-php-quick.html %}
+
               {% elsif page.slug == "app-client-tools-install" %}
                 {% include nav-app-install.html %}
               {% endif %}

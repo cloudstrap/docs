@@ -1,45 +1,19 @@
 ---
 layout: document
 
-title:  "> app --help | more"
+title:  "PHP приложения в Startapp"
 date:   2013-11-25 16:58:04
 header_title:  '> app create &lt;app&gt; with php'
-lead: "За PHP нинджи! Качване на PHP проложения в <strong>Startapp</strong> cloud за 5 минути"
+lead: "За PHP любознайковци! Дисекция на PHP проложенията в <strong>Startapp.bg</strong> Сloud"
 slug: startapp-with-php
 keywords: "хостинг, php хостинг, python хостинг, ruby хостинг, nodejs хостинг"
 description: ""
 noToc: true
 ---
 
-{% page_header id="quickstart-php" title="Бързо стартиране с PHP" %}
+{% page_header id="quickstart-php" title="Стартиране с PHP" %}
 
 {% include customer-requirements.html %}
-
-{% page_header id="fast-create-php-app" title="Бързи инструкции" %}
-
-Създаването на `php` приложения в Startapp е изключително лесно и в повечето случаи е само с 1 ред код:
-
-    $ app create myphpapp php
-
-
-Ако искате вашето приложение да иползва база данни ... примерно `MySQL`:
-
-    # Налични бази данни:
-    # mongodb-2.2, mysql-5.1, postgresql-8.4, postgresql-9.2
-
-    $ app cartridge add mysql-5.1 -a myphpapp
-
-
-Тези две команди създават вашия виртуален сървър инсталират и конфигурират PHP, MySQL и Git хранилището за вашето приложение. Отворете браузъра си и вижте дали приложението работи:
-
-    http://myphpapp-MyDomain.startapp.bg/
-
-Ако искаме да бъдем малко по-фешън можем да заменим горните 2 команди само с 1:
-
-    $ app create myphpapp with php and mysql-5.1
-
-Това е!
-
 
 {% page_header id="create-php-app-in-details" title="Подробни инструкции" %}
 
@@ -905,10 +879,4 @@ EOF
 
 Това е! Приятна работа с Composer!
 
-<br />
-
-{% page_header id="help" title="Помощ" %}
-
-Ако имате проблеми с изпълнението на примерите от тази страница не се колебайте да ги споделите тук: [Проблеми при инсталация на PHP приложение](https://groups.google.com/forum/#!topic/startapp-cloud/QuERFCzlk3E)
-
-<br />
+{% include help/php.html %}

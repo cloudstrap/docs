@@ -13,29 +13,20 @@ description: ""
 noToc: true
 ---
 
-{% page_header id="what-is-startapp" title="Какво е Startapp?" %}
-
-<p class="lead">Startapp.bg е ново поколение многоезична cloud базирана уеб хостинг платформа от типа PaaS.</p>
-
-Платформата на Startapp е базирана <a href="http://openshift.github.io/">RedHat OpenShift</a> което е Open Source PaaS решение.
-
-Благодарение на добрата симбиоза от технологии с които Startapp работи, вие вече няма да има нуджда да мислите за сървърите като цяло :). Вече ще можете да пишете приложения следвайки модерните практики и технологии за софтуерна разработка, да пишете на езиците, на които обичате и се чувствате най-комфорнтно, да използвате допълнителни технологии като `SQL` или `NoSQL` бази данни, `Memcache`, `Redis` и много други!
-За да управлявате приложенията си ще са ви нужни [startapp tools]({{site.startapp.tools_page}}#install-app-macos) или графичната конзола, а за да deploy-вате кода си в клауда на Startapp.bg ще използвате известния source control инструмент `Git`.
-
 {% page_header id="how-can-i-start" title="Как да започна?" %}
 
 <p class="lead">Ако искате за <= 5.minutes да имате работещо Ruby, Python, NodeJS или PHP приложение, вижте примерите по-долу:</p>
 
 <div class="row startapp-starters">
   <div class="col-xs-6 col-md-3">
-    <a class="thumbnail" href="/getting-started/startapp-with-ruby/">
+    <a class="thumbnail" href="/getting-started/startapp-with-ruby-quick.html">
       <img src="/img/jumps/ruby.jpg" alt="Ruby Хостинг">
     </a>
     <h4>Примери с Ruby</h4>
     <p>Интересни примери с Rails, Sinatra, PostgreSQL, MySQL, MongoDB</p>
   </div>
   <div class="col-xs-6 col-md-3">
-    <a class="thumbnail" href="/getting-started/startapp-with-php.html">
+    <a class="thumbnail" href="/getting-started/startapp-with-php-quick.html">
       <img src="/img/jumps/php.jpg" alt="PHP Хостинг">
     </a>
     <h4>Примери с PHP</h4>
@@ -43,14 +34,14 @@ noToc: true
   </div>
   <div class="clearfix visible-xs"></div>
   <div class="col-xs-6 col-md-3">
-    <a class="thumbnail" href="/getting-started/startapp-with-python/">
+    <a class="thumbnail" href="/getting-started/startapp-with-python-quick.html">
       <img src="/img/jumps/python.jpg" alt="Python Хостинг">
     </a>
     <h4>Примери с Python</h4>
     <p>Интересни примери с Django, WebPy, BottlePy, MySQL, MongoDB</p>
   </div>
   <div class="col-xs-6 col-md-3">
-    <a class="thumbnail" href="/getting-started/startapp-with-nodejs/">
+    <a class="thumbnail" href="/getting-started/startapp-with-nodejs-quick.html">
       <img src="/img/jumps/node.jpg" alt="NodeJS Хостинг">
     </a>
     <h4>Примери с NodeJS</h4>
@@ -61,8 +52,12 @@ noToc: true
 
 {% page_header id="need-help" title="Имаш нужда от помощ?" %}
 
-Не можете да намерите отговорите на въпросите, които имате? Попитайте [Startapp общността в Google Groups]({{ site.startapp.groups }})
-
+Не можете да намерите отговорите на въпросите, които имате?
+<section class="read-more">
+  <ul class="list-unstyled">
+    <li><a href="{{ site.startapp.groups }}">Попитайте Startapp общността в Google Groups</a></li>
+  </ul>
+</section>
 
 {% page_header id="want-to-contribute" title="Искам да помогна! Как да го направя?" %}
 
