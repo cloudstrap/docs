@@ -51,10 +51,11 @@ p
 
 .bs-header
   background: header_bg_color url(../img/header_bg.jpg) center center no-repeat
-  padding-top: 50px
+  padding: 0
   max-height: 266px
   text-shadow: 2px 2px 0 rgba(0,0,0,.15)
   border-bottom: solid 1px dark_purple_red
+  overflow: hidden
   if_desktop height 266px
 
   & h1
@@ -81,6 +82,11 @@ p
     if_desktop margin-right 50px
     if_tablet font-size 16px
     if_mobile font-size 13px
+
+  & .logos_wrapper
+    padding: 50px 15px 40px
+    background: transparent url(../img/logos_bg_5t.png) center center repeat-x
+    overflow: hidden
 
 
 /* Sidebar */

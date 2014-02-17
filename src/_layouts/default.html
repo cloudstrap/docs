@@ -9,9 +9,11 @@
 
     <!-- Docs page layout -->
     <div class="bs-header {% if page.header_title_fontsize %}{{ page.header_title_fontsize }}{% endif %}" id="content">
-      <div class="container">
-        <h1>{% if page.header_title %}{{ page.header_title }}{% else %}{{ site.header_title }}{% endif %}</h1>
-        <p>{{ page.lead }}</p>
+      <div class="logos_wrapper">
+        <div class="container">
+          <h1>{% if page.header_title %}{{ page.header_title }}{% else %}{{ site.header_title }}{% endif %}</h1>
+          <p>{{ page.lead }}</p>
+        </div>
       </div>
     </div>
     <!-- Callout for the old docs link -->
