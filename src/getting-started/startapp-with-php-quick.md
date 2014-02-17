@@ -17,9 +17,9 @@ noToc: true
 
 За да работят примерите по-долу:
 
-- Регистрирайте се безплатно [http://startapp.bg](#)
-- Инсталирайте си Git: [Windows]({{ install_url }}#install-git-windows) | [Mac OS]({{ install_url }}#install-git-macos) | [Linux]({{ install_url }}#install-git-linux)
-- Инсталирайте Startapp Client Tools: [Windows]({{ install_url }}#install-app-windows) | [Mac OS]({{ install_url }}#install-app-macos) | [Linux]({{ install_url }}#install-app-linux)
+- Регистрирайте се безплатно в [http://startapp.bg](#)
+- Инсталирай Git за: [Windows]({{ install_url }}#install-git-windows) | [Mac OS]({{ install_url }}#install-git-macos) | [Linux]({{ install_url }}#install-git-linux)
+- Инсталирайте Startapp Client Tools за: [Windows]({{ install_url }}#install-app-windows) | [Mac OS]({{ install_url }}#install-app-macos) | [Linux]({{ install_url }}#install-app-linux)
 
 ---
 
@@ -49,7 +49,7 @@ noToc: true
 <br />
 
 <div class="text-center">
-  <p class="lead">Ако тази информация не е достатъчна, тогава прочетете</p>
+  <p class="lead">Ако тази информация не е достатъчна, тогава прочети</p>
   <h2><a href="/getting-started/startapp-with-php.html" alt="Подробни инструкции за инсталиране на PHP приложение">Подробни инструкции</a></h2>
 </div>
 
