@@ -23,29 +23,28 @@ noToc: true
 
 ---
 
-### 1. Създаване на PHP приложение
+#### 1. Създаване на приложение
 
-    $ app create myphpapp php
-
-### 2. Добавяне на база данни
-
-Наличните бази са: `mongodb-2.2` `mysql-5.1` `postgresql-8.4` `postgresql-9.2`
-
-    $ app cartridge add mysql-5.1 -a myphpapp
+    $ app create myphpapp php mysql-5.1
 
 
-Ако искате да се разминете само с 1 ред вместо горните 2, можете да използвате този синтаксис
+#### 2. Промени в кода
 
-    $ app create myphpapp with php and mysql-5.1
+    $ echo 'Hello Wolrd!' > php/index.php
 
-### 3. Отваряне в браузъра
+#### 3. Качване на сървъра
+
+    $ git push
+
+
+#### 4. Отваряне в браузъра
 
 За предпочитане да е **различен от IE** :)
 
     http://myphpapp-<mydomain>.startapp.bg/
 
 
-Това е!
+**Да толкова е просто!**
 
 <br />
 
