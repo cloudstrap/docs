@@ -1,8 +1,7 @@
-$("a[href^='#']").on 'click', (e) ->
+$("a[href^='#']").not('[data-toggle="tab"]').on 'click', (e) ->
+  e.preventDefault()
   originalHash = this.hash
   havbarHeight = $('.startapp-navbar').outerHeight(true);
-
-  e.preventDefault()
 
   $('html, body').animate
     scrollTop: ($(originalHash).offset().top - havbarHeight),

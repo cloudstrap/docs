@@ -21,20 +21,20 @@
       <div class="row">
         <div class="col-md-3">
           <div class="bs-sidebar hidden-print" role="complementary">
-            <ul class="nav bs-sidenav">
-              {% if page.slug == "getting-started" %}
-                {% include nav-getting-started.html %}
 
-              {% elsif page.slug == "startapp-with-php" %}
-                {% include nav-getting-started-with-php.html %}
+            {% if page.slug == "getting-started" %}
+              {% include nav-getting-started.html %}
 
-              {% elsif page.slug == "startapp-with-php-quick" %}
-                {% include nav-getting-started-with-php-quick.html %}
+            {% elsif page.slug == "startapp-with-php" %}
+              {% include nav-getting-started-with-php.html %}
 
-              {% elsif page.slug == "app-client-tools-install" %}
-                {% include nav-app-install.html %}
-              {% endif %}
-            </ul>
+            {% elsif page.slug == "startapp-with-php-quick" %}
+              {% include nav-getting-started-with-php-quick.html %}
+
+            {% elsif page.slug == "app-client-tools-install" %}
+              {% include nav-app-install.html %}
+            {% endif %}
+
           </div>
         </div>
         <div class="col-md-9" role="main">

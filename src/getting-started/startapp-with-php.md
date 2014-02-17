@@ -216,44 +216,9 @@ Startapp търси в директориите `php` и `libs` когато с�
 
 Можете да го редактирате с предпочитан от вас текстов редактор или през командния ред както е в този пример.
 
-След като се намираме вече в `/път/до/myphpapp/php/` трябва да изпълним следния код (copy/paste) и натискаме `ENTER`:
+След като се намираме вече в `/път/до/myphpapp/php/` трябва да изпълним следния код:
 
-{% highlight html %}
-cat <<EOF> index.php
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Welcome to Startapp</title>
-
-  <style>
-    body {
-      background: #fafafa;
-      font-family: "Helvetica Neue",Helvetica,"Liberation Sans",Arial;
-      font-size: 14px;
-      line-height: 1.4;
-    }
-    .change {
-      display: table;
-      margin: 0 auto;
-      padding: 10px;
-      background: #fff;
-      border-left: solid 1px #ccc;
-    }
-  </style>
-
-</head>
-<body>
-  <div class="change">
-    <h1>Вашата първа промяна в Startapp.bg</h1>
-  </div>
-</body>
-</html>
-EOF
-
-{% endhighlight %}
-
+    echo 'Hello Wolrd!' > index.php
 
 За да проверим дали сме променили успешно `index.php` файла изпълняваме следната команда:
 
@@ -282,18 +247,12 @@ EOF
     Compressing objects: 100% (4/4), done.
     Writing objects: 100% (4/4), 419 bytes | 0 bytes/s, done.
     Total 4 (delta 2), reused 0 (delta 0)
-    remote: Stopping PHP cartridge
     remote: Waiting for stop to finish
-    remote: Stopping PHPMyAdmin cartridge
-    remote: Waiting for stop to finish
-    remote: Stopping MySQL cartridge
-    remote: Building git ref 'master', commit 2463db6
+    remote: Building git ref 'master', commit 0c54629
     remote: Building PHP cartridge
     remote: Preparing build for deployment
-    remote: Deployment id is 2df9d963
+    remote: Deployment id is 1f5b7eef
     remote: Activating deployment
-    remote: Starting PHPMyAdmin cartridge
-    remote: Starting MySQL cartridge
     remote: Starting PHP cartridge
     remote: Result: success
     remote: Activation status: success

@@ -11,3 +11,8 @@ addTargetBlank = (link) ->
   link.target = '_blank'
 
 linksHandler()
+
+$('.docs-tabs a').click (event) ->
+  event.preventDefault()
+  $(this).tab('show')
+  return false
