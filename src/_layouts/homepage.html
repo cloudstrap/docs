@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+    <a class="sr-only" href="#content">Skip to main content</a>
+
+    <!-- Docs master nav -->
+    {% include nav-main.html %}
+
+    <!-- Docs page layout -->
+    <div class="bs-header homepage" id="content">
+      <div class="logos_wrapper">
+        <div class="container">
+          <h1>Ново поколение уеб хостинг за сайтове и интернет приложения</h1>
+          <p>{{ page.lead }}</p>
+        </div>
+      </div>
+    </div>
+    <!-- Callout for the old docs link -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12" role="main">
+          {{ content }}
+        </div>
+      </div>
+    </div>
+
+    <!-- JS and analytics only. -->
+    {% include footer.html %}
+
+  </body>
+</html>

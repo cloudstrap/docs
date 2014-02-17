@@ -1,12 +1,12 @@
 ---
-layout: default
+layout: homepage
 
 title:  "> app --help | more"
 date:   2013-11-25 16:58:04
 permalink: /
 header_title:  "> app --help | more"
 header_title_fontsize: big
-lead: "Бърз поглед на <strong>Startapp</strong>. Какво е Startapp? Как да работя със Startapp? "
+lead: "ДОКУМЕНТАЦИЯ И РЕСУРСИ"
 slug: getting-started
 keywords: "хостинг, php хостинг, python хостинг, ruby хостинг, nodejs хостинг"
 description: ""

@@ -24,6 +24,7 @@ p
   color: purple_red
   padding-left: 6px
   text-shadow: none
+  vertical-align: bottom
 
 .navbar-inverse .navbar-nav > li > a
   color: link_color
@@ -86,12 +87,43 @@ p
   & .logos_wrapper
     padding: 50px 15px 40px
     height: 100%
-    background: transparent url(../img/logos_bg_5t.png) center center repeat-x
-    overflow: hidden
+    background: transparent url(../img/logos_bg_10t.png) center center repeat-x
 
   &.homepage
+    background: header_bg_color url(../img/homepage_header_bg.jpg) top center repeat
     height: 398px
     max-height: 398px
+    position: relative
+    overflow: visible
+  &.homepage .logos_wrapper
+    background: transparent url(../img/logos_bg_60t.png) center center repeat-x
+
+  &.homepage .container
+    width: 460px
+    position: absolute
+    z-index: 9999
+    top: -50px
+    left: 50%
+    margin: 0 0 0 -230px
+    padding: 0
+    overflow: hidden
+
+  &.homepage h1
+    width: 460px
+    height: 324px
+    background: transparent url(../img/devs_center_logo.png) center center no-repeat
+    text-indent: -9999px
+    margin-bottom: 10px
+
+  &.homepage p
+    display: table
+    margin: 0 auto
+    border-radius: 5px
+    font-size: 20px
+    padding: 8px 16px
+    -webkit-box-shadow: 0 -3px 8px rgba(0,0,0,0.07)
+    box-shadow: 0 -3px 8px rgba(0,0,0,0.07)
+
 
 
 /* Sidebar */
