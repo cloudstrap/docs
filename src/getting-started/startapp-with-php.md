@@ -15,10 +15,7 @@ noToc: true
 
 {% include customer-requirements.html %}
 
-{% page_header id="create-php-app-in-details" title="Подробни инструкции" %}
-
-
-### Създаване на ново приложение
+{% page_header id="create-php-app-in-details" title="Създаване на ново PHP приложение" %}
 
 Създаването на `php` приложения в Startapp е изключително лесно и в повечето случаи е само с 1 ред код:
 
