@@ -15,7 +15,7 @@ noToc: true
 
 {% page_header id="how-can-i-start" title="Как да започна?" %}
 
-<p class="lead">Искате за <= 5.minutes да имате работещо Ruby, Python, NodeJS или PHP приложение, вижте примерите по-долу колко лесно е:</p>
+<p class="lead">Искате за <= 5.minutes да имате работещо Ruby, Python, NodeJS или PHP приложение, вижте колко бързо и лесно е всичко от примерите под мен:</p>
 
 <div class="row startapp-starters">
   <div class="col-xs-6 col-md-3">
