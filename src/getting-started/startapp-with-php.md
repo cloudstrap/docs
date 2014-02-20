@@ -110,6 +110,11 @@ Run 'app show-app myphpapp' for more details about your app.
 
 Това е!
 
+<!-- <div class="well well-startapp well-sm" style="margin-top: 20px;"><h4>Разбра ли как да създадеш първото си PHP приложение?
+  <a href=""><span class="label label-success">Да</span></a>
+  <a href=""><span class="label label-danger">Не</span></a>
+</h4></div>
+ -->
 <br />
 
 {% page_header id="file-structure" title="Файлова структура на PHP приложението" %}
@@ -203,6 +208,11 @@ Run 'app show-app myphpapp' for more details about your app.
 Startapp търси в директориите `php` и `libs` когато сервиеа вашето приложение на клиентите. Файлът **index.php** (който се намира в директория **php**) ще поеме всички requests от root URL-а на вашето приложение. Разбира се може да си създавате и други директории, ако желате, с цел по-добра огранизация на вашето приложение или поради друга ваша причина.
 {% endnote %}
 
+<!-- <div class="well well-startapp well-sm" style="margin-top: 20px;"><h4>Разбра ли кой файл за какво се ползва?
+  <a href=""><span class="label label-success">Да</span></a>
+  <a href=""><span class="label label-danger">Не</span></a>
+</h4></div> -->
+
 <br />
 
 {% page_header id="make-code-changes" title="Как да правим промени по кода?" %}
@@ -235,6 +245,11 @@ Startapp търси в директориите `php` и `libs` когато с�
 Браво! Трудната част мина успешно :) Сега остана само да запишем промените в `Git` и да ги качим на сървъра:
 
     git commit -am "Change content of index.php"
+
+<!-- <div class="well well-startapp well-sm" style="margin-top: 20px;"><h4>Успя ли да направиш първата си промяна?
+  <a href=""><span class="label label-success">Да</span></a>
+  <a href=""><span class="label label-danger">Не</span></a>
+</h4></div> -->
 
 <br />
 
@@ -281,6 +296,11 @@ Startapp търси в директориите `php` и `libs` когато с�
 <br />
 
 {% include markers.html slug=page.slug %}
+
+<!-- <div class="well well-startapp well-sm" style="margin-top: 20px;"><h4>Разбра ли за какво се използват Маркерите?
+  <a href=""><span class="label label-success">Да</span></a>
+  <a href=""><span class="label label-danger">Не</span></a>
+</h4></div> -->
 
 {% page_header id="add-mysql-to-app" title="Добавяне на MySQL към PHP приложение" %}
 

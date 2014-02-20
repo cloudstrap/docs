@@ -73,6 +73,8 @@ $ app setup
 
 {{help_links}}
 
+<br /><br />
+
 {% page_header id="install-windows" title="Windows" %}
 
 <h3 id="install-ruby-windows">Инсталиране на Ruby</h3>
@@ -118,6 +120,8 @@ C:\Program Files\> app
 {% endhighlight %}
 
 {{help_links}}
+
+<br /><br />
 
 {% page_header id="install-linux" title="Linux" %}
 
