@@ -29,9 +29,9 @@ StartApp Client tools които ще използваме през команд
 
 Предполага се, че за да можете да стартирате команди, трабва да имате "Command Prompt" или "Terminal". Ако използвате [Ruby Version Manager (rvm) вижте инструкциите по-долу.](#rvm)
 
-{% page_header id="install-macos" title="Mac OS X" %}
+{% section id="install-macos" title="Mac OS X" %}
 
-<h3 id="install-ruby-macos">Инсталиране на Ruby</h3>
+{% section id="install-ruby-macos" title="Инсталиране на Ruby" %}
 
 От Mac OS X Lion насам, всяко копие на операционната система идва с инсталиран Ruby 1.8.7. На по-старите Mac системи, Ruby идва, като част от [Xcode development suite](http://developer.apple.com/xcode) и може да си го инсталирате от вашия инсталационен диск. Ако сте се занимавали с разработка на приложения за Mac, можете да изпозлвате [MacRuby](http://macruby.org/) или да видите [как можете да инсталирате Ruby с помоща на homebrew.](http://www.ruby-lang.org/en/downloads/)
 
@@ -42,7 +42,9 @@ $ ruby -e 'puts "Welcome to Ruby"'
 Welcome to Ruby
 {% endhighlight %}
 
-<h3 id="install-git-macos">Инсталиране на Git</h3>
+{% endsection %}
+
+{% section id="install-git-macos" title="Инсталиране на Git" %}
 
 Има много опрции за да си инсталирате `Git` на вашия Mac OS X. Ние препоръчваме този: [Git for OS X installer](http://code.google.com/p/git-osx-installer/). Свалете последната версия на `dmg` файла. След това го инсталирайте по познатия начин ... next ... next ... next :)
 
@@ -55,7 +57,9 @@ git version 1.7.11.1
 
 Версията на Git може да е различна от тази в примера. Ако е по-висока от тази това не тябва да ви притеснява.
 
-<h3 id="install-app-macos">Инсталиране на StartApp Gem</h3>
+{% endsection %}
+
+{% section id="install-app-macos" title="Инсталиране на StartApp Gem" %}
 
 {{ after_ruby_and_git_installed }}
 
@@ -73,11 +77,15 @@ $ app setup
 
 {{help_links}}
 
-<br /><br />
+{% endsection %}
+{% endsection %}
 
-{% page_header id="install-windows" title="Windows" %}
 
-<h3 id="install-ruby-windows">Инсталиране на Ruby</h3>
+
+
+{% section id="install-windows" title="Windows" %}
+
+{% section id="install-ruby-windows" title="Инсталиране на Ruby" %}
 
 [RubyInstaller 1.9](http://rubyinstaller.org/) е най-лесният начин да инсталирате Ruby на Windows XP, Vista и Windows 7. Свалете последната версия от [тази страница](http://rubyinstaller.org/downloads/) и стартирайте инсталатора след това.
 
@@ -94,7 +102,9 @@ Welcome to Ruby
 
 Ако съобщението 'Welcome to Ruby' не се покаже е възжмоно изпълнимия файл `ruby` да не е добавен във вашите пътища. Опитайте се да инсталирате отново Ruby, но този път се уверете, че чекбокс-а "Add Ruby executables to your PATH" е включен!
 
-<h3 id="install-git-windows">Инсталиране на Git</h3>
+{% endsection %}
+
+{% section id="install-git-windows" title="Инсталиране на Git" %}
 
 Следващата стъпка е да инсталираме [Git за Windows](http://msysgit.github.com/) благодарение на който ще можете да синхронизирате сорса на вашите лойални приложения с тези които работят на StartApp. Git за Windows предлага най-ленсия начин за инсталация на Git под Windows и затова силно го препоръчваме - ако използвате друга версия на Git, молим да се уверите, че може да се използва през командния ред, след това продължете със следващата секция.
 
@@ -105,7 +115,9 @@ git version 1.7.11.msysgit.1
 
 Версията на Git може да е различна от тази в примера. Ако е по-висока от тази това не тябва да ви притеснява.
 
-<h3 id="install-app-windows">Инсталиране на StartApp Gem</h3>
+{% endsection %}
+
+{% section id="install-app-windows" title="Инсталиране на StartApp Gem" %}
 
 {{ after_ruby_and_git_installed }}
 
@@ -121,14 +133,15 @@ C:\Program Files\> app
 
 {{help_links}}
 
-<br /><br />
+{% endsection %}
+{% endsection %}
 
-{% page_header id="install-linux" title="Linux" %}
 
-## Инсталация на Ubuntu
 
-<h3 class="pseudo-invisible" id="install-ruby-linux">Инсталиране на Ruby</h3>
-<h3 class="pseudo-invisible" id="install-git-linux">Инсталиране на Git</h3>
+{% section id="install-linux" title="Linux" %}
+
+{% section id="install-git-ruby-linux" title="Инсталация на Ruby и Git - Ubuntu" %}
+
 Ще използваме вградения конзолен пакетен мениджър `apt-get` за да инсталираме Ruby и Git преди да инсталираме StartApp Client tools. Иползвайте този ред:
 
 {% highlight sh %}
@@ -148,7 +161,9 @@ git version 1.7.11.1
 
 Ако някоя от програмите Git или Ruby не са достъпни през командния ред, молим ви да ги добавите в `PATH`.
 
-<h3 id="install-app-linux">Инсталиране на StartApp Gem</h3>
+{% endsection %}
+
+{% section id="install-app-linux" title="Инсталиране на StartApp Gem" %}
 
 {{ after_ruby_and_git_installed }}
 
@@ -174,7 +189,9 @@ $ app setup
 
 {{help_links}}
 
-<h3 id="rvm">Ruby Version Manager</h3>
+{% endsection %}
+
+{% section id="rvm" title="Ruby Version Manager" %}
 
 Ruby Version Manager ви позволява да инсталирате и използвате различни версии на Ruby. Когато инсталирате StartApp Client Tools върху системата използваща RVM, е необходимо да инсталирате `startapp` gem-а в глобалния `gemset`, за да може да го достъпвате от всички Ruby инсталации, които имате на машината си:
 
@@ -200,3 +217,5 @@ $ sudo gem update startapp
 {% endhighlight %}
 
 и ще имате последната версия на StartApp Client Tools. Ако възникнат някакви проблеми, погледнете инструкциите по-горе за вашата операционна система.
+{% endsection %}
+{% endsection %}
