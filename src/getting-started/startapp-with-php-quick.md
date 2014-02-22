@@ -11,7 +11,7 @@ description: ""
 noToc: true
 ---
 
-{% page_header id="fast-create-php-app" title="Бързи инструкции" %}
+{% section id="fast-create-php-app" title="Бързи инструкции" %}
 
 {%assign install_url="/getting-started/app-client-tools-install.html" %}
 {%assign php_full="/getting-started/startapp-with-php.html" %}
@@ -51,15 +51,18 @@ noToc: true
 
 <div class="text-center">
   <p class="lead">Ако тази информация не е достатъчна, тогава прочети</p>
-  <h2><a href="{{ php_full }}" alt="Подробни инструкции за инсталиране на PHP приложение">Подробни инструкции</a></h2>
-  (All-in-one)
+  <h2><a class="btn btn-primary btn-lg" href="{{ php_full }}" alt="Подробни инструкции за инсталиране на PHP приложение">Подробни инструкции</a></h2>
 </div>
 
 <br />
 
-{% page_header id="read-more" title="Научи повече за:" %}
+{% endsection %}
 
-<section class="read-more">
+
+<div class="document-content-section">
+{% page_header id="read-more" title="Прочети още" %}
+
+<section class="read-more no-border">
   <div class="row" style="overflow: hidden;">
     <div class="col-sm-6 col-md-4 col-xs-12">
       <div class="thumbnail">
@@ -109,6 +112,6 @@ noToc: true
     </div>
   </div>
 </section>
-
+</div>
 
 {% include help/php.html %}

@@ -15,7 +15,7 @@ noToc: true
 
 {% include customer-requirements.html %}
 
-{% page_header id="create-php-app-in-details" title="Създаване на ново PHP приложение" %}
+{% section id="create-php-app-in-details" title="Създаване на ново PHP приложение" %}
 
 Създаването на `php` приложения в Startapp е изключително лесно и в повечето случаи е само с 1 ред код:
 
@@ -82,11 +82,15 @@ Your application 'myphpapp' is now available.
 Run 'app show-app myphpapp' for more details about your app.
 {% endhighlight %}
 
+---
+
 ### Отваряне в браузъра
 
 За да видите вашия сайт отворете с браузър URL-то което по-горе е изписано след `URL:`, в нашия случай:
 
     http://myphpapp-demos.startapp.bg/
+
+---
 
 ### SSH достъп
 
@@ -98,7 +102,10 @@ Run 'app show-app myphpapp' for more details about your app.
 Този пример е валиден за Mac OS и Linux. Ако използвате Windows трябва да имате инсталирано [Putty](/getting-started/using-putty-examples.html). Ако не знаете как да инсталирате и използвате [Putty](/getting-started/using-putty-examples.html), можете да разгледате [примера тук](/getting-started/using-putty-examples.html)
 {% endnote %}
 
+---
+
 ### Git хранилище
+
 Всяко приложение в Startapp.bg се съхранява в отделно Git хранилище. Адресът на хранилището на вашето приложение може да го видите веднага след "Git remote:", което в този конкретен случай е :
 
     ssh://52debd81bfbf5aa4ca000482@myphpapp-demos.startapp.bg/~/git/myphpapp.git/
@@ -115,9 +122,10 @@ Run 'app show-app myphpapp' for more details about your app.
   <a href=""><span class="label label-danger">Не</span></a>
 </h4></div>
  -->
-<br />
+{% endsection %}
 
-{% page_header id="file-structure" title="Файлова структура на PHP приложението" %}
+
+{% section id="file-structure" title="Файлова структура на PHP приложението" %}
 
 След като създадете вашето ново PHP приложение и го клонирате на компютъра си, ще видите следните файлове и директории.
 
@@ -213,9 +221,10 @@ Startapp търси в директориите `php` и `libs` когато с�
   <a href=""><span class="label label-danger">Не</span></a>
 </h4></div> -->
 
-<br />
+{% endsection %}
 
-{% page_header id="make-code-changes" title="Как да правим промени по кода?" %}
+
+{% section id="make-code-changes" title="Как да правим промени по кода?" %}
 
 Файлът който трябва да промерним е `index.php` и се намира тук:
 
@@ -251,9 +260,10 @@ Startapp търси в директориите `php` и `libs` когато с�
   <a href=""><span class="label label-danger">Не</span></a>
 </h4></div> -->
 
-<br />
+{% endsection %}
 
-{% page_header id="deployment" title="Качване на сървъра" %}
+
+{% section id="deployment" title="Качване на сървъра" %}
 
 Качваме промените, които сме направили със следната команда:
 
@@ -293,7 +303,8 @@ Startapp търси в директориите `php` и `libs` когато с�
 Това е нормалното поведение на всеки един deploy процес в Startapp. Хубавото обаче, че това част от поведението на deployment процеса и начина по-който работи вашето проложение може да бъде променяно! Това става благодарение на така наречените **Маркери**, за които можете да намерите информация малко по-долу!
 {% endnote %}
 
-<br />
+{% endsection %}
+
 
 {% include markers.html slug=page.slug %}
 
@@ -302,7 +313,7 @@ Startapp търси в директориите `php` и `libs` когато с�
   <a href=""><span class="label label-danger">Не</span></a>
 </h4></div> -->
 
-{% page_header id="add-mysql-to-app" title="Добавяне на MySQL към PHP приложение" %}
+{% section id="add-mysql-to-app" title="Добавяне на MySQL към PHP приложение" %}
 
     $ app cartridge add mysql-5.1 -a myphpapp
 
@@ -346,8 +357,9 @@ The phpmyadmin username and password will be the same as the MySQL credentials a
 Със добавянето на MySQL към вашето приложение също така се добавят няколко ENV променливи, които казват какъв е хоста на базата, кой е порта, както и потребитлски имена и пароли.
 
 {% include env_vars/mysql.html %}
+{% endsection %}
 
-{% page_header id="how-to-access-mysql-via-php" title="Достъпване на МySQL през PHP" %}
+{% section id="how-to-access-mysql-via-php" title="Достъпване на МySQL през PHP" %}
 
 Ако се чудите за какво бяха тези MySQL ENV променливи, които показхме отгоре и как можете да използвате във вашия PHP код, ето един прост пример как да се закачите за вашия чисто нов MySQL сървър.
 
@@ -382,9 +394,9 @@ $link->close();
 ?>
 {% endhighlight %}
 
-<br />
+{% endsection %}
 
-{% page_header id="how-to-access-mysql-via-ssh" title="Достъпване на МySQL през SSH" %}
+{% section id="how-to-access-mysql-via-ssh" title="Достъпване на МySQL през SSH" %}
 
 Първо трябва да се логнем на сървъра по SSH. Това става много лесно. Само изпълнете следната команда:
 
@@ -412,9 +424,9 @@ $link->close();
 
 Което означава, че вие сте в интерактивната конзола на MySQL!
 
-<br />
+{% endsection %}
 
-{% page_header id="how-to-access-mysql-via-devpc" title="Достъпване на МySQL през работната ви машина/лаптоп" %}
+{% section id="how-to-access-mysql-via-devpc" title="Достъпване на МySQL през работната ви машина/лаптоп" %}
 
     $ app port-forward -a myphpapp
 
@@ -446,9 +458,9 @@ $link->close();
 
     $ app show myphpapp
 
-<br />
+{% endsection %}
 
-{% page_header id="add-phpmyadmin-to-app" title="Добавяне на phpMyAdmin към PHP приложение" %}
+{% section id="add-phpmyadmin-to-app" title="Добавяне на phpMyAdmin към PHP приложение" %}
 
     $ app cartridge add phpmyadmin -a myphpapp
 
@@ -467,10 +479,10 @@ Please make note of these MySQL credentials again:
 URL: https://myphpapp-apps.startapp.bg/phpmyadmin/
 {% endhighlight %}
 
-<br />
+{% endsection %}
 
 
-{% page_header id="add-postgresql-to-app" title="PostgreSQL и PHP" %}
+{% section id="add-postgresql-to-app" title="PostgreSQL и PHP" %}
 
     $ app cartridge add postgresql-8.4 -a myphpapp
 
@@ -513,8 +525,9 @@ Connection URL: postgresql://$OPENSHIFT_POSTGRESQL_DB_HOST:$OPENSHIFT_POSTGRESQL
 Със добавянето на PostgreSQL към вашето приложение също така се добавят няколко ENV променливи, които казват какъв е хоста на базата, кой е порта, както и потребитлски имена и пароли.
 
 {% include env_vars/postgresql.html %}
+{% endsection %}
 
-{% page_header id="how-to-access-postgresql-via-php" title="Достъпване на PostgreSQL през PHP" %}
+{% section id="how-to-access-postgresql-via-php" title="Достъпване на PostgreSQL през PHP" %}
 
 Ако се чудите за какво бяха тези PostgreSQL ENV променливи, които показхме отгоре и как можете да използвате във вашия PHP код, ето един прост пример как да се закачите за вашия чисто нов PostgreSQL сървър.
 
@@ -547,10 +560,10 @@ pg_close($connection);
 ?>
 {% endhighlight %}
 
-<br />
+{% endsection %}
 
 
-{% page_header id="how-to-access-postgresql-via-ssh" title="Достъпване на PostgreSQL през SSH" %}
+{% section header id="how-to-access-postgresql-via-ssh" title="Достъпване на PostgreSQL през SSH" %}
 
 Първо трябва да се логнем на сървъра по SSH. Това става много лесно. Само изпълнете следната команда:
 
@@ -576,11 +589,11 @@ pg_close($connection);
 
 Което означава, че вие сте в интерактивната конзола на PostgreSQL!
 
-<br />
+{% endsection %}
 
 
 
-{% page_header id="how-to-access-postgresql-via-devpc" title="Достъпване на PostgreSQL. през работната ви машина/лаптоп" %}
+{% section id="how-to-access-postgresql-via-devpc" title="Достъпване на PostgreSQL. през работната ви машина/лаптоп" %}
 
     $ app port-forward -a myphpapp
 
@@ -618,11 +631,9 @@ pg_close($connection);
 
     $ app show myphpapp
 
-<br />
+{% endsection %}
 
-<br />
-
-{% page_header id="add-mongo-to-app" title="MongoDB и PHP" %}
+{% section id="add-mongo-to-app" title="MongoDB и PHP" %}
 
     $ app cartridge add mongodb-2.2 -a myphpapp
 
@@ -665,7 +676,9 @@ Connection URL: mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT/
 
 {% include env_vars/mongodb.html %}
 
-{% page_header id="how-to-access-mongodb-via-php" title="Достъпване на MongoDB през PHP" %}
+{% endsection %}
+
+{% section id="how-to-access-mongodb-via-php" title="Достъпване на MongoDB през PHP" %}
 
 Ако се чудите за какво бяха тези MongoDB ENV променливи, които показхме отгоре и как можете да използвате във вашия PHP код, ето един прост пример как да се закачите за вашия чисто нов MongoDB сървър.
 
@@ -698,9 +711,9 @@ $database = $mongo->$db_name;
 ?>
 {% endhighlight %}
 
-<br />
+{% endsection %}
 
-{% page_header id="how-to-access-mongodb-via-ssh" title="Достъпване на MongoDB през SSH" %}
+{% section id="how-to-access-mongodb-via-ssh" title="Достъпване на MongoDB през SSH" %}
 
 Първо трябва да се логнем на сървъра по SSH. Това става много лесно. Само изпълнете следната команда:
 
@@ -724,9 +737,9 @@ $database = $mongo->$db_name;
 
 Което означава, че вие сте в интерактивната конзола на MongoDB!
 
-<br />
+{% endsection %}
 
-{% page_header id="how-to-access-mongodb-via-devpc" title="Достъпване на MongoDB през работната ви машина/лаптоп" %}
+{% section id="how-to-access-mongodb-via-devpc" title="Достъпване на MongoDB през работната ви машина/лаптоп" %}
 
     $ app port-forward -a myphpapp
 
@@ -760,9 +773,9 @@ $database = $mongo->$db_name;
     $ app show myphpapp
 
 
-<br />
+{% endsection %}
 
-{% page_header id="create-codeigniter-app" title="Инсталиране на Codeigniter" %}
+{% section id="create-codeigniter-app" title="Инсталиране на Codeigniter" %}
 
 
 Благодарение на **Startapp Quickstarts** можете да инсталирате Codeigniter само с една команда:
@@ -774,9 +787,9 @@ $database = $mongo->$db_name;
 #### Подробна информация за инсталиране и конфигуриране на Codeigniter [можете да получите тук](#)
 
 
-<br />
+{% endsection %}
 
-{% page_header id="create-cakephp-app" title="Инсталиране на CakePHP" %}
+{% section id="create-cakephp-app" title="Инсталиране на CakePHP" %}
 
 Благодарение на **Startapp Quickstarts** можете да инсталирате CakePHP само с една команда:
 
@@ -786,10 +799,10 @@ $database = $mongo->$db_name;
 
 #### Подробна информация за инсталиране и конфигуриране на CakePHP [можете да получите тук](#)
 
+{% endsection %}
 
-<br />
 
-{% page_header id="add-composer" title="Добавяне на Composer" %}
+{% section id="add-composer" title="Добавяне на Composer" %}
 
 За да можете да изпозлвате Composer на Startapp, трябва да направите следното:
 
@@ -861,5 +874,7 @@ EOF
     git push
 
 Това е! Приятна работа с Composer!
+
+{% endsection %}
 
 {% include help/php.html %}
