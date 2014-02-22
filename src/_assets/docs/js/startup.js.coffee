@@ -16,3 +16,5 @@ $('.docs-tabs a').click (event) ->
   event.preventDefault()
   $(this).tab('show')
   return false
+
+$('.read-more .caption').responsiveEqualHeightGrid()
