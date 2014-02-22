@@ -14,6 +14,7 @@ noToc: true
 {% page_header id="fast-create-php-app" title="Бързи инструкции" %}
 
 {%assign install_url="/getting-started/app-client-tools-install.html" %}
+{%assign php_full="/getting-started/startapp-with-php.html" %}
 
 За да работят примерите по-долу:
 
@@ -50,7 +51,7 @@ noToc: true
 
 <div class="text-center">
   <p class="lead">Ако тази информация не е достатъчна, тогава прочети</p>
-  <h2><a href="/getting-started/startapp-with-php.html" alt="Подробни инструкции за инсталиране на PHP приложение">Подробни инструкции</a></h2>
+  <h2><a href="{{ php_full }}" alt="Подробни инструкции за инсталиране на PHP приложение">Подробни инструкции</a></h2>
   (All-in-one)
 </div>
 
@@ -65,11 +66,11 @@ noToc: true
         <div class="caption">
           <h3>PHP приложения</h3>
           <ul class="list-unstyled">
-              <li><a href="/getting-started/startapp-with-php.html#create-php-app-in-details">Създаване</a></li>
-              <li><a href="/getting-started/startapp-with-php.html#file-structure">Файлова структура</a></li>
-              <li><a href="/getting-started/startapp-with-php.html#make-code-changes">Промени по кода</a></li>
-              <li><a href="/getting-started/startapp-with-php.html#deployment">Качване на сървъра</a></li>
-              <li><a href="/getting-started/startapp-with-php.html#markers">Маркери</a></li>
+              <li><a href="{{ php_full }}#create-php-app-in-details">Създаване</a></li>
+              <li><a href="{{ php_full }}#file-structure">Файлова структура</a></li>
+              <li><a href="{{ php_full }}#make-code-changes">Промени по кода</a></li>
+              <li><a href="{{ php_full }}#deployment">Качване на сървъра</a></li>
+              <li><a href="{{ php_full }}#markers">Маркери</a></li>
           </ul>
         </div>
       </div>
@@ -79,9 +80,9 @@ noToc: true
         <div class="caption">
           <h3>Бази данни</h3>
           <ul class="list-unstyled">
-             <li><a href="">MySQL и PHP</a></li>
-             <li><a href="">PostgreSQL и PHP</a></li>
-             <li><a href="">MongoDB и PHP</a></li>
+             <li><a href="{{ php_full }}#add-mysql-to-app">MySQL и PHP</a></li>
+             <li><a href="{{ php_full }}#add-postgresql-to-app">PostgreSQL и PHP</a></li>
+             <li><a href="{{ php_full }}#add-mongo-to-app">MongoDB и PHP</a></li>
           </ul>
         </div>
       </div>
@@ -91,8 +92,8 @@ noToc: true
         <div class="caption">
           <h3>PHP Frameworks</h3>
           <ul class="list-unstyled">
-              <li><a href="">Инсталиране на Codeigniter</a></li>
-              <li><a href="">Инсталиране на CakePHP</a></li>
+              <li><a href="{{ php_full }}#create-codeigniter-app">Инсталиране на Codeigniter</a></li>
+              <li><a href="{{ php_full }}#create-cakephp-app">Инсталиране на CakePHP</a></li>
           </ul>
         </div>
       </div>
@@ -102,7 +103,7 @@ noToc: true
         <div class="caption">
           <h3>Други</h3>
           <ul class="list-unstyled">
-            <li><a href="">Добавяне на Composer</a></li>
+            <li><a href="{{ php_full }}#add-composer">Добавяне на Composer</a></li>
         </div>
       </div>
     </div>
