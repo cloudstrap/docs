@@ -10,7 +10,7 @@ module Jekyll
     end
 
     def render(context)
-      "<div class='bs-docs-section'><div class='page-header'><h1 id='#{@id}'>#{@text}</h1></div>"
+      "<div class='bs-docs-section'><div id='#{@id}' class='page-header'><h1>#{@text}</h1></div></div>"
     end
   end
 end

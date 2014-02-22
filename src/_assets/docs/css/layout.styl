@@ -143,8 +143,14 @@ p
 
 /* /Sidebar */
 
-.bs-docs-section > h4
-  margin-top: 30px
+.bs-docs-section
+
+  & .page-header
+    padding-top: 80px
+    margin-top: -60px
+
+  & > h4
+    margin-top: 30px
 
 section.read-more
 
@@ -154,6 +160,9 @@ section.read-more
 
   & li a
     font-size: 16px
+
+  & .caption h3
+    margin: 0 0 20px 0
 
 .bs-sidenav
   padding-top: 0
