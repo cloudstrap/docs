@@ -18,7 +18,7 @@ noToc: true
 
 За да работят примерите по-долу:
 
-- Регистрирайте се безплатно в [http://startapp.bg](#)
+- Регистрирай се безплатно в [http://startapp.bg](#)
 - Инсталирай Git за: [Windows]({{ install_url }}#install-git-windows) | [Mac OS]({{ install_url }}#install-git-macos) | [Linux]({{ install_url }}#install-git-linux)
 - Инсталирай Startapp Client Tools за: [Windows]({{ install_url }}#install-app-windows) | [Mac OS]({{ install_url }}#install-app-macos) | [Linux]({{ install_url }}#install-app-linux)
 
@@ -45,7 +45,7 @@ noToc: true
     http://myphpapp-<mydomain>.startapp.bg/
 
 
-**Да толкова е просто!**
+**Да, толкова е просто!**
 
 <br />
 
