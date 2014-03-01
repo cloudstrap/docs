@@ -56,6 +56,7 @@ noToc: true
 <section class="read-more">
   <ul class="list-unstyled">
     <li><a href="{{ site.startapp.groups }}">Попитай Startapp общността в Google Groups</a></li>
+    <li><a href="{{ site.startapp.irc }}">Пиши в #startapp IRC канала в Freenode</a></li>
   </ul>
 </section>
 
@@ -73,6 +74,6 @@ noToc: true
 
 Ние любителите на отворената идея и отворения код, сме страхотни, защото обичаме да споделяме.
 Споделяме идеи, когато публикуваме творенията си в `GitHub`. Чепим идеи когато четем код в `GitHub`.
-Трупаме опит когато прелистваме `stackoverflow`.
+Трупаме опит когато помагаме в `stackoverflow`.
 
 Сподели твоите знания опит и сред [Startapp общността в Google Groups]({{ site.startapp.groups }})
