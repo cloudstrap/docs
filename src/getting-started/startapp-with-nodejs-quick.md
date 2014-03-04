@@ -45,7 +45,7 @@ noToc: true
     http://mynodejsapp-<mydomain>.startapp.bg/
 
 
-**Да толкова е просто!**
+**Да, толкова е лесно!**
 
 <br />
 
@@ -107,7 +107,7 @@ noToc: true
         <div class="caption">
           <h3>Други</h3>
           <ul class="list-unstyled">
-            <li><a href="{{ full_docs }}#package-json">Пакети и package.json</a></li>
+            <li><a href="{{ full_docs }}#package-json">NodeJS модули/пакети</a></li>
         </div>
       </div>
     </div>

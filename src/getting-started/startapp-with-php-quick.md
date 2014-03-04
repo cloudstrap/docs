@@ -45,7 +45,7 @@ noToc: true
     http://myphpapp-<mydomain>.startapp.bg/
 
 
-**Да толкова е просто!**
+**Да, толкова е лесно!**
 
 <br />
 

@@ -1,59 +1,52 @@
 ---
 layout: document
 
-title:  "PHP приложения в Startapp"
-date:   2013-11-25 16:58:04
-header_title:  '> app create &lt;app&gt; with php'
-lead: "За PHP любознайковци! Дисекция на PHP приложенията в <strong>Startapp.bg</strong> Сloud"
-slug: startapp-with-php
-keywords: "хостинг, php хостинг, python хостинг, ruby хостинг, nodejs хостинг"
+title:  "NodeJS приложения в Startapp.bg NodeJS хостинг."
+date:   2014-03-01 18:58:04
+header_title:  '> app create &lt;app&gt; with nodejs'
+lead: "За любознателни JavaScript машини! Създаване на NodeJS приложения в <strong>Startapp</strong>  Сloud"
+slug: startapp-with-nodejs
+keywords: "хостинг, nodejs хостинг, nodejs mongodb, nodejs mysql, nodejs framework, nodejs приложения, nodejs"
 description: ""
 noToc: true
 ---
 
-{% page_header id="quickstart-php" title="Стартиране с PHP" %}
+{% page_header id="quickstart" title="Стартиране с NodeJS" %}
 
 {% include customer-requirements.html %}
 
-{% section id="create-php-app-in-details" title="Създаване на ново PHP приложение" %}
+{% section id="create-app-in-details" title="Създаване на ново NodeJS приложение" %}
 
-Създаването на `php` приложения в Startapp е изключително лесно и в повечето случаи е само с 1 ред код:
+Създаването на `nodejs` приложения в Startapp е изключително лесно и в повечето случаи е само с 1 ред код:
 
-    $ app create myphpapp php
+    $ app create mynodejsapp nodejs-0.10
 
-{% note info, Относно myphpapp! %}
-Ако се чудите дали това `myphpapp` е нещо вълшебно, отговорът е НЕ това е просто името на на нашето ново приложение :) Което означава, че синтаксисът е следния:
+{% note info, Относно mynodejsapp! %}
+Ако се чудите дали това `mynodejsapp` е нещо вълшебно, отговорът е НЕ това е просто името на на нашето ново приложение :) Което означава, че синтаксисът е следния:
 
     $ app create <име-на-приложението> <език>
 
-Това означава също, че навсякъде в примера където използваме `myphpapp` имайте предвид, че там стои името на вашето приложение.
+Това означава също, че навсякъде в примера където използваме `mynodejsapp` имайте предвид, че там стои името на вашето приложение.
 
 {%endnote%}
 
 След като напишете тази команда на екрана ви ще се изпише нещо такова:
 
 {% highlight sh %}
-Using php-5.3 (PHP 5.3) for 'php'
-
 Application Options
 -------------------
-Domain:     demos
-Cartridges: php-5.3
+Domain:     apps
+Cartridges: nodejs-0.10
 Gear Size:  default
 Scaling:    no
 
-Creating application 'myphpapp' ... done
+Creating application 'mynodejsapp' ... done
 
 
-Waiting for your DNS name to be available ...
-    retry # 1 - Waiting for DNS: myphpapp-demos.startapp.bg
-    retry # 2 - Waiting for DNS: myphpapp-demos.startapp.bg
-    retry # 3 - Waiting for DNS: myphpapp-demos.startapp.bg
-    retry # 4 - Waiting for DNS: myphpapp-demos.startapp.bg
-done
+Waiting for your DNS name to be available ... done
 
-Cloning into 'myphpapp'...
-The authenticity of host 'myphpapp-demos.startapp.bg (93.123.32.34)' can't be established.
+Cloning into 'mynodejsapp'...
+The authenticity of host 'mynodejsapp-apps.startapp.bg (93.123.32.34)' can't be established.
 RSA key fingerprint is e2:4c:39:1a:d1:d1:1c:cc:66:2a:bf:43:42:56:c4:26.
 Are you sure you want to continue connecting (yes/no)?
 {% endhighlight %}
@@ -69,17 +62,17 @@ Are you sure you want to continue connecting (yes/no)?
 Ако сте направили това на екрана ви ще бъдат изписани следните неща:
 
 {% highlight sh %}
-Warning: Permanently added 'myphpapp-demos.startapp.bg' (RSA) to the list of known hosts.
+Warning: Permanently added 'mynodejsapp-apps.startapp.bg' (RSA) to the list of known hosts.
 Checking connectivity... done
 
-Your application 'myphpapp' is now available.
+Your application 'mynodejsapp' is now available.
 
-  URL:        http://myphpapp-demos.startapp.bg/
-  SSH to:     52debd81bfbf5aa4ca000482@myphpapp-demos.startapp.bg
-  Git remote: ssh://52debd81bfbf5aa4ca000482@myphpapp-demos.startapp.bg/~/git/myphpapp.git/
-  Cloned to:  /private/tmp/myphpapp
+  URL:        http://mynodejsapp-apps.startapp.bg/
+  SSH to:     5313bc74bfbf5a097a000163@mynodejsapp-apps.startapp.bg
+  Git remote: ssh://5313bc74bfbf5a097a000163@mynodejsapp-apps.startapp.bg/~/git/mynodejsapp.git/
+  Cloned to:  /private/tmp/mynodejsapp
 
-Run 'app show-app myphpapp' for more details about your app.
+Run 'app show-app mynodejsapp' for more details about your app.
 {% endhighlight %}
 
 ---
@@ -88,7 +81,7 @@ Run 'app show-app myphpapp' for more details about your app.
 
 За да видите вашия сайт отворете с браузър URL-то което по-горе е изписано след `URL:`, в нашия случай:
 
-    http://myphpapp-demos.startapp.bg/
+    http://mynodejsapp-demos.startapp.bg/
 
 ---
 
@@ -96,7 +89,7 @@ Run 'app show-app myphpapp' for more details about your app.
 
 Всички приложения в Startapp.bg идват с SSH достъп. За да се логнете на сървъра през SSH използвайте адреса изписан след `SSH to:` в този пример той е :
 
-    ssh 52debd81bfbf5aa4ca000482@myphpapp-demos.startapp.bg
+    ssh 5313bc74bfbf5a097a000163@mynodejsapp-apps.startapp.bg
 
 {% note warning, Внимание! %}
 Този пример е валиден за Mac OS и Linux. Ако използвате Windows трябва да имате инсталирано [Putty](/getting-started/using-putty-examples.html). Ако не знаете как да инсталирате и използвате [Putty](/getting-started/using-putty-examples.html), можете да разгледате [примера тук](/getting-started/using-putty-examples.html)
@@ -108,12 +101,12 @@ Run 'app show-app myphpapp' for more details about your app.
 
 Всяко приложение в Startapp.bg се съхранява в отделно Git хранилище. Адресът на хранилището на вашето приложение може да го видите веднага след "Git remote:", което в този конкретен случай е :
 
-    ssh://52debd81bfbf5aa4ca000482@myphpapp-demos.startapp.bg/~/git/myphpapp.git/
+    ssh://5313bc74bfbf5a097a000163@mynodejsapp-apps.startapp.bg/~/git/mynodejsapp.git/
 
 Което означава, че ако иксаме да клонираме нашето приложение/сайт някъде другаде а не там където го е направило автоматично startapp tools, трябва само да изпълним следните команди:
 
     cd /path/to/my/working/dir
-    git clone ssh://52debd81bfbf5aa4ca000482@myphpapp-demos.startapp.bg/~/git/myphpapp.git/
+    git clone ssh://5313bc74bfbf5a097a000163@mynodejsapp-apps.startapp.bg/~/git/mynodejsapp.git/
 
 Това е!
 
@@ -125,9 +118,9 @@ Run 'app show-app myphpapp' for more details about your app.
 {% endsection %}
 
 
-{% section id="file-structure" title="Файлова структура на PHP приложението" %}
+{% section id="file-structure" title="Файлова структура на NodeJS приложението" %}
 
-След като създадете вашето ново PHP приложение и го клонирате на компютъра си, ще видите следните файлове и директории.
+След като създадете вашето ново NodeJS приложение и го клонирате на компютъра си, ще видите следните файлове и директории.
 
 <div class="table-responsive">
     <table class="table table-bordered table-striped">
@@ -145,37 +138,30 @@ Run 'app show-app myphpapp' for more details about your app.
 
         <tr>
           <td>
-            <code>php/</code>
+            <code>node_modules/</code>
           </td>
-          <td>Това е document root-а на приложението. Вашият код трябва да бъде тук.</td>
+          <td>Всички Node модулу и тяхните dependencies. В нея можеш да добавяш и своите custom модули. <b>Важно: не я изтривай, не я преименувай.</b></td>
         </tr>
 
         <tr>
           <td>
-            <code>php/index.php</code>
+            <code>server.js</code>
           </td>
-          <td>Стандартен index като на всяко PHP приложение</td>
+          <td>Това е файлът, чрез който Startapp ще стартира твоето приложение.</td>
         </tr>
 
         <tr>
           <td>
-            <code>libs/</code>
+            <code>package.json</code>
           </td>
-          <td>Място за допълнителни библиотеки</td>
-        </tr>
-
-        <tr>
-          <td>
-            <code>misc/</code>
-          </td>
-          <td>Място за PHP код който не е достъпен от крайни потребители</td>
+          <td>Това е файлът в който описване вашие dependencies.</td>
         </tr>
 
         <tr>
           <td>
             <code>deplist.txt</code>
           </td>
-          <td>Списък от PEAR пакети които да бъдат инсталирани *1</td>
+          <td>Deprecated.</td>
         </tr>
 
         <tr>
@@ -213,7 +199,7 @@ Run 'app show-app myphpapp' for more details about your app.
   </div>
 
 {% note warning, Важно! %}
-Startapp търси в директориите `php` и `libs` когато сервиеа вашето приложение на клиентите. Файлът **index.php** (който се намира в директория **php**) ще поеме всички requests от root URL-а на вашето приложение. Разбира се може да си създавате и други директории, ако желате, с цел по-добра огранизация на вашето приложение или поради друга ваша причина.
+Моля не пипай директориите node_modules и .openshift. Разбира се може да си създавате и други директории, ако желате, с цел по-добра огранизация на вашето приложение или поради друга ваша причина.
 {% endnote %}
 
 <!-- <div class="well well-startapp well-sm" style="margin-top: 20px;"><h4>Разбра ли кой файл за какво се ползва?
@@ -226,17 +212,17 @@ Startapp търси в директориите `php` и `libs` когато с�
 
 {% section id="make-code-changes" title="Как да правим промени по кода?" %}
 
-Файлът който трябва да промерним е `index.php` и се намира тук:
+Във всяко едно ново NodeJS приложение има по един `index.html` файл. Той се използва от `server.js` като темплейтен файл за може лесно да каже "Hello World":
 
-    $ cd /път/до/myphpapp/php/
+    $ cd /път/до/mynodejsapp/
 
 Можете да го редактирате с предпочитан от вас текстов редактор или през командния ред както е в този пример.
 
-След като се намираме вече в `/път/до/myphpapp/php/` трябва да изпълним следния код:
+След като се намираме вече в `/път/до/mynodejsapp/` трябва да изпълним следния код:
 
-    echo 'Hello Wolrd!' > index.php
+    echo 'Hello Wolrd!' > index.html
 
-За да проверим дали сме променили успешно `index.php` файла изпълняваме следната команда:
+За да проверим дали сме променили успешно `index.html` файла изпълняваме следната команда:
 
     git status
 
@@ -247,13 +233,13 @@ Startapp търси в директориите `php` и `libs` когато с�
     #   (use "git add <file>..." to update what will be committed)
     #   (use "git checkout -- <file>..." to discard changes in working directory)
     #
-    # modified:   index.php
+    # modified:   index.html
     #
     no changes added to commit (use "git add" and/or "git commit -a")
 
 Браво! Трудната част мина успешно :) Сега остана само да запишем промените в `Git` и да ги качим на сървъра:
 
-    git commit -am "Change content of index.php"
+    git commit -am "Change content of index.html"
 
 <!-- <div class="well well-startapp well-sm" style="margin-top: 20px;"><h4>Успя ли да направиш първата си промяна?
   <a href=""><span class="label label-success">Да</span></a>
@@ -271,32 +257,43 @@ Startapp търси в директориите `php` и `libs` когато с�
 
 Резултатът от `git push` трябва да е нещо подобно на това:
 
-    Counting objects: 7, done.
+    Counting objects: 5, done.
     Delta compression using up to 8 threads.
-    Compressing objects: 100% (4/4), done.
-    Writing objects: 100% (4/4), 419 bytes | 0 bytes/s, done.
-    Total 4 (delta 2), reused 0 (delta 0)
-    remote: Waiting for stop to finish
-    remote: Building git ref 'master', commit 0c54629
-    remote: Building PHP cartridge
+    Compressing objects: 100% (2/2), done.
+    Writing objects: 100% (3/3), 283 bytes | 0 bytes/s, done.
+    Total 3 (delta 1), reused 0 (delta 0)
+    remote: Stopping NodeJS cartridge
+    remote: Saving away previously installed Node modules
+    remote: Building git ref 'master', commit ed321be
+    remote: Building NodeJS cartridge
+    remote: npm info it worked if it ends with ok
+    remote: npm info using npm@1.2.17
+    remote: npm info using node@v0.10.5
+    remote: npm info preinstall OpenShift-Sample-App@1.0.0
+    remote: npm info build /var/lib/openshift/5313bc74bfbf5a097a000163/app-root/runtime/repo
+    remote: npm info linkStuff OpenShift-Sample-App@1.0.0
+    remote: npm info install OpenShift-Sample-App@1.0.0
+    remote: npm info postinstall OpenShift-Sample-App@1.0.0
+    remote: npm info prepublish OpenShift-Sample-App@1.0.0
+    remote: npm info ok
     remote: Preparing build for deployment
-    remote: Deployment id is 1f5b7eef
+    remote: Deployment id is 5fb78009
     remote: Activating deployment
-    remote: Starting PHP cartridge
+    remote: Starting NodeJS cartridge
     remote: Result: success
     remote: Activation status: success
     remote: Deployment completed with status: success
-    To ssh://52debd81bfbf5aa4ca000482@myphpapp-demos.startapp.bg/~/git/myphpapp.git/
-       22f27f1..2463db6  master -> master
+    To ssh://5313bc74bfbf5a097a000163@mynodejsapp-apps.startapp.bg/~/git/mynodejsapp.git/
+       8ed094d..ed321be  master -> master
 
 Това е! Можете да отворите URL на приложението си и да се насладите на промените, които току що направихте :)
 
 {% note info, За любопитните! %}
 За по-любитните от вас, на които прави впечатление след като написахте `git push` се случиха няколко интересни неща:
 
-- Stopping PHP cartridge
+- remote: Stopping NodeJS cartridge
 - Activating deployment
-- Starting PHP cartridge
+- Starting NodeJS cartridge
 
 Това е нормалното поведение на всеки един deploy процес в Startapp. Хубавото обаче, че това част от поведението на deployment процеса и начина по-който работи вашето проложение може да бъде променяно! Това става благодарение на така наречените **Маркери**, за които можете да намерите информация малко по-долу!
 {% endnote %}
@@ -311,11 +308,11 @@ Startapp търси в директориите `php` и `libs` когато с�
   <a href=""><span class="label label-danger">Не</span></a>
 </h4></div> -->
 
-{% section id="add-mysql-to-app" title="Добавяне на MySQL към PHP приложение" %}
+{% section id="add-mysql-to-app" title="Добавяне на MySQL към NodeJS приложение" %}
 
-    $ app cartridge add mysql-5.1 -a myphpapp
+    $ app cartridge add mysql-5.1 -a mynodejsapp
 
-{% note info, Относно аргумента '-a myphpapp' %}
+{% note info, Относно аргумента '-a mynodejsapp' %}
 Ако се намирате в директорията на приложението си, можете да пропускате аргумента '-a appname'!
 
 Което означава, че ако се намирате в HOME директорията си трябва да използвате следния синтаксис:
@@ -324,19 +321,19 @@ Startapp търси в директориите `php` и `libs` когато с�
 
 Ако обаче се намирате в директорията на вашето приложение:
 
-    cd /path/to/myphpapp
+    cd /path/to/mynodejsapp
     app cartridge add mysql-5.1
 
 {%endnote%}
 
 {% highlight sh %}
-Adding mysql-5.1 to application 'myphpapp' ... done
+Adding mysql-5.1 to application 'mynodejsapp' ... done
 
 mysql-5.1 (MySQL 5.1)
 ---------------------
   Gears:          Located with php-5.3
   Connection URL: mysql://$OPENSHIFT_MYSQL_DB_HOST:$OPENSHIFT_MYSQL_DB_PORT/
-  Database Name:  myphpapp
+  Database Name:  mynodejsapp
   Password:       gBq1wGX1sKAi
   Username:       adminrWaKHZ3
 
@@ -344,7 +341,7 @@ MySQL 5.1 database added.  Please make note of these credentials:
 
        Root User: adminrWaKHZ3
    Root Password: gBq1wGX1sKAi
-   Database Name: myphpapp
+   Database Name: mynodejsapp
 
 Connection URL: mysql://$OPENSHIFT_MYSQL_DB_HOST:$OPENSHIFT_MYSQL_DB_PORT/
 
@@ -357,9 +354,9 @@ The phpmyadmin username and password will be the same as the MySQL credentials a
 {% include env_vars/mysql.html %}
 {% endsection %}
 
-{% section id="how-to-access-mysql-via-php" title="Достъпване на МySQL през PHP" %}
+{% section id="how-to-access-mysql-via-nodejs" title="Достъпване на МySQL през NodeJS" %}
 
-Ако се чудите за какво бяха тези MySQL ENV променливи, които показхме отгоре и как можете да използвате във вашия PHP код, ето един прост пример как да се закачите за вашия чисто нов MySQL сървър.
+Ако се чудите за какво бяха тези MySQL ENV променливи, които показхме отгоре и как можете да използвате във вашия код, ето един прост пример как да се закачите за вашия чисто нов MySQL сървър.
 
 {% highlight php %}
 <?php
@@ -398,7 +395,7 @@ $link->close();
 
 Първо трябва да се логнем на сървъра по SSH. Това става много лесно. Само изпълнете следната команда:
 
-    $ app ssh -a myphpapp
+    $ app ssh -a mynodejsapp
 
 След като се логнете на сървъра напишете:
 
@@ -426,7 +423,7 @@ $link->close();
 
 {% section id="how-to-access-mysql-via-devpc" title="Достъпване на МySQL през работната ви машина/лаптоп" %}
 
-    $ app port-forward -a myphpapp
+    $ app port-forward -a mynodejsapp
 
 Като резултат от тази команда ще видите следното:
 
@@ -454,37 +451,37 @@ $link->close();
 
 Ако сте забравили вашите `username` и `password` можете да ги видите така:
 
-    $ app show myphpapp
+    $ app show mynodejsapp
 
 {% endsection %}
 
 {% section id="add-phpmyadmin-to-app" title="Добавяне на phpMyAdmin към PHP приложение" %}
 
-    $ app cartridge add phpmyadmin -a myphpapp
+    $ app cartridge add phpmyadmin -a mynodejsapp
 
 {% highlight sh %}
 Using phpmyadmin-4 (phpMyAdmin 4.0) for 'phpmyadmin'
-Adding phpmyadmin-4 to application 'myphpapp' ... done
+Adding phpmyadmin-4 to application 'mynodejsapp' ... done
 
 phpmyadmin-4 (phpMyAdmin 4.0)
 -----------------------------
   Gears:          Located with php-5.3, mysql-5.1
-  Connection URL: https://myphpapp-apps.startapp.bg/phpmyadmin/
+  Connection URL: https://mynodejsapp-apps.startapp.bg/phpmyadmin/
 
 Please make note of these MySQL credentials again:
   Root User: adminH3N4yWf
   Root Password: 7nxXBwI9aV_m
-URL: https://myphpapp-apps.startapp.bg/phpmyadmin/
+URL: https://mynodejsapp-apps.startapp.bg/phpmyadmin/
 {% endhighlight %}
 
 {% endsection %}
 
 
-{% section id="add-postgresql-to-app" title="PostgreSQL и PHP" %}
+{% section id="add-postgresql-to-app" title="PostgreSQL и NodeJS" %}
 
-    $ app cartridge add postgresql-8.4 -a myphpapp
+    $ app cartridge add postgresql-8.4 -a mynodejsapp
 
-{% note info, Относно аргумента '-a myphpapp' %}
+{% note info, Относно аргумента '-a mynodejsapp' %}
 Ако се намирате в директорията на приложението си, можете да пропускате аргумента '-a appname'!
 
 Което означава, че ако се намирате в HOME директорията си трябва да използвате следния синтаксис:
@@ -493,20 +490,20 @@ URL: https://myphpapp-apps.startapp.bg/phpmyadmin/
 
 Ако обаче се намирате в директорията на вашето приложение:
 
-    cd /path/to/myphpapp
+    cd /path/to/mynodejsapp
     app cartridge add postgresql-8.4
 
 {%endnote%}
 
 {% highlight sh %}
 
-Adding postgresql-8.4 to application 'myphpapp' ... done
+Adding postgresql-8.4 to application 'mynodejsapp' ... done
 
 postgresql-8.4 (PostgreSQL 8.4)
 -------------------------------
   Gears:          Located with php-5.3
   Connection URL: postgresql://$OPENSHIFT_POSTGRESQL_DB_HOST:$OPENSHIFT_POSTGRESQL_DB_PORT
-  Database Name:  myphpapp
+  Database Name:  mynodejsapp
   Password:       jBeeIbXSTGsw
   Username:       adminfj66lmx
 
@@ -514,7 +511,7 @@ PostgreSQL 8.4 database added.  Please make note of these credentials:
 
    Root User: adminfj66lmx
    Root Password: jBeeIbXSTGsw
-   Database Name: myphpapp
+   Database Name: mynodejsapp
 
 Connection URL: postgresql://$OPENSHIFT_POSTGRESQL_DB_HOST:$OPENSHIFT_POSTGRESQL_DB_PORT
 {% endhighlight %}
@@ -525,9 +522,9 @@ Connection URL: postgresql://$OPENSHIFT_POSTGRESQL_DB_HOST:$OPENSHIFT_POSTGRESQL
 {% include env_vars/postgresql.html %}
 {% endsection %}
 
-{% section id="how-to-access-postgresql-via-php" title="Достъпване на PostgreSQL през PHP" %}
+{% section id="how-to-access-postgresql-via-nodejs" title="Достъпване на PostgreSQL през NodeJS" %}
 
-Ако се чудите за какво бяха тези PostgreSQL ENV променливи, които показхме отгоре и как можете да използвате във вашия PHP код, ето един прост пример как да се закачите за вашия чисто нов PostgreSQL сървър.
+Ако се чудите за какво бяха тези PostgreSQL ENV променливи, които показхме отгоре и как можете да използвате във вашия код, ето един прост пример как да се закачите за вашия чисто нов PostgreSQL сървър.
 
 {% highlight php %}
 <?php
@@ -565,7 +562,7 @@ pg_close($connection);
 
 Първо трябва да се логнем на сървъра по SSH. Това става много лесно. Само изпълнете следната команда:
 
-    $ app ssh -a myphpapp
+    $ app ssh -a mynodejsapp
 
 След като се логнете на сървъра напишете:
 
@@ -576,14 +573,14 @@ pg_close($connection);
     psql (8.4.18)
     Type "help" for help.
 
-    myphpapp=# help
+    mynodejsapp=# help
     You are using psql, the command-line interface to PostgreSQL.
     Type:  \copyright for distribution terms
            \h for help with SQL commands
            \? for help with psql commands
            \g or terminate with semicolon to execute query
            \q to quit
-    myphpapp=#
+    mynodejsapp=#
 
 Което означава, че вие сте в интерактивната конзола на PostgreSQL!
 
@@ -593,7 +590,7 @@ pg_close($connection);
 
 {% section id="how-to-access-postgresql-via-devpc" title="Достъпване на PostgreSQL. през работната ви машина/лаптоп" %}
 
-    $ app port-forward -a myphpapp
+    $ app port-forward -a mynodejsapp
 
 Като резултат от тази команда ще видите следното:
 
@@ -627,15 +624,15 @@ pg_close($connection);
 
 Ако сте забравили вашите `username` и `password` можете да ги видите така:
 
-    $ app show myphpapp
+    $ app show mynodejsapp
 
 {% endsection %}
 
-{% section id="add-mongo-to-app" title="MongoDB и PHP" %}
+{% section id="add-mongo-to-app" title="MongoDB и NodeJS" %}
 
-    $ app cartridge add mongodb-2.2 -a myphpapp
+    $ app cartridge add mongodb-2.2 -a mynodejsapp
 
-{% note info, Относно аргумента '-a myphpapp' %}
+{% note info, Относно аргумента '-a mynodejsapp' %}
 Ако се намирате в директорията на приложението си, можете да пропускате аргумента '-a appname'!
 
 Което означава, че ако се намирате в HOME директорията си трябва да използвате следния синтаксис:
@@ -644,20 +641,20 @@ pg_close($connection);
 
 Ако обаче се намирате в директорията на вашето приложение:
 
-    cd /path/to/myphpapp
+    cd /path/to/mynodejsapp
     app cartridge add mongodb-2.2
 
 {%endnote%}
 
 {% highlight sh %}
 
-Adding mongodb-2.2 to application 'myphpapp' ... done
+Adding mongodb-2.2 to application 'mynodejsapp' ... done
 
 mongodb-2.2 (MongoDB 2.2)
 -------------------------
   Gears:          Located with php-5.3
   Connection URL: mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT/
-  Database Name:  myphpapp
+  Database Name:  mynodejsapp
   Password:       jgSb9c7sGcMi
   Username:       admin
 
@@ -665,7 +662,7 @@ MongoDB 2.2 database added.  Please make note of these credentials:
 
    Root User:     admin
    Root Password: jgSb9c7sGcMi
-   Database Name: myphpapp
+   Database Name: mynodejsapp
 
 Connection URL: mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT/
 {% endhighlight %}
@@ -676,9 +673,9 @@ Connection URL: mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT/
 
 {% endsection %}
 
-{% section id="how-to-access-mongodb-via-php" title="Достъпване на MongoDB през PHP" %}
+{% section id="how-to-access-mongodb-via-nodejs" title="Достъпване на MongoDB през NodeJS" %}
 
-Ако се чудите за какво бяха тези MongoDB ENV променливи, които показхме отгоре и как можете да използвате във вашия PHP код, ето един прост пример как да се закачите за вашия чисто нов MongoDB сървър.
+Ако се чудите за какво бяха тези MongoDB ENV променливи, които показхме отгоре и как можете да използвате във вашия код, ето един прост пример как да се закачите за вашия чисто нов MongoDB сървър.
 
 {% highlight php %}
 <?php
@@ -703,7 +700,7 @@ $uri = "mongodb://" . $username . ":" . $password . "@" . $host . ":" . $port;
 $mongo = new Mongo($uri);
 
 // Името на базата данни винаги е името на самото приложение
-// Ако вашето приложение се казва myphpapp, тогава трябва да заместите <app-name> с myphpapp
+// Ако вашето приложение се казва mynodejsapp, тогава трябва да заместите <app-name> с mynodejsapp
 $database = $mongo->$db_name;
 
 ?>
@@ -715,7 +712,7 @@ $database = $mongo->$db_name;
 
 Първо трябва да се логнем на сървъра по SSH. Това става много лесно. Само изпълнете следната команда:
 
-    $ app ssh -a myphpapp
+    $ app ssh -a mynodejsapp
 
 След като се логнете на сървъра напишете:
 
@@ -739,7 +736,7 @@ $database = $mongo->$db_name;
 
 {% section id="how-to-access-mongodb-via-devpc" title="Достъпване на MongoDB през работната ви машина/лаптоп" %}
 
-    $ app port-forward -a myphpapp
+    $ app port-forward -a mynodejsapp
 
 Като резултат от тази команда ще видите следното:
 
@@ -768,111 +765,111 @@ $database = $mongo->$db_name;
 
 Ако сте забравили вашите `username` и `password` можете да ги видите така:
 
-    $ app show myphpapp
+    $ app show mynodejsapp
 
 
 {% endsection %}
 
-{% section id="create-codeigniter-app" title="Инсталиране на Codeigniter" %}
+
+{% section id="development-mode" title="Development mode" %}
+
+Ако искаш да се презареждат динамично твоите JavaScript файлове в "development" mode, когато качваш твоите промени по кода на Startapp, можеш да използваш маркера `hot_deploy` или да добавиш следния ред във `package.json` файла:
+
+    "scripts": { "start": "supervisor <relative-path-from-repo-to>/server.js" },
 
 
-Благодарение на **Startapp Quickstarts** можете да инсталирате Codeigniter само с една команда:
-
-    app create myciapp codeigniter
-
-Тази команда, автоматично ще инсталира Codeigniter, също така ще създаде автоматично MySQL база данни за вас.
-
-#### Подробна информация за инсталиране и конфигуриране на Codeigniter [можете да получите тук](#)
-
+Това ще стартира NodeJS със [Supervisor](https://npmjs.org/package/supervisor).
 
 {% endsection %}
 
-{% section id="create-cakephp-app" title="Инсталиране на CakePHP" %}
+{% section id="local-development-and-testing" title="Локална среда за разработка" %}
 
-Благодарение на **Startapp Quickstarts** можете да инсталирате CakePHP само с една команда:
+Можеш да също така да разработваш и тестваш своя NodeJS app локално, на твоята машина. За да можеш да го да разработваш локално ще тябва да направиш няколко встъпителни неща.
 
-    app create mycakeapp cakephp
+- Да инсталираш NodeJS
+- Да добавиш npm модулите които ги има на Startapp
 
-Тази команда, автоматично ще инсталира CakePHP, също така ще създаде автоматично MySQL база данни за вас.
+### 1. Информация за environment-а на Startapp
 
-#### Подробна информация за инсталиране и конфигуриране на CakePHP [можете да получите тук](#)
+#### 1.1. Виж коя версия на NodeJS използва твоето приложение
+
+    $ app ssh -a mynodejsapp --command "node -v"
+
+#### 1.2 Виж какви npm модули са инсталирани
+
+    $ app ssh -a mynodejsapp --command "npm list -g"
+
+### 2. Коя е твоята NodeJS версия?
+
+Увери се, че на локалната си машина имаш инсталирана подходяща версия на NodeJS. Използването на една и съща версия е за предпочитане в повечето случаи, но също така можеш да използваш и по-нова версия.
+
+### 3. Инсталирай модулите
+
+Инсталирай npm модулите с подходящите версии, които получи като резултат от примера в точка **1.2**. Когато инсталираш npm модулите можеш да изполваш `-g` като аргумент към `npm` ако искаш да ги инсталираш глобално. Също така като алрернативно решение можете да ги инсталирате в `home` директорията, на вашя юзър с който сте логнат.
+
+    $ pushd ~
+    $ npm install [-g] $module_name@$version
+    $ popd
+
+### 4. Стартиране на локалния сървър
+
+След като сте приключили с цялата процедура, можеш да пуснеш твоята апликация локално, като използваш някоя от следните команди.
+
+    node server.js
+    npm start -d
+    supervisor server.js
+
+Единственото което ви остава да направите е да се забавлявате докато разработвате вашето приложение :)
+
+{% endsection %}
+
+{% section id="add-modules" title="Модули" %}
+
+{% endsection %}
+
+{% section id="env-vars" title="Environment променливи" %}
+
+Вскяко едно NodeJS приложение идва с няколко environment.
+
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <colgroup>
+      <col class="col-xs-3">
+      <col class="col-xs-7">
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Име на променливата</th>
+        <th>Какво съдържа?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <code>OPENSHIFT_NODEJS_IP</code>
+        </td>
+        <td>Вътрешния IP адрес на NodeJS приложението. Използва се от Startapp.</td>
+      </tr>
+
+      <tr>
+        <td>
+          <code>OPENSHIFT_NODEJS_PORT</code>
+        </td>
+        <td>Вътрешния порт на NodeJS приложението. Използва се от Startapp.</td>
+      </tr>
+
+      <tr>
+        <td>
+          <code>OPENSHIFT_NODEJS_POLL_INTERVAL</code>
+        </td>
+        <td>Можеш да го сетнеш като user environment променлива за да смените default-ната му стройност която е 1 секунда.</td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
 
 {% endsection %}
 
 
-{% section id="add-composer" title="Добавяне на Composer" %}
-
-За да можете да изпозлвате Composer на Startapp, трябва да направите следното:
-
-Влезте във директорията на проекта си:
-
-    $ cd /път/до/myphpapp/
-
-Изпълнете следния код (copy/paste) и натиснете `ENTER`:
-
-{% highlight sh %}
-cat > .openshift/action_hooks/deploy << "EOF"
-#!/bin/bash
-# This deploy hook gets executed after dependencies are resolved and the
-# build hook has been run but before the application has been started back
-# up again.  This script gets executed directly, so it could be python, php,
-# ruby, etc.
-
-export COMPOSER_HOME="$OPENSHIFT_DATA_DIR/.composer"
-
-if [ ! -f "$OPENSHIFT_DATA_DIR/composer.phar" ]; then
-    curl -s https://getcomposer.org/installer | /usr/bin/php -- --install-dir=$OPENSHIFT_DATA_DIR
-else
-  /usr/bin/php $OPENSHIFT_DATA_DIR/composer.phar self-update
-fi
-
-# Install phars if composer.json exists
-if [ -f "$OPENSHIFT_REPO_DIR/composer.json" ]; then
-  ( unset GIT_DIR ; cd $OPENSHIFT_REPO_DIR ; /usr/bin/php $OPENSHIFT_DATA_DIR/composer.phar install )
-fi
-EOF
-{% endhighlight %}
-
-Този скрипт ни направи нов файл `.openshift/action_hooks/deploy`, който се изпълнява вски път след като push-вате промени към сървъра.
-
-За да заработи този скрипт трябва да го направим изпълним:
-
-    chmod +x .openshift/action_hooks/deploy
-
-Остана да го добавим в `Git` и да го качин на сървъра:
-
-    git add .openshift/action_hooks/deploy
-    git commit -am "Enable Composer"
-    git push
-
-Сега вече Comsposer е инсталиран!
-
-### Добавяне на composer.json
-
-За да инсталирате пакети с Comsposer е необходимо да създадете `composer.json` файл тук `/път/до/myphpapp/composer.json` и да опишете, кои пакети искате да ви бъдат инсталирани.
-
-Създаваме `composer.json`
-
-    cd /път/до/myphpapp/
-    cat <<EOF> composer.json
-    {
-        "require": {
-            "monolog/monolog": "1.0.*"
-        }
-    }
-    EOF
-
-Добавяме го в `Git`
-
-    git add composer.json
-    git commit -am "Add composer.json"
-
-Качваме го на сървъра
-
-    git push
-
-Това е! Приятна работа с Composer!
-
-{% endsection %}
-
-{% include help/php.html %}
+{% include help/nodejs.html %}
