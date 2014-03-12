@@ -42,7 +42,7 @@ noToc: true
 
 За предпочитане да е **различен от IE** :)
 
-    http://mynodejsapp-<mydomain>.startapp.bg/
+    http://mynodejsapp-<mydomain>.sapp.io/
 
 
 **Да, толкова е лесно!**

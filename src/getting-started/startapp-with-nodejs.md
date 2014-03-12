@@ -46,7 +46,7 @@ Creating application 'mynodejsapp' ... done
 Waiting for your DNS name to be available ... done
 
 Cloning into 'mynodejsapp'...
-The authenticity of host 'mynodejsapp-apps.startapp.bg (93.123.32.34)' can't be established.
+The authenticity of host 'mynodejsapp-demos.sapp.io (93.123.32.34)' can't be established.
 RSA key fingerprint is e2:4c:39:1a:d1:d1:1c:cc:66:2a:bf:43:42:56:c4:26.
 Are you sure you want to continue connecting (yes/no)?
 {% endhighlight %}
@@ -62,14 +62,14 @@ Are you sure you want to continue connecting (yes/no)?
 Ако сте направили това на екрана ви ще бъдат изписани следните неща:
 
 {% highlight sh %}
-Warning: Permanently added 'mynodejsapp-apps.startapp.bg' (RSA) to the list of known hosts.
+Warning: Permanently added 'mynodejsapp-demos.sapp.io' (RSA) to the list of known hosts.
 Checking connectivity... done
 
 Your application 'mynodejsapp' is now available.
 
-  URL:        http://mynodejsapp-apps.startapp.bg/
-  SSH to:     5313bc74bfbf5a097a000163@mynodejsapp-apps.startapp.bg
-  Git remote: ssh://5313bc74bfbf5a097a000163@mynodejsapp-apps.startapp.bg/~/git/mynodejsapp.git/
+  URL:        http://mynodejsapp-demos.sapp.io/
+  SSH to:     5313bc74bfbf5a097a000163@mynodejsapp-demos.sapp.io
+  Git remote: ssh://5313bc74bfbf5a097a000163@mynodejsapp-demos.sapp.io/~/git/mynodejsapp.git/
   Cloned to:  /private/tmp/mynodejsapp
 
 Run 'app show-app mynodejsapp' for more details about your app.
@@ -81,7 +81,7 @@ Run 'app show-app mynodejsapp' for more details about your app.
 
 За да видите вашия сайт отворете с браузър URL-то което по-горе е изписано след `URL:`, в нашия случай:
 
-    http://mynodejsapp-demos.startapp.bg/
+    http://mynodejsapp-demos.sapp.io/
 
 ---
 
@@ -89,7 +89,7 @@ Run 'app show-app mynodejsapp' for more details about your app.
 
 Всички приложения в Startapp.bg идват с SSH достъп. За да се логнете на сървъра през SSH използвайте адреса изписан след `SSH to:` в този пример той е :
 
-    ssh 5313bc74bfbf5a097a000163@mynodejsapp-apps.startapp.bg
+    ssh 5313bc74bfbf5a097a000163@mynodejsapp-demos.sapp.io
 
 {% note warning, Внимание! %}
 Този пример е валиден за Mac OS и Linux. Ако използвате Windows трябва да имате инсталирано [Putty](/getting-started/using-putty-examples.html). Ако не знаете как да инсталирате и използвате [Putty](/getting-started/using-putty-examples.html), можете да разгледате [примера тук](/getting-started/using-putty-examples.html)
@@ -101,12 +101,12 @@ Run 'app show-app mynodejsapp' for more details about your app.
 
 Всяко приложение в Startapp.bg се съхранява в отделно Git хранилище. Адресът на хранилището на вашето приложение може да го видите веднага след "Git remote:", което в този конкретен случай е :
 
-    ssh://5313bc74bfbf5a097a000163@mynodejsapp-apps.startapp.bg/~/git/mynodejsapp.git/
+    ssh://5313bc74bfbf5a097a000163@mynodejsapp-demos.sapp.io/~/git/mynodejsapp.git/
 
 Което означава, че ако иксаме да клонираме нашето приложение/сайт някъде другаде а не там където го е направило автоматично startapp tools, трябва само да изпълним следните команди:
 
     cd /path/to/my/working/dir
-    git clone ssh://5313bc74bfbf5a097a000163@mynodejsapp-apps.startapp.bg/~/git/mynodejsapp.git/
+    git clone ssh://5313bc74bfbf5a097a000163@mynodejsapp-demos.sapp.io/~/git/mynodejsapp.git/
 
 Това е!
 
@@ -283,7 +283,7 @@ Run 'app show-app mynodejsapp' for more details about your app.
     remote: Result: success
     remote: Activation status: success
     remote: Deployment completed with status: success
-    To ssh://5313bc74bfbf5a097a000163@mynodejsapp-apps.startapp.bg/~/git/mynodejsapp.git/
+    To ssh://5313bc74bfbf5a097a000163@mynodejsapp-demos.sapp.io/~/git/mynodejsapp.git/
        8ed094d..ed321be  master -> master
 
 Това е! Можете да отворите URL на приложението си и да се насладите на промените, които току що направихте :)
@@ -466,12 +466,12 @@ Adding phpmyadmin-4 to application 'mynodejsapp' ... done
 phpmyadmin-4 (phpMyAdmin 4.0)
 -----------------------------
   Gears:          Located with php-5.3, mysql-5.1
-  Connection URL: https://mynodejsapp-apps.startapp.bg/phpmyadmin/
+  Connection URL: https://mynodejsapp-demos.sapp.io/phpmyadmin/
 
 Please make note of these MySQL credentials again:
   Root User: adminH3N4yWf
   Root Password: 7nxXBwI9aV_m
-URL: https://mynodejsapp-apps.startapp.bg/phpmyadmin/
+URL: https://mynodejsapp-demos.sapp.io/phpmyadmin/
 {% endhighlight %}
 
 {% endsection %}
