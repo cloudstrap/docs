@@ -18,7 +18,7 @@ noToc: true
 
 За да работят примерите по-долу:
 
-- Регистрирай се безплатно в [http://startapp.bg](#)
+- Регистрирай се безплатно в [http://startapp.bg]({{ site.startapp.new_account }})
 - Инсталирай Git за: [Windows]({{ install_url }}#install-git-windows) | [Mac OS]({{ install_url }}#install-git-macos) | [Linux]({{ install_url }}#install-git-linux)
 - Инсталирай Startapp Client Tools за: [Windows]({{ install_url }}#install-app-windows) | [Mac OS]({{ install_url }}#install-app-macos) | [Linux]({{ install_url }}#install-app-linux)
 

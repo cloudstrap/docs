@@ -32,3 +32,4 @@ startapp:
   github_docs_new_issue: "https://github.com/startapp-cloud/docs/issues/new"
   tools_page : "/getting-started/app-client-tools-install.html"
   irc: "http://webchat.freenode.net/?randomnick=1&channels=startapp"
+  new_account: "http://www.startapp.bg/"
