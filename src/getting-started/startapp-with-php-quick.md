@@ -42,7 +42,7 @@ noToc: true
 
 За предпочитане да е **различен от IE** :)
 
-    http://myphpapp-<mydomain>.startapp.bg/
+    http://myphpapp-<mydomain>.sapp.io/
 
 
 **Да, толкова е просто!**

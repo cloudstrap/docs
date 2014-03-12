@@ -46,14 +46,14 @@ Creating application 'myphpapp' ... done
 
 
 Waiting for your DNS name to be available ...
-    retry # 1 - Waiting for DNS: myphpapp-demos.startapp.bg
-    retry # 2 - Waiting for DNS: myphpapp-demos.startapp.bg
-    retry # 3 - Waiting for DNS: myphpapp-demos.startapp.bg
-    retry # 4 - Waiting for DNS: myphpapp-demos.startapp.bg
+    retry # 1 - Waiting for DNS: myphpapp-demos.sapp.io
+    retry # 2 - Waiting for DNS: myphpapp-demos.sapp.io
+    retry # 3 - Waiting for DNS: myphpapp-demos.sapp.io
+    retry # 4 - Waiting for DNS: myphpapp-demos.sapp.io
 done
 
 Cloning into 'myphpapp'...
-The authenticity of host 'myphpapp-demos.startapp.bg (93.123.32.34)' can't be established.
+The authenticity of host 'myphpapp-demos.sapp.io (93.123.32.34)' can't be established.
 RSA key fingerprint is e2:4c:39:1a:d1:d1:1c:cc:66:2a:bf:43:42:56:c4:26.
 Are you sure you want to continue connecting (yes/no)?
 {% endhighlight %}
@@ -69,14 +69,14 @@ Are you sure you want to continue connecting (yes/no)?
 Ако си направил това на екрана ти ще бъдат изписани следните неща:
 
 {% highlight sh %}
-Warning: Permanently added 'myphpapp-demos.startapp.bg' (RSA) to the list of known hosts.
+Warning: Permanently added 'myphpapp-demos.sapp.io' (RSA) to the list of known hosts.
 Checking connectivity... done
 
 Your application 'myphpapp' is now available.
 
-  URL:        http://myphpapp-demos.startapp.bg/
-  SSH to:     52debd81bfbf5aa4ca000482@myphpapp-demos.startapp.bg
-  Git remote: ssh://52debd81bfbf5aa4ca000482@myphpapp-demos.startapp.bg/~/git/myphpapp.git/
+  URL:        http://myphpapp-demos.sapp.io/
+  SSH to:     52debd81bfbf5aa4ca000482@myphpapp-demos.sapp.io
+  Git remote: ssh://52debd81bfbf5aa4ca000482@myphpapp-demos.sapp.io/~/git/myphpapp.git/
   Cloned to:  /private/tmp/myphpapp
 
 Run 'app show-app myphpapp' for more details about your app.
@@ -88,7 +88,7 @@ Run 'app show-app myphpapp' for more details about your app.
 
 За да видиш твоя сайт, отвори с браузър URL-то, което е изписано след `URL:` в горния пример. В нашия случай то е:
 
-    http://myphpapp-demos.startapp.bg/
+    http://myphpapp-demos.sapp.io/
 
 ---
 
@@ -96,7 +96,7 @@ Run 'app show-app myphpapp' for more details about your app.
 
 Всички приложения в Startapp.bg идват с SSH достъп. За да се логнеш на сървъра през SSH, използвай адреса, изписан след `SSH to:`. В този пример той е :
 
-    ssh 52debd81bfbf5aa4ca000482@myphpapp-demos.startapp.bg
+    ssh 52debd81bfbf5aa4ca000482@myphpapp-demos.sapp.io
 
 {% note warning, Внимание! %}
 Този пример е валиден за Mac OS и Linux. За Windows е нужно инсталиране на [Putty](/getting-started/using-putty-examples.html). За информация как да инсталираш и използваш [Putty](/getting-started/using-putty-examples.html), разгледай [примера тук](/getting-started/using-putty-examples.html)
@@ -108,12 +108,12 @@ Run 'app show-app myphpapp' for more details about your app.
 
 Всяко приложение в Startapp.bg се съхранява в отделно Git хранилище. Адресът на хранилището на твоето приложение се вижда веднага след "Git remote:". Което в този конкретен случай е :
 
-    ssh://52debd81bfbf5aa4ca000482@myphpapp-demos.startapp.bg/~/git/myphpapp.git/
+    ssh://52debd81bfbf5aa4ca000482@myphpapp-demos.sapp.io/~/git/myphpapp.git/
 
 Което означава, че ако искаш да клонираш твоето приложение / сайт някъде другаде, а не там където го е направило автоматично startapp tools, трябва да изпълниш следните команди:
 
     cd /path/to/my/working/dir
-    git clone ssh://52debd81bfbf5aa4ca000482@myphpapp-demos.startapp.bg/~/git/myphpapp.git/
+    git clone ssh://52debd81bfbf5aa4ca000482@myphpapp-demos.sapp.io/~/git/myphpapp.git/
 
 Това е!
 
@@ -286,7 +286,7 @@ Startapp търси в директориите `php` и `libs`, когато с
     remote: Result: success
     remote: Activation status: success
     remote: Deployment completed with status: success
-    To ssh://52debd81bfbf5aa4ca000482@myphpapp-demos.startapp.bg/~/git/myphpapp.git/
+    To ssh://52debd81bfbf5aa4ca000482@myphpapp-demos.sapp.io/~/git/myphpapp.git/
        22f27f1..2463db6  master -> master
 
 Това е! Можете да отвориш URL на приложението си и да се насладиш на промените, които току що направи :)
@@ -471,12 +471,12 @@ Adding phpmyadmin-4 to application 'myphpapp' ... done
 phpmyadmin-4 (phpMyAdmin 4.0)
 -----------------------------
   Gears:          Located with php-5.3, mysql-5.1
-  Connection URL: https://myphpapp-apps.startapp.bg/phpmyadmin/
+  Connection URL: https://myphpapp-demos.sapp.io/phpmyadmin/
 
 Please make note of these MySQL credentials again:
   Root User: adminH3N4yWf
   Root Password: 7nxXBwI9aV_m
-URL: https://myphpapp-apps.startapp.bg/phpmyadmin/
+URL: https://myphpapp-demos.sapp.io/phpmyadmin/
 {% endhighlight %}
 
 {% endsection %}
