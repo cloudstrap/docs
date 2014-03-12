@@ -18,9 +18,9 @@ noToc: true
 
 За да работят примерите по-долу:
 
-- Регистрирайте се безплатно в [http://startapp.bg](#)
+- Регистрирай се безплатно в [http://startapp.bg](#)
 - Инсталирай Git за: [Windows]({{ install_url }}#install-git-windows) | [Mac OS]({{ install_url }}#install-git-macos) | [Linux]({{ install_url }}#install-git-linux)
-- Инсталирайте Startapp Client Tools за: [Windows]({{ install_url }}#install-app-windows) | [Mac OS]({{ install_url }}#install-app-macos) | [Linux]({{ install_url }}#install-app-linux)
+- Инсталирай Startapp Client Tools за: [Windows]({{ install_url }}#install-app-windows) | [Mac OS]({{ install_url }}#install-app-macos) | [Linux]({{ install_url }}#install-app-linux)
 
 ---
 
@@ -42,7 +42,7 @@ noToc: true
 
 За предпочитане да е **различен от IE** :)
 
-    http://myphpapp-<mydomain>.startapp.bg/
+    http://myphpapp-<mydomain>.sapp.io/
 
 
 **Да, толкова е лесно!**
