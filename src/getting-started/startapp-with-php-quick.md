@@ -26,7 +26,7 @@ noToc: true
 
 #### 1. Създаване на приложение
 
-    $ app create myphpapp php mysql-5.1
+    $ app create myphpapp php-5.3 mysql-5.1
 
 
 #### 2. Промени в кода
