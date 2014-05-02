@@ -358,35 +358,42 @@ The phpmyadmin username and password will be the same as the MySQL credentials a
 
 Ако се чудите за какво бяха тези MySQL ENV променливи, които показхме отгоре и как можете да използвате във вашия код, ето един прост пример как да се закачите за вашия чисто нов MySQL сървър.
 
-{% highlight php %}
-<?php
+{% highlight js %}
+var mysql = require('mysql'),
+    host = process.env.OPENSHIFT_MONGODB_DB_HOST,
+    username = process.env.OPENSHIFT_MONGODB_DB_USERNAME,
+    password = process.env.OPENSHIFT_MONGODB_DB_PASSWORD,
+    port = process.env.OPENSHIFT_MONGODB_DB_PORT,
+    db_name = process.env.OPENSHIFT_APP_NAME;
 
-/* Можете да достъпвате ENV променливите по няколко начина
- * Пример с getenv()
- * $hostname = getenv('OPENSHIFT_MYSQL_DB_HOST');
- *
- * Или можете да използвате глобалните променливи в PHP ($_SERVER or $_ENV)
- * $$hostname = $_SERVER['OPENSHIFT_MYSQL_DB_HOST'];
-*/
+// Инициализация на базата
+// създаване на конекция
+var connection = mysql.createConnection({
+  host: host,
+  user: username,
+  password: password
+});
 
-$host     = getenv('OPENSHIFT_MYSQL_DB_HOST');
-$username = getenv('OPENSHIFT_MYSQL_DB_USERNAME');
-$password = getenv('OPENSHIFT_MYSQL_DB_PASSWORD');
-$db_name  = getenv('OPENSHIFT_APP_NAME');
+// Създаване на тестова таблица.
 
-// Отваряне на конекция
-$link = new mysqli($host, $username, $password, $db_name);
+connection.query('CREATE DATABASE IF NOT EXISTS test', function(err) {
+  if (err) throw err;
+  connection.query('USE test', function(err) {
+    if (err) throw err;
+    connection.query('CREATE TABLE IF NOT EXISTS users(' + 'id INT NOT NULL AUTO_INCREMENT,' + 'PRIMARY KEY(id),' + 'name VARCHAR(30)' + ')', function(err) {
+      if (err) throw err;
+    });
+  });
+});
 
-if ($mysqli->connect_errno) {
-    echo "Cound not connect: " . $mysqli->connect_error;
-}
+// Примерно update query
+connection.query('INSERT INTO users SET ?', req.body,
+  function(err, result) {
+    if (err) throw err;
+    res.send('User added to database with ID: ' + result.insertId);
+  }
+);
 
-echo 'Connected successfully';
-
-// Затваряне на конекцията
-$link->close();
-
-?>
 {% endhighlight %}
 
 {% endsection %}
@@ -526,33 +533,34 @@ Connection URL: postgresql://$OPENSHIFT_POSTGRESQL_DB_HOST:$OPENSHIFT_POSTGRESQL
 
 Ако се чудите за какво бяха тези PostgreSQL ENV променливи, които показхме отгоре и как можете да използвате във вашия код, ето един прост пример как да се закачите за вашия чисто нов PostgreSQL сървър.
 
-{% highlight php %}
-<?php
+{% highlight js %}
+var pg = require('pg'),
 
-/* Можете да достъпвате ENV променливите по няколко начина
- * Пример с getenv()
- * $hostname = getenv('OPENSHIFT_POSTGRESQL_DB_HOST');
- *
- * Или можете да използвате глобалните променливи в PHP ($_SERVER or $_ENV)
- * $hostname = $_SERVER['OPENSHIFT_POSTGRESQL_DB_HOST'];
-*/
+    host     = process.env.OPENSHIFT_MONGODB_DB_HOST,
+    username = process.env.OPENSHIFT_MONGODB_DB_USERNAME,
+    password = process.env.OPENSHIFT_MONGODB_DB_PASSWORD,
+    port     = process.env.OPENSHIFT_MONGODB_DB_PORT,
+    db_name  = process.env.OPENSHIFT_APP_NAME,
+    uri = "postgres://" + username + ":" + password + "@" + host + "/" + db_name;
 
-$host     = getenv('OPENSHIFT_POSTGRESQL_DB_HOST');
-$username = getenv('OPENSHIFT_POSTGRESQL_DB_USERNAME');
-$password = getenv('OPENSHIFT_POSTGRESQL_DB_PASSWORD');
-$db_name  = getenv('OPENSHIFT_APP_NAME');
 
-// Отваряне на конекция
+var client = new pg.Client(uri);
 
-$conection = pg_connect("host=$host dbname=$db_name user=$username password=$password")
-    or die ("Could not connect to server\n");
+client.connect(function(err) {
+  if(err) {
+    return console.error('could not connect to postgres', err);
+  }
+  client.query('SELECT NOW() AS "theTime"', function(err, result) {
+    if(err) {
+      return console.error('error running query', err);
+    }
+    console.log(result.rows[0].theTime);
+    //output: Tue Jan 15 2013 19:12:47 GMT-600 (CST)
+    client.end();
+  });
+});
 
-echo 'Connected successfully';
 
-// Затваряне на конекцията
-pg_close($connection);
-
-?>
 {% endhighlight %}
 
 {% endsection %}
@@ -677,33 +685,32 @@ Connection URL: mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT/
 
 Ако се чудите за какво бяха тези MongoDB ENV променливи, които показхме отгоре и как можете да използвате във вашия код, ето един прост пример как да се закачите за вашия чисто нов MongoDB сървър.
 
-{% highlight php %}
-<?php
+{% highlight js %}
+var MongoClient = require('mongodb').MongoClient,
 
-/* Можете да достъпвате ENV променливите по няколко начина
- * Пример с getenv()
- * $hostname = getenv('OPENSHIFT_MONGODB_DB_HOST');
- *
- * Или можете да използвате глобалните променливи в PHP ($_SERVER or $_ENV)
- * $$hostname = $_SERVER['OPENSHIFT_MONGODB_DB_HOST'];
-*/
+    host     = process.env.OPENSHIFT_MONGODB_DB_HOST,
+    username = process.env.OPENSHIFT_MONGODB_DB_USERNAME,
+    password = process.env.OPENSHIFT_MONGODB_DB_PASSWORD,
+    port     = process.env.OPENSHIFT_MONGODB_DB_PORT,
+    db_name  = process.env.OPENSHIFT_APP_NAME,
+    uri = "mongodb://" + username + ":" + password + "@" + host + ":" + port + "/" + db_name;
 
-$host     = getenv('OPENSHIFT_MONGODB_DB_HOST');
-$username = getenv('OPENSHIFT_MONGODB_DB_USERNAME');
-$password = getenv('OPENSHIFT_MONGODB_DB_PASSWORD');
-$port     = getenv('OPENSHIFT_MONGODB_DB_PORT');
-$db_name  = getenv('OPENSHIFT_APP_NAME');
+// Свързване с базата данни
+MongoClient.connect("mongodb://localhost:27017/exampleDb", function(err, db) {
 
+  if(err) {
+    return console.dir(err);
+  }
 
-// Отваряне на конекция
-$uri = "mongodb://" . $username . ":" . $password . "@" . $host . ":" . $port;
-$mongo = new Mongo($uri);
+  db.collection('test', function(err, collection) {});
 
-// Името на базата данни винаги е името на самото приложение
-// Ако вашето приложение се казва mynodejsapp, тогава трябва да заместите <app-name> с mynodejsapp
-$database = $mongo->$db_name;
+  db.collection('test', { w:1 }, function(err, collection) {});
 
-?>
+  db.createCollection('test', function(err, collection) {});
+
+  db.createCollection('test', { w:1 }, function(err, collection) {});
+
+});
 {% endhighlight %}
 
 {% endsection %}
@@ -824,6 +831,19 @@ $database = $mongo->$db_name;
 {% endsection %}
 
 {% section id="add-modules" title="Модули" %}
+Директорията `node_modules`, която ще намериш във всяко едно NodeJS приложение на StartApp, ти дава възможност да пакетираш всички NodeJS модули от които твоето приложение е зависимо.
+
+Ако искаш да инсталираш модули от npm registry (npmjs.org), можеш да добавиш всеки един модул по именно, заедно с версията му във файла `package.json`, който ще откриеш директорията на приложението ти.
+
+###  deplist.txt
+
+Тази функционалност е остаряла и скоро ще изчезне. package.json е предпочитания начин за добавяне на зависимости (dependencies).
+
+###  package.json
+
+npm package descriptor - стартирай `npm help json` за повече детайли.
+
+Наред с другите неща, този файло съдържа списък от зависимости (node modules) които ще се инсталират заедно с приложенито и ще се обработват всеки път когато вие push-вате промените си с Git на клауда на StartApp.
 
 {% endsection %}
 
