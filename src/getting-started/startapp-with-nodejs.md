@@ -331,7 +331,7 @@ Adding mysql-5.1 to application 'mynodejsapp' ... done
 
 mysql-5.1 (MySQL 5.1)
 ---------------------
-  Gears:          Located with php-5.3
+  Gears:          Located with nodejs-0.10
   Connection URL: mysql://$OPENSHIFT_MYSQL_DB_HOST:$OPENSHIFT_MYSQL_DB_PORT/
   Database Name:  mynodejsapp
   Password:       gBq1wGX1sKAi
@@ -472,7 +472,7 @@ Adding phpmyadmin-4 to application 'mynodejsapp' ... done
 
 phpmyadmin-4 (phpMyAdmin 4.0)
 -----------------------------
-  Gears:          Located with php-5.3, mysql-5.1
+  Gears:          Located with nodejs-0.10, mysql-5.1
   Connection URL: https://mynodejsapp-demos.sapp.io/phpmyadmin/
 
 Please make note of these MySQL credentials again:
@@ -508,7 +508,7 @@ Adding postgresql-8.4 to application 'mynodejsapp' ... done
 
 postgresql-8.4 (PostgreSQL 8.4)
 -------------------------------
-  Gears:          Located with php-5.3
+  Gears:          Located with nodejs-0.10
   Connection URL: postgresql://$OPENSHIFT_POSTGRESQL_DB_HOST:$OPENSHIFT_POSTGRESQL_DB_PORT
   Database Name:  mynodejsapp
   Password:       jBeeIbXSTGsw
@@ -660,7 +660,7 @@ Adding mongodb-2.2 to application 'mynodejsapp' ... done
 
 mongodb-2.2 (MongoDB 2.2)
 -------------------------
-  Gears:          Located with php-5.3
+  Gears:          Located with nodejs-0.10
   Connection URL: mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT/
   Database Name:  mynodejsapp
   Password:       jgSb9c7sGcMi
