@@ -16,5 +16,5 @@
 ##########################################################################
 
 _develo_actions_server_banner
-
-( wk startapp/docs/src && jekyll serve --watch )
+path=$('pwd')
+( cd $path/src && jekyll serve --watch )
