@@ -672,7 +672,7 @@ MongoDB 2.2 database added.  Please make note of these credentials:
 Connection URL: mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT/
 {% endhighlight %}
 
-Със добавянето на MongoDB към твоето приложение също така се добавят няколко ENV променливи, които казват какъв е хоста на базата, кой е порта, както и потребитлски имена и пароли.
+С добавянето на MongoDB към твоето приложение също така се добавят няколко ENV променливи, които казват какъв е хоста на базата, кой е порта, както и потребитлски имена и пароли.
 
 {% include env_vars/mongodb.html %}
 
