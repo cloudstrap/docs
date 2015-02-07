@@ -17,7 +17,7 @@ noToc: true
 
 {% section id="create-php-app-in-details" title="Създаване на PHP приложение" %}
 
-В StartАpp това става с 1 ред код:
+В StartАpp това става с една команда:
 
     app create myphpapp php-5.5
 
@@ -107,21 +107,28 @@ Git хранилище
 
         <tr>
           <td>
-            .opnshift/action_hooks/
+            .openshift/action_hooks/
           </td>
-          <td>Виж секция <a href="#">Action Hooks</a></td>
+          <td>Виж секция <a href="#action-hooks">Action Hooks</a></td>
         </tr>
 
         <tr>
           <td>
-            .opnshift/markers/
+            .openshift/cron
           </td>
-          <td>Виж секция <a href="#">Markers</a></td>
+          <td>директория за скриптове и команди, които се изпълняват в определени от теб дата и час</td>
         </tr>
 
         <tr>
           <td>
-            .opnshift/pear.txt
+            .openshift/markers/
+          </td>
+          <td>Виж секция <a href="#markers">Markers</a></td>
+        </tr>
+
+        <tr>
+          <td>
+            .openshift/pear.txt
           </td>
           <td>списък от `PHP Extension and Application Repository` за инсталиране</td>
         </tr>
@@ -133,12 +140,12 @@ Git хранилище
 {% note warning, Важно! %}
 StartАpp проверява и изпълнява `index.php` от изброените директории в следната последователност:
 
-    1. php/             стартова директоия за стандарно PHP приложение
-    2. public/          стартова директоия за Zend Framework v1/v2, Laravel, FuelPHP, Surebert.
-    3. public_html/     стартова директоия за определени Apache дистрибуции, Slim Framework.
-    4. web/             стартова директоия за Symfony Framework.
-    5. www/             стартова директоия за Nette Framework и други.
-    6. ./               стартова директоия за Wordpress, CodeIgniter, Joomla и други.
+    1. php/             стартова директория за стандартно PHP приложение
+    2. public/          стартова директория за Zend Framework v1/v2, Laravel, FuelPHP, Surebert.
+    3. public_html/     стартова директория за определени Apache дистрибуции, Slim Framework.
+    4. web/             стартова директория за Symfony Framework.
+    5. www/             стартова директория за Nette Framework и други.
+    6. ./               стартова директория за Wordpress, CodeIgniter, Joomla и други.
 {% endnote %}
 
 {% note info, За улеснение! %}
@@ -171,7 +178,7 @@ StartАpp проверява и изпълнява `index.php` от изброе
 
 {% section id="deployment" title="Качване на приложение" %}
 
-В StartАpp това става с 1 ред код:
+В StartАpp това става с една команда:
 
     git push
 
@@ -214,7 +221,7 @@ StartАpp проверява и изпълнява `index.php` от изброе
 
 {% section id="add-mysql-to-app" title="Добавяне на MySQL към PHP приложение" %}
 
-В StartАpp това става с 1 ред код:
+В StartАpp това става с една команда:
 
     app cartridge add mysql-5.5
 
@@ -245,7 +252,7 @@ The phpmyadmin username and password will be the same as the MySQL credentials a
 
 
 {% note info, За улеснение! %}
-С добавянето на MySQL към приложение се добавят няколко ENV променливи, които указват хоста, порта, потребитлското име и парола на базата.
+С добавянето на MySQL към приложение се добавят няколко ENV променливи, които указват хост, порт, потребителско име и парола на базата.
 {% endnote %}
 
 {% include env_vars/mysql.html %}
@@ -291,7 +298,7 @@ $link->close();
 
 {% section id="how-to-access-mysql-via-ssh" title="Достъпване на МySQL през SSH" %}
 
-В StartАpp това става с 1 ред код:
+В StartАpp това става с една команда:
 
     app ssh
 
@@ -348,7 +355,7 @@ $link->close();
     mysql -h 127.0.0.1 -P 3306 -u <username> -p <password>
 
 {% note info, Полезно! %}
-За да видиш хоста, порта, потребитлското име и парола на базата изпълни:
+За да видиш хост, порт, потребителско име и парола на базата изпълни:
 
     app show
 
@@ -412,7 +419,7 @@ Connection URL: postgresql://$OPENSHIFT_POSTGRESQL_DB_HOST:$OPENSHIFT_POSTGRESQL
 
 
 {% note info, За улеснение! %}
-С добавянето на PostgreSQL към приложение се добавят няколко ENV променливи, които указват хоста, порта, потребитлското име и парола на базата.
+С добавянето на PostgreSQL към приложение се добавят няколко ENV променливи, които указват хост, порт, потребителско име и парола на базата.
 {% endnote %}
 
 {% include env_vars/postgresql.html %}
@@ -456,7 +463,7 @@ pg_close($connection);
 
 {% section header id="how-to-access-postgresql-via-ssh" title="Достъпване на PostgreSQL през SSH" %}
 
-В StartАpp това става с 1 ред код:
+В StartАpp това става с една команда:
 
     app ssh
 
@@ -513,7 +520,7 @@ pg_close($connection);
     psql -h 127.0.0.1 -p 5432 -u <username> -w <database>
 
 {% note info, Полезно! %}
-За да видиш хоста, порта, потребитлското име и парола на базата изпълни:
+За да видиш хост, порт, потребителско име и парола на базата изпълни:
 
     app show
 
@@ -521,7 +528,7 @@ pg_close($connection);
 {% endsection %}
 
 {% section id="add-mongo-to-app" title="MongoDB и PHP" %}
-В StartАpp това става с 1 ред код:
+В StartАpp това става с една команда:
 
     app cartridge add mongodb-2.2
 
@@ -549,7 +556,7 @@ Connection URL: mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT/
 {% endhighlight %}
 
 {% note info, За улеснение! %}
-С добавянето на MongoDB към приложение се добавят няколко ENV променливи, които указват хоста, порта, потребитлското име и парола на базата.
+С добавянето на MongoDB към приложение се добавят няколко ENV променливи, които указват хост, порт, потребителско име и парола на базата.
 {% endnote %}
 
 {% include env_vars/mongodb.html %}
@@ -592,7 +599,7 @@ $database = $mongo->$db_name;
 
 {% section id="how-to-access-mongodb-via-ssh" title="Достъпване на MongoDB през SSH" %}
 
-В StartАpp това става с 1 ред код:
+В StartАpp това става с една команда:
 
     app ssh
 
@@ -646,7 +653,7 @@ $database = $mongo->$db_name;
     mongo 127.0.0.1:27017/<database> -u <username> -p <password>
 
 {% note info, Полезно! %}
-За да видиш хоста, порта, потребитлското име и парола на базата изпълни:
+За да видиш хост, порт, потребителско име и парола на базата изпълни:
 
     app show
 
@@ -655,7 +662,7 @@ $database = $mongo->$db_name;
 
 {% section id="create-codeigniter-app" title="Инсталиране на Codeigniter" %}
 
-Благодарение на **Startapp Quickstarts** може да инсталираш Codeigniter това става с 1 ред код:
+Благодарение на **Startapp Quickstarts** може да инсталираш Codeigniter това става с една команда:
 
     app create myciapp codeigniter
 
@@ -707,12 +714,16 @@ $database = $mongo->$db_name;
 
 {% section id="add-composer" title="Добавяне на Composer" %}
 
-**Метод 1**: Създаване на маркер
+#### Метод 1:
+
+Създаване на маркер, чрез който активираш `composer` за твоето приложение
 
     touch .openshift/markers/use_composer
 
 
-**Метод 2**: Създаване на action hook скрипт
+#### Метод 2:
+
+Създаване на action hook скрипт
 
 Изпълни следния код (copy/paste) и натисни `ENTER`:
 

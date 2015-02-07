@@ -27,16 +27,16 @@ noToc: true
 
 #### 1. Създай приложението
 
-    $ app create myphpapp php-5.5 mysql-5.5
+    app create myphpapp php-5.5 mysql-5.5
 
 
 #### 2. Промени кода
 
-    $ echo 'Hello Wolrd!' > index.php
+    echo 'Hello Wolrd!' > index.php
 
 #### 3. Качи приложението
 
-    $ git push
+    git push
 
 
 #### 4. Виж в браузър
@@ -49,7 +49,7 @@ noToc: true
 <br />
 
 <div class="text-center">
-  <p class="lead">Ако тази информация не е достатъчна, тогава прочети</p>
+  <p class="lead">Tази информация не е достатъчна? тогава прочети</p>
   <h2><a class="btn btn-primary btn-lg" href="{{ php_full }}" alt="Подробни инструкции за инсталиране на PHP приложение">Подробни инструкции</a></h2>
 </div>
 

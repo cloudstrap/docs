@@ -2,6 +2,14 @@
 
 Те представляват празни файлове със специфични имена, които се използват за промяна поведенето на системата според твоите нужди.
 
+{% assign current_lang = include.slug | split: "startapp-with-" %}
+
+{% if include.slug == "startapp-with-php" %}
+{% include markers/php.html %}
+{% elsif include.slug == "startapp-with-nodejs" %}
+{% include markers/nodejs.html %}
+{% endif %}
+
 **Създаване на маркер**
 
     touch .openshift/markers/<marker-name>
@@ -19,12 +27,6 @@
 При `git push` системата ще провери маркерите и ще направи това, което си указал чрез имената им.
 {% endnote %}
 
-{% assign current_lang = include.slug | split: "startapp-with-" %}
 
-{% if include.slug == "startapp-with-php" %}
-{% include markers/php.html %}
-{% elsif include.slug == "startapp-with-nodejs" %}
-{% include markers/nodejs.html %}
-{% endif %}
 
 {% endsection %}
