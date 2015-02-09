@@ -4,7 +4,7 @@ layout: document
 title:  "> app --help | more"
 date:   2014-02-10 12:58:04
 header_title:  '> app create &lt;app&gt; with php'
-lead: "За PHP нинджи! Качване на PHP приложения в <strong>Startapp</strong> cloud за 5 минути"
+lead: "За PHP нинджи! Създаване на PHP приложения в <strong>Startapp</strong> cloud за 5 минути"
 slug: startapp-with-php-quick
 keywords: "хостинг, php хостинг, python хостинг, ruby хостинг, nodejs хостинг"
 description: ""
@@ -16,31 +16,30 @@ noToc: true
 {%assign install_url="/getting-started/app-client-tools-install.html" %}
 {%assign php_full="/getting-started/startapp-with-php.html" %}
 
-За да работят примерите по-долу:
+За да работят примерите по-долу ти трябва:
 
-1. Регистрирай се безплатно в [http://startapp.bg](#)
-2. Инсталирай Git за: [Windows]({{ install_url }}#install-git-windows) | [Mac OS]({{ install_url }}#install-git-macos) | [Linux]({{ install_url }}#install-git-linux)
-3. Инсталирай Startapp Client Tools за: [Windows]({{ install_url }}#install-app-windows) | [Mac OS]({{ install_url }}#install-app-macos) | [Linux]({{ install_url }}#install-app-linux)
+1. Регистрация в [http://startapp.bg](#)
+2. Ruby за [Windows]({{ install_url }}#iinstall-ruby-windows) | [Mac OS]({{ install_url }}#install-ruby-macos) | [Linux]({{ install_url }}#install-git-ruby-linux)
+3. Git за: [Windows]({{ install_url }}#install-git-windows) | [Mac OS]({{ install_url }}#install-git-macos) | [Linux]({{ install_url }}#install-git-linux)
+4. Startapp Client Tools за: [Windows]({{ install_url }}#install-app-windows) | [Mac OS]({{ install_url }}#install-app-macos) | [Linux]({{ install_url }}#install-app-linux)
 
 ---
 
-#### 1. Създаване на приложение
+#### 1. Създай приложението
 
-    $ app create myphpapp php-5.3 mysql-5.1
-
-
-#### 2. Промени в кода
-
-    $ echo 'Hello Wolrd!' > php/index.php
-
-#### 3. Качване на сървъра
-
-    $ git push
+    app create myphpapp php-5.5 mysql-5.5
 
 
-#### 4. Отваряне в браузъра
+#### 2. Промени кода
 
-За предпочитане да е **различен от IE** :)
+    echo 'Hello Wolrd!' > index.php
+
+#### 3. Качи приложението
+
+    git push
+
+
+#### 4. Виж в браузър
 
     http://myphpapp-<mydomain>.sapp.io/
 
@@ -50,7 +49,7 @@ noToc: true
 <br />
 
 <div class="text-center">
-  <p class="lead">Ако тази информация не е достатъчна, тогава прочети</p>
+  <p class="lead">Tази информация не е достатъчна? тогава прочети</p>
   <h2><a class="btn btn-primary btn-lg" href="{{ php_full }}" alt="Подробни инструкции за инсталиране на PHP приложение">Подробни инструкции</a></h2>
 </div>
 
@@ -95,8 +94,7 @@ noToc: true
         <div class="caption">
           <h3>PHP Frameworks</h3>
           <ul class="list-unstyled">
-              <li><a href="{{ php_full }}#create-codeigniter-app">Инсталиране на Codeigniter</a></li>
-              <li><a href="{{ php_full }}#create-cakephp-app">Инсталиране на CakePHP</a></li>
+            <li><a href="{{ php_full }}#create-codeigniter-app">Инсталиране на Codeigniter</a></li>
           </ul>
         </div>
       </div>

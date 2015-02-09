@@ -1,0 +1,60 @@
+{% section id="action-hooks" title="Action Hooks" %}
+
+Това са скриптове със специфични имена, които се изпълняват от системата според твоите нужди.
+Те могат да са написани на Python, PHP, Ruby, shell и други.
+StartApp поддържа следните `action hooks`.
+
+
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <colgroup>
+      <col class="col-xs-3">
+      <col class="col-xs-7">
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Action Hook</th>
+        <th>предназначение</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Pre-Receive</td>
+        <td>During your push, OpenShift checks to ensure that your application is in a consistent state. There is no hook for this step.</td>
+      </tr>
+      <tr>
+        <td>Pre-Build</td>
+        <td>This happens after the application is stopped and the new repo dir has been deployed but before the build. Runs the .openshift/action_hooks/pre_build script</td>
+      </tr>
+      <tr>
+        <td>Build</td>
+        <td>This builds your application, downloads required deps, executes the .openshift/action_hooks/build script and preps everything for deployment.</td>
+      </tr>
+      <tr>
+        <td>Deploy</td>
+        <td>This step happens right before the application is issued a start. Any required prep work to get the application ready to be started should be done in the .openshift/action_hooks/deploy hook.</td>
+      </tr>
+      <tr>
+        <td>Post-Deploy</td>
+        <td>Some applications may need to interact with the running application to complete the deployment process. After the application starts, the .openshift/action_hooks/post_deploy hook will be executed.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+#### Добавяне на Action Hook
+
+Създай следният пример
+
+    echo "echo 'Hello from deploy Action Hook'" > .openshift/hooks/deploy
+
+За да бъде изпълним скрипта:
+
+    chmod +x .openshift/hooks/deploy
+
+Да запишем промените в `Git`.
+
+    git commit -am "Add deploy action hook"
+    git push
+
+{% endsection %}

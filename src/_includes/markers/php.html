@@ -1,4 +1,4 @@
-#### Валидни маркери за всяко едно PHP приложение/уеб сайт
+#### Валидни маркери за PHP приложения
 
 <div class="table-responsive">
     <table class="table table-bordered table-striped">
@@ -15,25 +15,35 @@
       <tbody>
         <tr>
           <td>
-            <code>force_clean_build</code>
+            force_clean_build
           </td>
-          <td>Ще изтрие всички dependencies и ще започне да ги инсталира на ново, при всеки <code>git push</code></td>
+          <td>Ще изтрие всички dependencies и ще ги инсталира, при всеки <code>git push</code></td>
         </tr>
 
         <tr>
           <td>
-            <code>hot_deploy</code>
+            hot_deploy
           </td>
-          <td>Apache сървърът няма да се рестартира по време на build/deploy</td>
+          <td>Уеб сървърът няма да се рестартира при на качване на приложението</td>
         </tr>
-
         <tr>
           <td>
-            <code>disable_auto_scaling</code>
+            disable_auto_scaling
           </td>
-          <td>Ще забраните автоматичното скалиране на приложението</td>
+          <td>Забранява автоматичното скалиране на приложението</td>
         </tr>
-
+        <tr>
+          <td>
+            use_composer
+          </td>
+          <td>Стартира автоматично инсталирането на Composer при всеки build. За подробности <a href="#add-composer">Composer</a>.</td>
+        </tr>
+        <tr>
+          <td>
+            enable_public_server_status
+          </td>
+          <td>Разрешава 'server status page' да бъде публично достъпна</td>
+        </tr>
       </tbody>
     </table>
   </div>

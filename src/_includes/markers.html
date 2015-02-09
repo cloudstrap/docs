@@ -1,32 +1,6 @@
 {% section id="markers" title="Маркери" %}
 
-Маркерът представлява празен файл с определено име. Маркерите се използват с цел да променяте поведенето на системата според вашите нужди.
-
-
-#### Добавяне на маркер
----
-
-Създаването на маркер е много лесно. Само трябва да направите следното:
-
-    cd /path/to/my/project
-    touch .openshift/markers/<име-на-маркера>
-
-Понеже маркерът е част от вашето приложение, трябва да го добавите в Git:
-
-    git add .openshift/markers/*
-    git commit -m "Add <marker-name>"
-
-От следващия път в който изпълните `git push` системата ще провери кои активните маркери и ще направи това което сте и казали чрез тях.
-
-
-#### Премахване на маркер
----
-
-За да премахнете определен маркер просто напишете следните команди:
-
-    cd /path/to/my/project
-    git rm .openshift/markers/<име-на-маркера>
-    git commit -m "Remove <marker-name>"
+Те представляват празни файлове със специфични имена, които се използват за промяна поведенето на системата според твоите нужди.
 
 {% assign current_lang = include.slug | split: "startapp-with-" %}
 
@@ -35,5 +9,24 @@
 {% elsif include.slug == "startapp-with-nodejs" %}
 {% include markers/nodejs.html %}
 {% endif %}
+
+**Създаване на маркер**
+
+    touch .openshift/markers/<marker-name>
+    git add .openshift/markers/<marker-name>
+    git commit -m "Add <marker-name>"
+
+**Премахване на маркер**
+
+    git rm .openshift/markers/<marker-name>
+    git commit -m "Remove <marker-name>"
+
+Браво! Трудната част мина успешно :) Сега остава да качим промените на сървъра.
+
+{% note info, За улеснение! %}
+При `git push` системата ще провери маркерите и ще направи това, което си указал чрез имената им.
+{% endnote %}
+
+
 
 {% endsection %}
