@@ -1,7 +1,7 @@
 ---
 layout: document
 
-title:  "PHP приложения в Startapp"
+title:  "PHP приложения в StartАpp"
 date:   2013-11-25 16:58:04
 header_title:  '> app create &lt;app&gt; with php'
 lead: "За PHP любознайковци! Дисекция на PHP приложенията в <strong>Startapp.bg</strong> Сloud"
@@ -11,36 +11,32 @@ description: ""
 noToc: true
 ---
 
-{% page_header id="quickstart-php" title="Стартиране с PHP" %}
+{% page_header id="quickstart-php" title="Създаване на PHP приложение" %}
 
 {% include customer-requirements.html %}
 
-{% section id="create-php-app-in-details" title="Създаване на ново PHP приложение" %}
+{% section id="create-php-app-in-details" title="Създаване на PHP приложение" %}
 
-Създаването на `php` приложения в Startapp е изключително лесно и в повечето случаи е само с 1 ред код:
+В StartАpp това става с една команда:
 
-    $ app create myphpapp php-5.3
+    app create myphpapp php-5.5
 
 Наличните версии на PHP са `php-5.3`, `php-5.4`, `php-5.5`
 
 {% note info, Относно myphpapp! %}
-Ако се чудиш дали това `myphpapp` е нещо вълшебно, отговорът е НЕ. Това е името на твоето ново приложение :) Което значи, че синтаксисът е следният:
-
-    $ app create <име-на-приложението> <език>
-
-Това означава също, че навсякъде в примера където използваме `myphpapp` имай предвид, че там стои името на твоето приложение.
-
+Чудите се дали `myphpapp` е нещо вълшебно, отговорът е НЕ.
+Това е името на твоето приложение :)
 {%endnote%}
 
-След като напишеш тази команда на екрана ти ще се изпише нещо такова:
+Резултатът от тази команда е:
 
 {% highlight sh %}
-Using php-5.3 (PHP 5.3) for 'php'
+Using php-5.5 (PHP 5.5) for 'php'
 
 Application Options
 -------------------
 Domain:     demos
-Cartridges: php-5.3
+Cartridges: php-5.5
 Gear Size:  default
 Scaling:    no
 
@@ -51,28 +47,9 @@ Waiting for your DNS name to be available ...
     retry # 1 - Waiting for DNS: myphpapp-demos.sapp.io
     retry # 2 - Waiting for DNS: myphpapp-demos.sapp.io
     retry # 3 - Waiting for DNS: myphpapp-demos.sapp.io
-    retry # 4 - Waiting for DNS: myphpapp-demos.sapp.io
 done
 
 Cloning into 'myphpapp'...
-The authenticity of host 'myphpapp-demos.sapp.io (93.123.32.34)' can't be established.
-RSA key fingerprint is e2:4c:39:1a:d1:d1:1c:cc:66:2a:bf:43:42:56:c4:26.
-Are you sure you want to continue connecting (yes/no)?
-{% endhighlight %}
-
-Последните няколко реда казват, че твоето приложение е създадено и готово за клониране на твоя компютър.
-
-Ако искаш да го клонираш напиши:
-
-    yes
-
-и натисни `ENTER`.
-
-Ако си направил това на екрана ти ще бъдат изписани следните неща:
-
-{% highlight sh %}
-Warning: Permanently added 'myphpapp-demos.sapp.io' (RSA) to the list of known hosts.
-Checking connectivity... done
 
 Your application 'myphpapp' is now available.
 
@@ -84,52 +61,29 @@ Your application 'myphpapp' is now available.
 Run 'app show-app myphpapp' for more details about your app.
 {% endhighlight %}
 
----
+Последните няколко реда казват, че твоето приложение е създадено в StartApp и клонирано на твоя компютър.
 
-### Отваряне в браузъра
+{% note info, Всяко приложение в StartApp притежава: %}
 
-За да видиш твоя сайт, отвори с браузър URL-то, което е изписано след `URL:` в горния пример. В нашия случай то е:
+Собствен домейн адрес (с включен SSL сертификат).
 
-    http://myphpapp-demos.sapp.io/
+    URL:        http://myphpapp-demos.sapp.io/
 
----
+SSH достъп
 
-### SSH достъп
+    SSH to:     52debd81bfbf5aa4ca000482@myphpapp-demos.sapp.io
 
-Всички приложения в Startapp.bg идват с SSH достъп. За да се логнеш на сървъра през SSH, използвай адреса, изписан след `SSH to:`. В този пример той е :
+Git хранилище
 
-    ssh 52debd81bfbf5aa4ca000482@myphpapp-demos.sapp.io
+    Git remote: ssh://52debd81bfbf5aa4ca000482@myphpapp-demos.sapp.io/~/git/myphpapp.git/
 
-{% note warning, Внимание! %}
-Този пример е валиден за Mac OS и Linux. За Windows е нужно инсталиране на [Putty](/getting-started/using-putty-examples.html). За информация как да инсталираш и използваш [Putty](/getting-started/using-putty-examples.html), разгледай [примера тук](/getting-started/using-putty-examples.html)
-{% endnote %}
-
----
-
-### Git хранилище
-
-Всяко приложение в Startapp.bg се съхранява в отделно Git хранилище. Адресът на хранилището на твоето приложение се вижда веднага след "Git remote:". Което в този конкретен случай е :
-
-    ssh://52debd81bfbf5aa4ca000482@myphpapp-demos.sapp.io/~/git/myphpapp.git/
-
-Което означава, че ако искаш да клонираш твоето приложение / сайт някъде другаде, а не там където го е направило автоматично startapp tools, трябва да изпълниш следните команди:
-
-    cd /path/to/my/working/dir
-    git clone ssh://52debd81bfbf5aa4ca000482@myphpapp-demos.sapp.io/~/git/myphpapp.git/
-
-Това е!
-
-<!-- <div class="well well-startapp well-sm" style="margin-top: 20px;"><h4>Разбра ли как да създадеш първото си PHP приложение?
-  <a href=""><span class="label label-success">Да</span></a>
-  <a href=""><span class="label label-danger">Не</span></a>
-</h4></div>
- -->
+{%endnote%}
 {% endsection %}
 
 
 {% section id="file-structure" title="Файлова структура на PHP приложението" %}
 
-След създаване и клонране на твоето PHP приложение ще видиш следните файлове и директории:
+След създаване на приложението ще видиш следната файлова структура:
 
 <div class="table-responsive">
     <table class="table table-bordered table-striped">
@@ -144,134 +98,95 @@ Run 'app show-app myphpapp' for more details about your app.
         </tr>
       </thead>
       <tbody>
-
         <tr>
           <td>
-            <code>php/</code>
+            index.php
           </td>
-          <td>Това е document root-а на приложението. Твоят код трябва да бъде тук.</td>
+          <td>Стартов файл на твоето приложение</td>
         </tr>
 
         <tr>
           <td>
-            <code>php/index.php</code>
+            .openshift/action_hooks/
           </td>
-          <td>Стандартен index като на всяко PHP приложение</td>
+          <td>Виж секция <a href="#action-hooks">Action Hooks</a></td>
         </tr>
 
         <tr>
           <td>
-            <code>libs/</code>
+            .openshift/cron
           </td>
-          <td>Място за допълнителни библиотеки</td>
+          <td>директория за скриптове и команди, които се изпълняват с определена цикличност</td>
         </tr>
-
         <tr>
           <td>
-            <code>misc/</code>
+            .openshift/markers/
           </td>
-          <td>Място за PHP код, който не е достъпен от крайни потребители</td>
+          <td>Виж секция <a href="#markers">Markers</a></td>
         </tr>
-
         <tr>
           <td>
-            <code>deplist.txt</code>
+            .openshift/pear.txt
           </td>
-          <td>Списък от PEAR пакети които да бъдат инсталирани *1</td>
+          <td>списък от `PHP Extension and Application Repository` за инсталиране</td>
         </tr>
-
         <tr>
           <td>
-            <code>.openshift/</code>
+            .git/
           </td>
-          <td>Директория за специфични скриптове. Може и никога да не ти се наложи да пипаш в нея, но тя е задължителна.</td>
+          <td>Това е локалното Git хранилище на приложението.</td>
         </tr>
-
-        <tr>
-          <td>
-            <code>.openshift/action_hooks/</code>
-          </td>
-          <td>Виж документацията за Action Hooks *2</td>
-        </tr>
-
-        <tr>
-          <td>
-            <code>.openshift/markers/</code>
-          </td>
-          <td>Виж наличните Маркери по-долу.</td>
-        </tr>
-
-        <tr>
-          <td>
-            <code>.git/</code>
-          </td>
-          <td>Това е локалното ти Git хранилище. <br /><b>Важно: </b>Не го изтривай, ако искаш приложението ти да работи.</td>
-        </tr>
-
-
-
       </tbody>
     </table>
   </div>
 
 {% note warning, Важно! %}
-Startapp търси в директориите `php` и `libs`, когато сервира твоето приложение на клиентите. Файлът **index.php** (който се намира в директория **php**) ще поеме всички requests от root URL-а на твоето приложение. За по-добра организация, създай и други директории, ако се налага :).
+
+StartАpp проверява и изпълнява `index.php` от изброените директории в следната последователност:
+
+    1. php/             стартова директория за стандартно PHP приложение
+    2. public/          стартова директория за Zend Framework v1/v2, Laravel, FuelPHP, Surebert.
+    3. public_html/     стартова директория за определени Apache дистрибуции, Slim Framework.
+    4. web/             стартова директория за Symfony Framework.
+    5. www/             стартова директория за Nette Framework и други.
+    6. ./               стартова директория за Wordpress, CodeIgniter, Joomla и други.
 {% endnote %}
 
-<!-- <div class="well well-startapp well-sm" style="margin-top: 20px;"><h4>Разбра ли кой файл за какво се ползва?
-  <a href=""><span class="label label-success">Да</span></a>
-  <a href=""><span class="label label-danger">Не</span></a>
-</h4></div> -->
+{% note info, За улеснение! %}
+Следните директории на приложението се добавят автоматично към `PHP include_path`.
 
+    - lib/
+    - libs/
+    - libraries/
+    - src/
+    - misc/
+    - vendor/
+    - vendors/
+{% endnote %}
 {% endsection %}
 
 
 {% section id="make-code-changes" title="Как да правим промени по кода?" %}
 
-Файлът, който трябва да промениш е `index.php` и се намира тук:
-
-    $ cd /път/до/myphpapp/php/
-
-Можеш да го редактираш с предпочитан от теб текстов редактор или през командния ред, както е в този пример.
-
-След като се намираш вече в `/път/до/myphpapp/php/`, трябва да изпълниш следния код:
+Да променим `index.php` през командния ред със следната команда:
 
     echo 'Hello Wolrd!' > index.php
 
-За да провериш дали успешно е променен `index.php`, изпълни следната команда:
-
-    git status
-
-Ако всичко е минало нормално, резултатът от тази команда трябва да е нещо подобно на това:
-
-    # On branch master
-    # Changes not staged for commit:
-    #   (use "git add <file>..." to update what will be committed)
-    #   (use "git checkout -- <file>..." to discard changes in working directory)
-    #
-    # modified:   index.php
-    #
-    no changes added to commit (use "git add" and/or "git commit -a")
-
-Браво! Трудната част мина успешно :) Сега остана само да запишеш промените в `Git` и да ги качиш на сървъра:
+Да запишем промените в `Git`.
 
     git commit -am "Change content of index.php"
 
-<!-- <div class="well well-startapp well-sm" style="margin-top: 20px;"><h4>Успя ли да направиш първата си промяна?
-  <a href=""><span class="label label-success">Да</span></a>
-  <a href=""><span class="label label-danger">Не</span></a>
-</h4></div> -->
+Браво! Трудната част мина успешно :) Сега остава да качим промените на сървъра.
 
 {% endsection %}
 
+{% section id="deployment" title="Качване на приложение" %}
 
-{% section id="deployment" title="Качване на сървъра" %}
-
-Качваме промените, които сме направили със следната команда:
+В StartАpp това става с една команда:
 
     git push
 
-Резултатът от `git push` трябва да е нещо подобно на това:
+Резултатът от тази команда е:
 
     Counting objects: 7, done.
     Delta compression using up to 8 threads.
@@ -291,58 +206,44 @@ Startapp търси в директориите `php` и `libs`, когато с
     To ssh://52debd81bfbf5aa4ca000482@myphpapp-demos.sapp.io/~/git/myphpapp.git/
        22f27f1..2463db6  master -> master
 
-Това е! Можете да отвориш URL на приложението си и да се насладиш на промените, които току що направи :)
+Това е! Можем да отворим приложението в браузър и да се насладим на промените :)
 
 {% note info, За любопитните! %}
-За по-любитните от вас, на които прави впечатление след като написахте `git push` се случиха няколко интересни неща:
+След `git push` се случиха няколко интересни неща:
 
 - Stopping PHP cartridge
 - Activating deployment
 - Starting PHP cartridge
 
-Това е нормалното поведение на всеки един deploy процес в Startapp. Хубавото обаче, е че това част от поведението на deployment процеса и начина по-който работи твоето проложение може да бъде променяно! Това става благодарение на така наречените **Маркери**, за които можеш да намериш информация малко по-долу!
+Това е нормалното поведение на всеки един `deploy` процес в StartАpp. Разбира се, това поведение може да бъде променяно чрез **маркери**.
+
 {% endnote %}
 
 {% endsection %}
 
-
 {% include markers.html slug=page.slug %}
-
-<!-- <div class="well well-startapp well-sm" style="margin-top: 20px;"><h4>Разбра ли за какво се използват Маркерите?
-  <a href=""><span class="label label-success">Да</span></a>
-  <a href=""><span class="label label-danger">Не</span></a>
-</h4></div> -->
+{% include action-hooks.html slug=page.slug %}
 
 {% section id="add-mysql-to-app" title="Добавяне на MySQL към PHP приложение" %}
 
-    $ app cartridge add mysql-5.1 -a myphpapp
+В StartАpp това става с една команда:
 
-{% note info, Относно аргумента '-a myphpapp' %}
-Ако се намираш в директорията на приложението си, може да пропускаш аргумента '-a appname'!
+    app cartridge add mysql-5.5
 
-Което означава, че ако се намираш в HOME директорията си трябва да използваш следния синтаксис:
-
-    $ app cartridge add mysql-5.1 -a <име-на-приложението>
-
-Ако обаче се намираш в директорията на твоето приложение:
-
-    cd /path/to/myphpapp
-    app cartridge add mysql-5.1
-
-{%endnote%}
+Резултатът от тази команда е:
 
 {% highlight sh %}
-Adding mysql-5.1 to application 'myphpapp' ... done
+Adding mysql-5.5 to application 'myphpapp' ... done
 
-mysql-5.1 (MySQL 5.1)
+mysql-5.5 (MySQL 5.5)
 ---------------------
-  Gears:          Located with php-5.3
+  Gears:          Located with php-5.5
   Connection URL: mysql://$OPENSHIFT_MYSQL_DB_HOST:$OPENSHIFT_MYSQL_DB_PORT/
   Database Name:  myphpapp
   Password:       gBq1wGX1sKAi
   Username:       adminrWaKHZ3
 
-MySQL 5.1 database added.  Please make note of these credentials:
+MySQL 5.5 database added.  Please make note of these credentials:
 
        Root User: adminrWaKHZ3
    Root Password: gBq1wGX1sKAi
@@ -354,14 +255,16 @@ You can manage your new MySQL database by also embedding phpmyadmin.
 The phpmyadmin username and password will be the same as the MySQL credentials above.
 {% endhighlight %}
 
-Със добавянето на MySQL към твоето приложение, също така се добавят няколко ENV променливи, които казват какъв е хоста на базата, кой е порта, както и потребитлски имена и пароли.
+{% note info, За улеснение! %}
+С добавянето на MySQL към приложение се добавят няколко ENV променливи, които указват хост, порт, потребителско име и парола на базата.
+{% endnote %}
 
 {% include env_vars/mysql.html %}
 {% endsection %}
 
 {% section id="how-to-access-mysql-via-php" title="Достъпване на МySQL през PHP" %}
 
-Ако се чудиш за какво бяха тези MySQL ENV променливи горе и как може да ги използваш в твоя PHP код, ето един прост пример как да се закачиш за твоя чисто нов MySQL сървър.
+Ето пример как MySQL ENV променливите могат да бъдат използвани.
 
 {% highlight php %}
 <?php
@@ -392,25 +295,26 @@ echo 'Connected successfully';
 $link->close();
 
 ?>
+
 {% endhighlight %}
 
 {% endsection %}
 
 {% section id="how-to-access-mysql-via-ssh" title="Достъпване на МySQL през SSH" %}
 
-Първо трябва да се логнеш на сървъра по SSH. Това става много лесно. Само изпълни следната команда:
+В StartАpp това става с една команда:
 
-    $ app ssh -a myphpapp
+    app ssh
 
-След като се логнеш на сървъра напиши:
+Стартиране на MySQL:
 
-    $ mysql
+    mysql
 
-И като резултат ще видиш, това:
+Резултатът от тази команда е:
 
     Welcome to the MySQL monitor.  Commands end with ; or \g.
     Your MySQL connection id is 3
-    Server version: 5.1.71 Source distribution
+    Server version: 5.5.36 Source distribution
 
     Copyright (c) 2000, 2013, Oracle and/or its affiliates. All rights reserved.
 
@@ -422,15 +326,15 @@ $link->close();
 
     mysql>
 
-Което означава, че си в интерактивната конзола на MySQL!
+Това означава, че си в интерактивната конзола на MySQL!
 
 {% endsection %}
 
-{% section id="how-to-access-mysql-via-devpc" title="Достъпване на МySQL през работната ви машина/лаптоп" %}
+{% section id="how-to-access-mysql-via-devpc" title="Достъпване на МySQL през работна машина" %}
 
-    $ app port-forward -a myphpapp
+    app port-forward
 
-Като резултат от тази команда ще видиш следното:
+Резултатът от тази команда е:
 
     Checking available ports ... done
     Forwarding ports ...
@@ -446,23 +350,27 @@ $link->close();
 
     Press CTRL-C to terminate port forwarding
 
-Ако погледнеш на последния ред пише следното:
+Обърни внимание на реда:
 
     mysql   127.0.0.1:3306  =>  127.12.225.130:3306
 
-Което означава, че можете да достъпваш MySQL сървъра, който работи на Startapp.bg от локалната си машина. Ето как:
+Можеш да достъпваш MySQL сървъра, който работи на StartАpp от локалната си машина:
 
-    $ mysql -h 127.0.0.1 -P 3306 -u<username> -p<password>
+    mysql -h 127.0.0.1 -P 3306 -u <username> -p <password>
 
-Ако си забравил твоите `username` и `password`, може да ги видиш така:
+{% note info, Полезно! %}
+За да видиш хост, порт, потребителско име и парола на базата изпълни:
 
-    $ app show myphpapp
+    app show
 
+{% endnote %}
 {% endsection %}
 
 {% section id="add-phpmyadmin-to-app" title="Добавяне на phpMyAdmin към PHP приложение" %}
 
-    $ app cartridge add phpmyadmin -a myphpapp
+    app cartridge add phpmyadmin
+
+Резултатът от тази команда е:
 
 {% highlight sh %}
 Using phpmyadmin-4 (phpMyAdmin 4.0) for 'phpmyadmin'
@@ -470,7 +378,7 @@ Adding phpmyadmin-4 to application 'myphpapp' ... done
 
 phpmyadmin-4 (phpMyAdmin 4.0)
 -----------------------------
-  Gears:          Located with php-5.3, mysql-5.1
+  Gears:          Located with php-5.5, mysql-5.5
   Connection URL: https://myphpapp-demos.sapp.io/phpmyadmin/
 
 Please make note of these MySQL credentials again:
@@ -479,40 +387,31 @@ Please make note of these MySQL credentials again:
 URL: https://myphpapp-demos.sapp.io/phpmyadmin/
 {% endhighlight %}
 
-{% endsection %}
+{% note info, Полезно! %}
+Потребителското име и парола за **phpMyAdmin** са същите като тези за **MySQL** базата.
+{% endnote %}
 
+{% endsection %}
 
 {% section id="add-postgresql-to-app" title="PostgreSQL и PHP" %}
 
-    $ app cartridge add postgresql-8.4 -a myphpapp
+    app cartridge add postgresql-9.2
 
-{% note info, Относно аргумента '-a myphpapp' %}
-Ако се намираш в директорията на приложението си, може да пропускаш аргумента '-a appname'!
-
-Което означава, че ако се намираш в HOME директорията си трябва да използваш следния синтаксис:
-
-    $ app cartridge add postgresql-8.4 -a <име-на-приложението>
-
-Ако обаче се намираш в директорията на твоето приложение:
-
-    cd /path/to/myphpapp
-    app cartridge add postgresql-8.4
-
-{%endnote%}
+Резултатът от тази команда е:
 
 {% highlight sh %}
 
-Adding postgresql-8.4 to application 'myphpapp' ... done
+Adding postgresql-9.2 to application 'myphpapp' ... done
 
-postgresql-8.4 (PostgreSQL 8.4)
+postgresql-9.2(PostgreSQL 9.2)
 -------------------------------
-  Gears:          Located with php-5.3
+  Gears:          Located with php-5.5
   Connection URL: postgresql://$OPENSHIFT_POSTGRESQL_DB_HOST:$OPENSHIFT_POSTGRESQL_DB_PORT
   Database Name:  myphpapp
   Password:       jBeeIbXSTGsw
   Username:       adminfj66lmx
 
-PostgreSQL 8.4 database added.  Please make note of these credentials:
+PostgreSQL 9.2 database added.  Please make note of these credentials:
 
    Root User: adminfj66lmx
    Root Password: jBeeIbXSTGsw
@@ -522,14 +421,16 @@ Connection URL: postgresql://$OPENSHIFT_POSTGRESQL_DB_HOST:$OPENSHIFT_POSTGRESQL
 {% endhighlight %}
 
 
-Със добавянето на PostgreSQL към твоето приложение също така се добавят няколко ENV променливи, които казват какъв е хоста на базата, кой е порта, както и потребитлски имена и пароли.
+{% note info, За улеснение! %}
+С добавянето на PostgreSQL към приложение се добавят няколко ENV променливи, които указват хост, порт, потребителско име и парола на базата.
+{% endnote %}
 
 {% include env_vars/postgresql.html %}
 {% endsection %}
 
 {% section id="how-to-access-postgresql-via-php" title="Достъпване на PostgreSQL през PHP" %}
 
-Ако се чудиш за какво бяха тези PostgreSQL ENV променливи, които показхме отгоре, и как можете да ги използваш във вашия PHP код, ето един прост пример как да се закачиш за твоя чисто нов PostgreSQL сървър.
+Ето пример как PostgreSQL ENV променливите могат да бъдат използвани.
 
 {% highlight php %}
 <?php
@@ -538,7 +439,7 @@ Connection URL: postgresql://$OPENSHIFT_POSTGRESQL_DB_HOST:$OPENSHIFT_POSTGRESQL
  * Пример с getenv()
  * $hostname = getenv('OPENSHIFT_POSTGRESQL_DB_HOST');
  *
- * Или можеш да използваш глобалните променливи в PHP ($_SERVER or $_ENV)
+ * Или можеш да използвате глобалните променливи в PHP ($_SERVER or $_ENV)
  * $hostname = $_SERVER['OPENSHIFT_POSTGRESQL_DB_HOST'];
 */
 
@@ -565,17 +466,17 @@ pg_close($connection);
 
 {% section header id="how-to-access-postgresql-via-ssh" title="Достъпване на PostgreSQL през SSH" %}
 
-Първо трябва да се логнеш на сървъра по SSH. Това става много лесно. Само изпълни следната команда:
+В StartАpp това става с една команда:
 
-    $ app ssh -a myphpapp
+    app ssh
 
-След като се логнеш на сървъра напиши:
+Стартиране на PostgreSQL
 
-    $ psql
+    psql
 
-И като резултат ще видиш, това:
+Резултатът от тази команда е:
 
-    psql (8.4.18)
+    psql (9.2.7)
     Type "help" for help.
 
     myphpapp=# help
@@ -587,17 +488,15 @@ pg_close($connection);
            \q to quit
     myphpapp=#
 
-Което означава, че си в интерактивната конзола на PostgreSQL!
+Това означава, че си в интерактивната конзола на PostgreSQL!
 
 {% endsection %}
 
+{% section id="how-to-access-postgresql-via-devpc" title="Достъпване на PostgreSQL през работна машина" %}
 
+    app port-forward
 
-{% section id="how-to-access-postgresql-via-devpc" title="Достъпване на PostgreSQL. през работната ви машина/лаптоп" %}
-
-    $ app port-forward -a myphpapp
-
-Като резултат от тази команда ще видиш следното:
+Резултатът от тази команда е:
 
     Checking available ports ... done
     Forwarding ports ...
@@ -613,57 +512,42 @@ pg_close($connection);
 
     Press CTRL-C to terminate port forwarding
 
-Ако погледнеш на последния ред пише следното:
+Обърни внимание на реда:
 
     postgresql 127.0.0.1:5432   =>  127.12.225.133:5432
 
-Което означава, че може да достъпваш MySQL сървъра, който работи на Startapp.bg, от локалната си машина. Ето как:
+Можеш да достъпваш PostgreSQL сървъра, който работи на StartАpp от локалната си машина:
 
-    $ psql -h 127.0.0.1 -p 5432 -U <username> -W <database>
+    psql -h 127.0.0.1 -p 5432 -u <username> -w <database>
 
-След като изпълниш тази команда, PostgreSQL ще поиска да си напишеш твоята парола:
+{% note info, Полезно! %}
+За да видиш хост, порт, потребителско име и парола на базата изпълни:
 
-  Password for user <username>:
+    app show
 
-Напиши паролата си и натисни `ENTER`.
-
-Ако си забравил твоите `username` и `password` може да ги видиш така:
-
-    $ app show myphpapp
-
+{% endnote %}
 {% endsection %}
 
 {% section id="add-mongo-to-app" title="MongoDB и PHP" %}
+В StartАpp това става с една команда:
 
-    $ app cartridge add mongodb-2.2 -a myphpapp
+    app cartridge add mongodb-2.4
 
-{% note info, Относно аргумента '-a myphpapp' %}
-Ако се намираш в директорията на приложението си, може да пропускаш аргумента '-a appname'!
-
-Което означава, че ако се намираш в HOME директорията си трябва да използваш следния синтаксис:
-
-    $ app cartridge add mongodb-2.2 -a <име-на-приложението>
-
-Ако обаче се намираш в директорията на твоето приложение:
-
-    cd /path/to/myphpapp
-    app cartridge add mongodb-2.2
-
-{%endnote%}
+Резултатът от тази команда е:
 
 {% highlight sh %}
 
-Adding mongodb-2.2 to application 'myphpapp' ... done
+Adding mongodb-2.4 to application 'myphpapp' ... done
 
-mongodb-2.2 (MongoDB 2.2)
+mongodb-2.4 (MongoDB 2.4)
 -------------------------
-  Gears:          Located with php-5.3
+  Gears:          Located with php-5.5
   Connection URL: mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT/
   Database Name:  myphpapp
   Password:       jgSb9c7sGcMi
   Username:       admin
 
-MongoDB 2.2 database added.  Please make note of these credentials:
+MongoDB 2.4 database added.  Please make note of these credentials:
 
    Root User:     admin
    Root Password: jgSb9c7sGcMi
@@ -672,15 +556,16 @@ MongoDB 2.2 database added.  Please make note of these credentials:
 Connection URL: mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT/
 {% endhighlight %}
 
-Със добавянето на MongoDB към твоето приложение също така се добавят няколко ENV променливи, които казват какъв е хоста на базата, кой е порта, както и потребитлски имена и пароли.
+{% note info, За улеснение! %}
+С добавянето на MongoDB към приложение се добавят няколко ENV променливи, които указват хост, порт, потребителско име и парола на базата.
+{% endnote %}
 
 {% include env_vars/mongodb.html %}
-
 {% endsection %}
 
 {% section id="how-to-access-mongodb-via-php" title="Достъпване на MongoDB през PHP" %}
 
-Ако се чудиш за какво бяха тези MongoDB ENV променливи, които показахме отгоре и как може да се използват във вашия PHP код, ето един прост пример как да се закачиш за твоя чисто нов MongoDB сървър.
+Ето пример как MongoDB ENV променливите могат да бъдат използвани.
 
 {% highlight php %}
 <?php
@@ -689,7 +574,7 @@ Connection URL: mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT/
  * Пример с getenv()
  * $hostname = getenv('OPENSHIFT_MONGODB_DB_HOST');
  *
- * Или може да използваш глобалните променливи в PHP ($_SERVER or $_ENV)
+ * Или може да използвате глобалните променливи в PHP ($_SERVER or $_ENV)
  * $$hostname = $_SERVER['OPENSHIFT_MONGODB_DB_HOST'];
 */
 
@@ -705,7 +590,7 @@ $uri = "mongodb://" . $username . ":" . $password . "@" . $host . ":" . $port;
 $mongo = new Mongo($uri);
 
 // Името на базата данни винаги е името на самото приложение
-// Ако твоето приложение се казва myphpapp, тогава трябва да заместиш <app-name> с myphpapp
+// Ако Вашето приложение се казва myphpapp, тогава трябва да заместиш <app-name> с myphpapp
 $database = $mongo->$db_name;
 
 ?>
@@ -715,15 +600,15 @@ $database = $mongo->$db_name;
 
 {% section id="how-to-access-mongodb-via-ssh" title="Достъпване на MongoDB през SSH" %}
 
-Първо трябва да се логнеш на сървъра по SSH. Това става много лесно. Само изпълни следната команда:
+В StartАpp това става с една команда:
 
-    $ app ssh -a myphpapp
+    app ssh
 
-След като се логнеш на сървъра напиши:
+Стартиране на MongoDB
 
-    $ mongo
+    mongo
 
-И като резултат ще видиш, това:
+Резултатът от тази команда е:
 
     MongoDB shell version: 2.4.6
     connecting to: 127.12.225.132:27017/admin
@@ -735,15 +620,15 @@ $database = $mongo->$db_name;
       http://groups.google.com/group/mongodb-user
     >
 
-Което означава, че ти си в интерактивната конзола на MongoDB!
+Това означава, че си в интерактивната конзола на MongoDB!
 
 {% endsection %}
 
-{% section id="how-to-access-mongodb-via-devpc" title="Достъпване на MongoDB през работната ви машина/лаптоп" %}
+{% section id="how-to-access-mongodb-via-devpc" title="Достъпване на MongoDB през работна машина" %}
 
-    $ app port-forward -a myphpapp
+    app port-forward
 
-Като резултат от тази команда ще видиш следното:
+Резултатът от тази команда е:
 
     Checking available ports ... done
     Forwarding ports ...
@@ -760,55 +645,86 @@ $database = $mongo->$db_name;
 
     Press CTRL-C to terminate port forwarding
 
-Ако погледнеш на последния ред пише следното:
+Обърни внимание на реда:
 
     mongodb 127.0.0.1:27017  =>  127.12.225.132:27017
 
-Което означава, че може да достъпваш MongoDB сървъра, който работи на Startapp.bg от локалната си машина. Ето как:
+Можеш да достъпваш MongoDB сървъра, който работи на StartАpp от локалната си машина:
 
-    $ mongo 127.0.0.1:27017/<database> --username <username> --password <password>
+    mongo 127.0.0.1:27017/<database> -u <username> -p <password>
 
-Ако си забравил твоите `username` и `password` може да ги видиш така:
+{% note info, Полезно! %}
+За да видиш хост, порт, потребителско име и парола на базата изпълни:
 
-    $ app show myphpapp
+    app show
 
-
+{% endnote %}
 {% endsection %}
 
 {% section id="create-codeigniter-app" title="Инсталиране на Codeigniter" %}
 
-
-Благодарение на **Startapp Quickstarts** може да инсталираш Codeigniter само с една команда:
+Благодарение на **Startapp Quickstarts** може да инсталираш Codeigniter това става с една команда:
 
     app create myciapp codeigniter
 
-Тази команда, автоматично ще инсталира Codeigniter, също така ще създаде автоматично MySQL база данни за теб.
+Тази команда, автоматично ще инсталира Codeigniter, също така ще създаде автоматично MySQL база данни.
 
-#### Подробна информация за инсталиране и конфигуриране на Codeigniter [може да получиш тук](#)
+Резултатът от тази команда е:
 
+    Application Options
+    -------------------
+    Domain:      myciapp
+    Cartridges:  php-5.5, mysql-5.1
+    Source Code: http://install.startapp.bg/q/codeigniter.git
+    Gear Size:   default
+    Scaling:     no
 
-{% endsection %}
+    Creating application 'myciapp' ... done
 
-{% section id="create-cakephp-app" title="Инсталиране на CakePHP" %}
+      MySQL 5.1 database added.  Please make note of these credentials:
 
-Благодарение на **Startapp Quickstarts** може да инсталираш CakePHP само с една команда:
+       Root User: adminNr7mdGm
+       Root Password: d2Tpn9zWWbdB
+       Database Name: myciapp
 
-    app create mycakeapp cakephp
+    Connection URL: mysql://$OPENSHIFT_MYSQL_DB_HOST:$OPENSHIFT_MYSQL_DB_PORT/
 
-Тази команда, автоматично ще инсталира CakePHP, също така ще създаде автоматично MySQL база данни за теб.
+    You can manage your new MySQL database by also embedding phpmyadmin.
+    The phpmyadmin username and password will be the same as the MySQL credentials above.
 
-#### Подробна информация за инсталиране и конфигуриране на CakePHP [може да получиш тук](#)
+    Waiting for your DNS name to be available ... done
 
+    Cloning into 'myciapp'...
+    The authenticity of host 'myciapp-demos.sapp.io (46.4.1.82)' can't be established.
+    RSA key fingerprint is fd:91:73:33:23:3f:cf:ad:ab:0a:c6:d4:4c:ff:d6:7d.
+    Are you sure you want to continue connecting (yes/no)? yes
+    Warning: Permanently added 'myciapp-demos.sapp.io' (RSA) to the list of known hosts.
+
+    Your application 'myciapp' is now available.
+
+      URL:        http://myciapp-demos.sapp.io/
+      SSH to:     54d2ccaeba7eeaeb6a000029@myciapp-demos.sapp.io
+      Git remote: ssh://54d2ccaeba7eeaeb6a000029@myciapp-demos.sapp.io/~/git/myciapp.git/
+      Cloned to:  /Users/demos/tmp/myciapp
+
+    Run 'app show-app myciapp' for more details about your app.
+
+Подробна информация за инсталиране и конфигуриране на Codeigniter [може да получиш тук](#)
 {% endsection %}
 
 
 {% section id="add-composer" title="Добавяне на Composer" %}
 
-За да може да изпозлваш Composer на Startapp, трябва да направиш следното:
+#### Метод 1:
 
-Влез в директорията на проекта си:
+Създаване на маркер, чрез който активираш `composer` за твоето приложение
 
-    $ cd /път/до/myphpapp/
+    touch .openshift/markers/use_composer
+
+
+#### Метод 2:
+
+С помощта на Action hooks можеш да определиш поведението на Composer според твоите изисквания. Примерно по следния начин:
 
 Изпълни следния код (copy/paste) и натисни `ENTER`:
 
@@ -817,7 +733,7 @@ cat > .openshift/action_hooks/deploy << "EOF"
 #!/bin/bash
 # This deploy hook gets executed after dependencies are resolved and the
 # build hook has been run but before the application has been started back
-# up again.  This script gets executed directly, so it could be python, php,
+# up again. This script gets executed directly, so it could be python, php,
 # ruby, etc.
 
 export COMPOSER_HOME="$OPENSHIFT_DATA_DIR/.composer"
@@ -835,27 +751,22 @@ fi
 EOF
 {% endhighlight %}
 
-Този скрипт ти направи нов файл `.openshift/action_hooks/deploy`, който се изпълнява вски път след като push-ваш промени към сървъра.
-
-За да заработи този скрипт трябва да го направиш изпълним:
+За да бъде изпълним скрипта:
 
     chmod +x .openshift/action_hooks/deploy
 
-Остана да го добавиш в `Git` и да го качиш на сървъра:
+Да запишем промените в `Git`.
 
     git add .openshift/action_hooks/deploy
-    git commit -am "Enable Composer"
+    git commit -m "Enable Composer"
     git push
 
-Сега вече Comsposer е инсталиран!
+Сега вече Comsposer е активиран!
 
 ### Добавяне на composer.json
 
-За да инсталираш пакети с Comsposer е необходимо да създадеш `composer.json` файл тук `/път/до/myphpapp/composer.json` и да опишеш кои пакети искаш да ти бъдат инсталирани.
+За да инсталираш пакети с Comsposer е необходимо да създадеш `composer.json` файл в твоето приложение и да опишеш кои пакети да бъдат инсталирани.
 
-Създаваме `composer.json`
-
-    cd /път/до/myphpapp/
     cat <<EOF> composer.json
     {
         "require": {
@@ -864,17 +775,16 @@ EOF
     }
     EOF
 
-Добавяш го в `Git`
+Да запишем промените в `Git`.
 
     git add composer.json
-    git commit -am "Add composer.json"
+    git commit -m "Add composer.json"
 
-Качваш го на сървъра
+Да качим промените на сървъра.
 
     git push
 
 Това е! Приятна работа с Composer!
-
 {% endsection %}
 
 {% include help/php.html %}
