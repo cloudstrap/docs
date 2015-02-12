@@ -1,0 +1,56 @@
+{% section id="action-hooks" title="Action Hooks" %}
+
+Това са скриптове със специфични имена, които се изпълняват от системата според твоите нужди.
+Те могат да са написани на Python, PHP, Ruby, shell и други.
+StartApp поддържа следните `action hooks`.
+
+
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <colgroup>
+      <col class="col-xs-3">
+      <col class="col-xs-7">
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Action Hook</th>
+        <th>предназначение</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>pre_build</td>
+        <td>Изпълнява се локално на твоята CI система, ако е налична. В противен случай, се изпълнява преди build стъпката</td>
+      </tr>
+      <tr>
+        <td>build</td>
+        <td>Изпълнява се локално на твоята CI система, ако е налична. В противен случай, се изпълнява преди deploy стъпката</td>
+      </tr>
+      <tr>
+        <td>deploy</td>
+        <td>Изпълнява се след като dependencies са обработени, но преди да е стартирано приложението</td>
+      </tr>
+      <tr>
+        <td>post_deploy</td>
+        <td>Изпълнява се след deploy и стартиране на приложението</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+#### Добавяне на Action Hook
+
+Създай следният пример
+
+    echo "echo 'Hello from deploy Action Hook'" > .openshift/hooks/deploy
+
+За да бъде изпълним скрипта:
+
+    chmod +x .openshift/hooks/deploy
+
+Запиши промените в `Git` и ги качи на сървъра.
+
+    git commit -am "Add deploy action hook"
+    git push
+
+{% endsection %}
