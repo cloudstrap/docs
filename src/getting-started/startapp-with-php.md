@@ -11,7 +11,7 @@ description: ""
 noToc: true
 ---
 
-{% page_header id="quickstart-php" title="Създаване на PHP приложение" %}
+{% page_header id="quickstart-php" title="StartApp.bg с PHP" %}
 
 {% include customer-requirements.html %}
 
