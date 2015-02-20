@@ -314,14 +314,6 @@ body {
   }
 }
 
-@media (min-width: 992px) {
-  .bs-header h1,
-  .bs-header p {
-    margin-right: 380px;
-  }
-}
-
-
 /*
  * Carbon ads
  *
