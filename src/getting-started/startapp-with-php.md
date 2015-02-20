@@ -3,7 +3,7 @@ layout: document
 
 title:  "PHP приложения в StartАpp"
 date:   2013-11-25 16:58:04
-header_title:  '> app create &lt;app&gt; with php'
+header_title:  '> app create &lt;app&gt; with PHP'
 lead: "За PHP любознайковци! Дисекция на PHP приложенията в <strong>StartApp.bg</strong> Сloud"
 slug: startapp-with-php
 keywords: "хостинг, php хостинг, python хостинг, ruby хостинг, nodejs хостинг"

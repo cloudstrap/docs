@@ -3,7 +3,7 @@ layout: document
 
 title:  "> StartApp.bg - NodeJS хостинг."
 date:   2014-02-10 12:58:04
-header_title:  '> app create &lt;app&gt; with nodejs'
+header_title:  '> app create &lt;app&gt; with NodeJS'
 lead: "За JavaScript машини! Създаване на NodeJS приложения в <strong>StartApp</strong> cloud за 5 минути"
 slug: startapp-with-nodejs-quick
 keywords: "хостинг, nodejs хостинг, nodejs mongodb, nodejs mysql, nodejs framework, nodejs приложения, nodejs"
