@@ -4,7 +4,7 @@ layout: document
 title:  "> app --help | more"
 date:   2014-02-10 12:58:04
 header_title:  '> app create &lt;app&gt; with php'
-lead: "За PHP нинджи! Създаване на PHP приложения в <strong>Startapp</strong> cloud за 5 минути"
+lead: "За PHP нинджи! Създаване на PHP приложения в <strong>StartApp</strong> cloud за 5 минути"
 slug: startapp-with-php-quick
 keywords: "хостинг, php хостинг, python хостинг, ruby хостинг, nodejs хостинг"
 description: ""
@@ -21,7 +21,7 @@ noToc: true
 1. Регистрация в [http://startapp.bg](#)
 2. Ruby за [Windows]({{ install_url }}#iinstall-ruby-windows) | [Mac OS]({{ install_url }}#install-ruby-macos) | [Linux]({{ install_url }}#install-git-ruby-linux)
 3. Git за: [Windows]({{ install_url }}#install-git-windows) | [Mac OS]({{ install_url }}#install-git-macos) | [Linux]({{ install_url }}#install-git-linux)
-4. Startapp Client Tools за: [Windows]({{ install_url }}#install-app-windows) | [Mac OS]({{ install_url }}#install-app-macos) | [Linux]({{ install_url }}#install-app-linux)
+4. StartApp Client Tools за: [Windows]({{ install_url }}#install-app-windows) | [Mac OS]({{ install_url }}#install-app-macos) | [Linux]({{ install_url }}#install-app-linux)
 
 ---
 

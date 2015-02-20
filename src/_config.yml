@@ -1,9 +1,9 @@
-name: "Startapp.bg документация : startapp --help"
+name: "StartApp.bg документация : startapp --help"
 timezone: Europe/Sofia
 permalink: /blog/:title.html
 
 header_title: "> app --help | more"
-header_lead: "Бърз поглед на <strong>Startapp</strong>, как да създаваме и управляваме нашите приложения."
+header_lead: "Бърз поглед на <strong>StartApp</strong>, как да създаваме и управляваме нашите приложения."
 
 keywords: ""
 description: ""

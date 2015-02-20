@@ -13,7 +13,7 @@ noToc: true
 ---
 
 {% capture help_links %}
-  Интерактивният `setup wizzard` ще ви помага и насочва през целия процес на настройване на StartApp Client tools. Ако не можете да пуснете StartApp Client tools на този етап, моля свържете се с нас в [IRC](http://webchat.freenode.net/?channels=startapp&uio=d4) или пишете на [Startapp общността в Google Groups]({{ site.startapp.groups }}) за съдействие.
+  Интерактивният `setup wizzard` ще ви помага и насочва през целия процес на настройване на StartApp Client tools. Ако не можете да пуснете StartApp Client tools на този етап, моля свържете се с нас в [IRC](http://webchat.freenode.net/?channels=startapp&uio=d4) или пишете на [StartApp общността в Google Groups]({{ site.startapp.groups }}) за съдействие.
 {% endcapture %}
 
 {% capture after_ruby_and_git_installed %}

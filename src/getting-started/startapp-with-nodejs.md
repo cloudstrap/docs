@@ -1,10 +1,10 @@
 ---
 layout: document
 
-title:  "NodeJS приложения в Startapp.bg NodeJS хостинг."
+title:  "NodeJS приложения в StartApp.bg NodeJS хостинг."
 date:   2014-03-01 18:58:04
 header_title:  '> app create &lt;app&gt; with nodejs'
-lead: "За любознателни JavaScript машини! Създаване на NodeJS приложения в <strong>Startapp</strong>  Сloud"
+lead: "За любознателни JavaScript машини! Създаване на NodeJS приложения в <strong>StartApp</strong>  Сloud"
 slug: startapp-with-nodejs
 keywords: "хостинг, nodejs хостинг, nodejs mongodb, nodejs mysql, nodejs framework, nodejs приложения, nodejs"
 description: ""
@@ -137,7 +137,7 @@ Git хранилище
         <td>
           server.js
         </td>
-        <td>Това е файлът, чрез който Startapp ще стартира твоето приложение.</td>
+        <td>Това е файлът, чрез който StartApp ще стартира твоето приложение.</td>
       </tr>
 
       <tr>
@@ -188,14 +188,14 @@ Git хранилище
         <td>
           OPENSHIFT_NODEJS_IP
         </td>
-        <td>Вътрешния IP адрес на NodeJS приложението. Използва се от Startapp.</td>
+        <td>Вътрешния IP адрес на NodeJS приложението. Използва се от StartApp.</td>
       </tr>
 
       <tr>
         <td>
           OPENSHIFT_NODEJS_PORT
         </td>
-        <td>Вътрешния порт на NodeJS приложението. Използва се от Startapp.</td>
+        <td>Вътрешния порт на NodeJS приложението. Използва се от StartApp.</td>
       </tr>
 
       <tr>
