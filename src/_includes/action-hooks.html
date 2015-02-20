@@ -40,17 +40,20 @@ StartApp поддържа следните `action hooks`.
 
 #### Добавяне на Action Hook
 
-Създай следният пример
+Пример:
 
     echo "echo 'Hello from deploy Action Hook'" > .openshift/hooks/deploy
 
-За да бъде изпълним скрипта:
+action hook script файла трябва да се направи executable:
 
     chmod +x .openshift/hooks/deploy
 
-Запиши промените в `Git` и ги качи на сървъра.
+Запиши промените в `Git`:
 
     git commit -am "Add deploy action hook"
+
+Качване на сървъра:
+
     git push
 
 {% endsection %}

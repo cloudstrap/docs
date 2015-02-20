@@ -1,26 +1,31 @@
-#### Валидни маркери за всяко едно NodeJS приложение/уеб сайт
+#### Валидни маркери за NodeJS приложение
 
 <div class="table-responsive">
-    <table class="table table-bordered table-striped">
-      <colgroup>
-        <col class="col-xs-3">
-        <col class="col-xs-7">
-      </colgroup>
-      <thead>
-        <tr>
-          <th>Име на маркера</th>
-          <th>Какво прави?</th>
-        </tr>
-      </thead>
-      <tbody>
+  <table class="table table-bordered table-striped">
+    <colgroup>
+      <col class="col-xs-3">
+      <col class="col-xs-7">
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Име на маркера</th>
+        <th>Какво прави?</th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>
+        use_npm
+      </td>
+      <td>Инициализира твоето приложение чрез 'npm start' използвайки информацията от supervisor servername.js (където 'servername.js' е стойността, която си задал в package.json’s `main секцията).</td>
+    </tr>
+    <tr>
+      <td>
+        hot_deploy
+      </td>
+      <td>Забранява рестартирането на приложението по време на git push.</td>
+    </tr>
 
-        <tr>
-          <td>
-            <code>hot_deploy</code>
-          </td>
-          <td>Забранява рестартирането на апликейшъна по време на git push-овете. Виж още в Development mode.</td>
-        </tr>
-
-      </tbody>
-    </table>
+    </tbody>
+  </table>
   </div>

@@ -16,34 +16,30 @@ noToc: true
 {%assign install_url="/getting-started/app-client-tools-install.html" %}
 {%assign full_docs="/getting-started/startapp-with-nodejs.html" %}
 
-За да работят примерите по-долу:
+За да работят примерите по-долу ти трябва:
 
-- Регистрирайте се безплатно в [http://startapp.bg]({{ site.startapp.new_account }})
-- Инсталирай Git за: [Windows]({{ install_url }}#install-git-windows) | [Mac OS]({{ install_url }}#install-git-macos) | [Linux]({{ install_url }}#install-git-linux)
-- Инсталирайте Startapp Client Tools за: [Windows]({{ install_url }}#install-app-windows) | [Mac OS]({{ install_url }}#install-app-macos) | [Linux]({{ install_url }}#install-app-linux)
+  1. Регистрация в [http://startapp.bg](#)
+  2. Ruby за [Windows]({{ install_url }}#iinstall-ruby-windows) | [Mac OS]({{ install_url }}#install-ruby-macos) | [Linux]({{ install_url }}#install-git-ruby-linux)
+  3. Git за: [Windows]({{ install_url }}#install-git-windows) | [Mac OS]({{ install_url }}#install-git-macos) | [Linux]({{ install_url }}#install-git-linux)
+  4. Startapp Client Tools за: [Windows]({{ install_url }}#install-app-windows) | [Mac OS]({{ install_url }}#install-app-macos) | [Linux]({{ install_url }}#install-app-linux)
 
 ---
 
 #### 1. Създаване на приложение
 
-    $ app create mynodejsapp nodejs-0.10 mongodb-2.2
-
+    app create mynodejsapp nodejs-0.10
 
 #### 2. Промени в кода
 
-    $ echo 'Hello Wolrd!' > index.html
+   echo 'Hello Wolrd!' > index.html
 
 #### 3. Качване на сървъра
 
-    $ git push
-
+    git push
 
 #### 4. Отваряне в браузъра
 
-За предпочитане да е **различен от IE** :)
-
     http://mynodejsapp-<mydomain>.sapp.io/
-
 
 **Да, толкова е лесно!**
 
