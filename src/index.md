@@ -55,7 +55,7 @@ noToc: true
 Не можеш да намериш отговорите на въпросите, които имаш?
 <section class="read-more">
   <ul class="list-unstyled">
-    <li><a href="{{ site.startapp.groups }}">Попитай Startapp общността в Google Groups</a></li>
+    <li><a href="{{ site.startapp.groups }}">Попитай StartApp общността в Google Groups</a></li>
     <li><a href="{{ site.startapp.irc }}">Пиши в #startapp IRC канала в Freenode</a></li>
   </ul>
 </section>
@@ -76,4 +76,4 @@ noToc: true
 Споделяме идеи, когато публикуваме творенията си в `GitHub`. Чепим идеи когато четем код в `GitHub`.
 Трупаме опит когато помагаме в `stackoverflow`.
 
-Сподели твоите знания опит и сред [Startapp общността в Google Groups]({{ site.startapp.groups }})
+Сподели твоите знания опит и сред [StartApp общността в Google Groups]({{ site.startapp.groups }})

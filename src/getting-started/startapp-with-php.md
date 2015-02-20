@@ -4,7 +4,7 @@ layout: document
 title:  "PHP приложения в StartАpp"
 date:   2013-11-25 16:58:04
 header_title:  '> app create &lt;app&gt; with php'
-lead: "За PHP любознайковци! Дисекция на PHP приложенията в <strong>Startapp.bg</strong> Сloud"
+lead: "За PHP любознайковци! Дисекция на PHP приложенията в <strong>StartApp.bg</strong> Сloud"
 slug: startapp-with-php
 keywords: "хостинг, php хостинг, python хостинг, ruby хостинг, nodejs хостинг"
 description: ""
@@ -663,7 +663,7 @@ $database = $mongo->$db_name;
 
 {% section id="create-codeigniter-app" title="Инсталиране на Codeigniter" %}
 
-Благодарение на **Startapp Quickstarts** може да инсталираш Codeigniter това става с една команда:
+Благодарение на **StartApp Quickstarts** може да инсталираш Codeigniter това става с една команда:
 
     app create myciapp codeigniter
 
