@@ -1,0 +1,36 @@
+#### Валидни маркери за Ruby приложение
+
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <colgroup>
+      <col class="col-xs-3">
+      <col class="col-xs-7">
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Име на маркера</th>
+        <th>Какво прави?</th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>
+        force_clean_build
+      </td>
+      <td>Ще задейства чист re-bundle по време на build цикъл.</td>
+    </tr>
+    <tr>
+      <td>
+        hot_deploy
+      </td>
+      <td>Забранява рестартирането на приложението по време на git push. The Passenger 'Restart.txt' файл ще бъде използван, за да презареди заявката.</td>
+    </tr>
+    <tr>
+      <td>
+        disable_asset_compilation
+      </td>
+      <td>Забранява прекомпилирането на assets. Този маркер трябва да се използва при публикуване на приложения с вече компилирани assets.</td>
+    </tr>
+    </tbody>
+  </table>
+  </div>
