@@ -709,7 +709,6 @@ $database = $mongo->$db_name;
 
     Run 'app show-app myciapp' for more details about your app.
 
-Подробна информация за инсталиране и конфигуриране на Codeigniter [може да получиш тук](#)
 {% endsection %}
 
 
