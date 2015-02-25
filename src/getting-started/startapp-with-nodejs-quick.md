@@ -31,7 +31,7 @@ noToc: true
 
 #### 2. Промени в кода
 
-   echo 'Hello Wolrd!' > index.html
+    echo 'Hello Wolrd!' > index.html
 
 #### 3. Качване на сървъра
 
