@@ -4,7 +4,7 @@ layout: document
 title:  "Ruby приложения в StartАpp"
 date:   2013-11-25 16:58:04
 header_title:  '> app create &lt;app&gt; with Ruby'
-lead: "За Ruby поети! Създаване на Ruby приложения в <strong>Startapp</strong> cloud за 5 минути"
+lead: "За Ruby поети! Създаване на Ruby приложения в <strong>StartApp</strong> cloud за 5 минути"
 slug: startapp-with-ruby
 keywords: "хостинг, php хостинг, python хостинг, ruby хостинг, nodejs хостинг"
 description: ""
