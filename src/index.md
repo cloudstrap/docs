@@ -75,4 +75,4 @@ noToc: true
 Споделяме идеи, когато публикуваме творенията си в `GitHub`. Черпим идеи, когато четем код в `GitHub`.
 Трупаме опит, когато помагаме в `stackoverflow`.
 
-Сподели твоите знания и опит и сред [StartApp общността в Google Groups]({{ site.startapp.groups }})
+Сподели твоите знания и опит в [StartApp общността в Google Groups]({{ site.startapp.groups }})
