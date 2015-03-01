@@ -17,7 +17,7 @@ noToc: true
 {% endcapture %}
 
 {% capture after_ruby_and_git_installed %}
-  След като вече сте инсталирал Ruby и Git, използвай RubyGem, (който е вграден в Ruby), за да инсталираш и самите StartApp Client Tools:
+  След като вече сте инсталирал Ruby и Git, използвай RubyGem, (който е вграден в Ruby), за да инсталираш StartApp Client Tools:
 {% endcapture %}
 
 <!-- FIXME: Ugly work around -->
@@ -55,7 +55,7 @@ $ sudo gem install startapp
 {% endhighlight %}
 
 {% note info, Внимание %}
-Използваш Ubuntu 11.10 или по-старо (и производните като Mint) и използваш системното Ruby, е възможно да видиш грешки, когато инсталираш StartApp Client Tools като например `invalid date formats`. Използвай тези команди преди да инсталираш `startapp gem`:
+Използваш Ubuntu 11.10 или по-старо (и производните като Mint) и използваш системното Ruby? Възможно е да видиш грешки, когато инсталираш StartApp Client Tools като например `invalid date formats`. Използвай тези команди преди да инсталираш `startapp gem`:
 
 {% highlight sh %}
 $ sudo gem install rubygems-update

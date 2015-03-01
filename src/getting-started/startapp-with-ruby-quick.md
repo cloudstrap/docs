@@ -18,10 +18,7 @@ noToc: true
 
 За да работят примерите по-долу ти трябва:
 
-  1. Поискай покана на [http://startapp.bg](http://startapp.bg)
-  2. Ruby за [Windows]({{ install_url }}#iinstall-ruby-windows) | [Mac OS]({{ install_url }}#install-ruby-macos) | [Linux]({{ install_url }}#install-git-ruby-linux)
-  3. Git за: [Windows]({{ install_url }}#install-git-windows) | [Mac OS]({{ install_url }}#install-git-macos) | [Linux]({{ install_url }}#install-git-linux)
-  4. Startapp Client Tools за: [Windows]({{ install_url }}#install-app-windows) | [Mac OS]({{ install_url }}#install-app-macos) | [Linux]({{ install_url }}#install-app-linux)
+{% include customer-requirements.html %}
 
 ---
 
