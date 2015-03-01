@@ -13,7 +13,9 @@ noToc: true
 
 {% page_header id="quickstart-php" title="StartApp.bg с PHP" %}
 
-{% include customer-requirements.html %}
+{% note warning, Предварителни изисквания! %}
+  {% include customer-requirements.html %}
+{% endnote %}
 
 {% section id="create-php-app-in-details" title="Създаване на PHP приложение" %}
 

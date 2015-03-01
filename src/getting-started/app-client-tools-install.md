@@ -32,8 +32,27 @@ StartApp Client Tools, които ще използваме през коман�
 
 Инструкции за инсталация:
 
-<h4><a href="/getting-started/app-client-tools-install-osx.html">Инсталиране под MacOS</a> </h4>
-<h4><a href="/getting-started/app-client-tools-install-linux.html">Инсталиране под Linux</a></h4>
-<h4><a href="/getting-started/app-client-tools-install-windows.html">Инсталиране под Windows</a></h4>
+<div class="row startapp-starters">
+  <div class="col-xs-6 col-md-4">
+    <a class="thumbnail" href="/getting-started/app-client-tools-install-osx.html">
+      <img src="/img/install/osx-icon.png" alt="Инсталиране под MacOS">
+    </a>
+    <h4 class="text-center"><a href="/getting-started/app-client-tools-install-osx.html">Инсталиране под MacOS</a></h4>
+  </div>
+  <div class="col-xs-6 col-md-4">
+    <a class="thumbnail" href="/getting-started/app-client-tools-install-linux.html">
+      <img src="/img/install/linux-icon.png" alt="Инсталиране под Linux">
+    </a>
+    <h4 class="text-center"><a href="/getting-started/app-client-tools-install-linux.html">Инсталиране под Linux</a></h4>
+  </div>
+  <div class="clearfix visible-xs"></div>
+  <div class="col-xs-6 col-md-4">
+    <a class="thumbnail" href="/getting-started/app-client-tools-install-windows.html">
+      <img src="/img/install/windows-icon.png" alt="Инсталиране под Windows">
+    </a>
+    <h4 class="text-center"><a href="/getting-started/app-client-tools-install-windows.html">Инсталиране под Windows</a></h4>
+  </div>
+
+</div>
 
 {% endsection %}

@@ -40,7 +40,7 @@ C:\Program Files\> ruby -e 'puts "Welcome to Ruby"'
 Welcome to Ruby
 {% endhighlight %}
 
-Ако съобщението 'Welcome to Ruby' не се покаже е възможно изпълнимия файл `ruby` да не е добавен в `PATH` променливите на Windows. Опитай се да инсталираш отново Ruby, но този път се увери, че опцията "Add Ruby executables to your PATH" е включен!
+Ако съобщението 'Welcome to Ruby' не се покаже е възможно изпълнимия файл `ruby` да не е добавен в `PATH` променливите на Windows. Опитай се да инсталираш отново Ruby, но този път се увери, че опцията "Add Ruby executables to your PATH" е включена!
 
 {% endsection %}
 
