@@ -650,7 +650,7 @@ var MongoClient = require('mongodb').MongoClient,
     uri = "mongodb://" + username + ":" + password + "@" + host + ":" + port + "/" + db_name;
 
 // Свързване с базата данни
-MongoClient.connect("mongodb://localhost:27017/exampleDb", function(err, db) {
+MongoClient.connect(uri, function(err, db) {
 
   if(err) {
     return console.dir(err);
