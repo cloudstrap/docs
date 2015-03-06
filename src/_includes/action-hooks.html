@@ -42,11 +42,11 @@ StartApp поддържа следните `action hooks`.
 
 Пример:
 
-    echo "echo 'Hello from deploy Action Hook'" > .openshift/hooks/deploy
+    echo "echo 'Hello from deploy Action Hook'" > .openshift/action_hooks/deploy
 
 action hook script файла трябва да се направи executable:
 
-    chmod +x .openshift/hooks/deploy
+    chmod +x .openshift/action_hooks/deploy
 
 Запиши промените в `Git`:
 
