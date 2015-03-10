@@ -15,6 +15,12 @@
 #                                                                        #
 ##########################################################################
 
+docs_port=4100
+
+if [ -d ~/.pow ]; then
+  echo '4100' > ~/.pow/docs.startapp
+fi
+
 _develo_actions_server_banner
 path=$('pwd')
-( cd $path/src && jekyll serve --watch )
+( cd $path/src && bundle exec jekyll serve --watch --port $docs_port )
