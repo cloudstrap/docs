@@ -25,8 +25,8 @@ noToc: true
 
 Наличните версии на NodeJS са `nodejs-0.6`, `nodejs-0.10`
 
-{% note info, Относно myphpapp! %}
-Чудите се дали `myphpapp` е нещо вълшебно, отговорът е НЕ.
+{% note info, Относно mynodejsapp! %}
+Чудите се дали `mynodejsapp` е нещо вълшебно, отговорът е НЕ.
 Това е името на твоето приложение :)
 {%endnote%}
 
