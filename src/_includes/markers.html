@@ -2,15 +2,15 @@
 
 Те представляват файлове със специфични имена, които се използват за промяна поведението на системата според твоите нужди.
 
-{% assign current_lang = include.slug | split: "startapp-with-" %}
+{% assign current_lang = include.slug | split: "cloudstrap-with-" %}
 
-{% if include.slug == "startapp-with-php" %}
+{% if include.slug == "cloudstrap-with-php" %}
 {% include markers/php.html %}
-{% elsif include.slug == "startapp-with-nodejs" %}
+{% elsif include.slug == "cloudstrap-with-nodejs" %}
 {% include markers/nodejs.html %}
-{% elsif include.slug == "startapp-with-ruby" %}
+{% elsif include.slug == "cloudstrap-with-ruby" %}
 {% include markers/ruby.html %}
-{% elsif include.slug == "startapp-with-python" %}
+{% elsif include.slug == "cloudstrap-with-python" %}
 {% include markers/python.html %}
 {% endif %}
 
