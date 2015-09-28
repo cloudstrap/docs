@@ -4,8 +4,8 @@ layout: document
 title:  "> app --help | more"
 date:   2014-02-10 12:58:04
 header_title:  '> app create &lt;app&gt; with PHP'
-lead: "За PHP нинджи! Създаване на PHP приложения в <strong>StartApp</strong> cloud за 5 минути"
-slug: startapp-with-php-quick
+lead: "За PHP нинджи! Създаване на PHP приложения в <strong>CloudStrap</strong> cloud за 5 минути"
+slug: cloudstrap-with-php-quick
 keywords: "хостинг, php хостинг, python хостинг, ruby хостинг, nodejs хостинг"
 description: ""
 noToc: true
@@ -14,7 +14,7 @@ noToc: true
 {% section id="fast-create-php-app" title="Бързи инструкции" %}
 
 {%assign install_url="/getting-started/app-client-tools-install.html" %}
-{%assign php_full="/getting-started/startapp-with-php.html" %}
+{%assign php_full="/getting-started/cloudstrap-with-php.html" %}
 
 За да работят примерите по-долу ти трябва:
 

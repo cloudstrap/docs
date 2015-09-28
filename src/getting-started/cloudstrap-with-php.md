@@ -1,17 +1,17 @@
 ---
 layout: document
 
-title:  "PHP приложения в StartАpp"
+title:  "PHP приложения в CloudStrap"
 date:   2013-11-25 16:58:04
 header_title:  '> app create &lt;app&gt; with PHP'
-lead: "За PHP любознайковци! Дисекция на PHP приложенията в <strong>StartApp.bg</strong> Сloud"
-slug: startapp-with-php
+lead: "За PHP любознайковци! Дисекция на PHP приложенията в <strong>CloudStrap.io</strong> Сloud"
+slug: cloudstrap-with-php
 keywords: "хостинг, php хостинг, python хостинг, ruby хостинг, nodejs хостинг"
 description: ""
 noToc: true
 ---
 
-{% page_header id="quickstart-php" title="StartApp.bg с PHP" %}
+{% page_header id="quickstart-php" title="CloudStrap.io с PHP" %}
 
 {% note warning, Предварителни изисквания! %}
   {% include customer-requirements.html %}
@@ -19,7 +19,7 @@ noToc: true
 
 {% section id="create-php-app-in-details" title="Създаване на PHP приложение" %}
 
-В StartАpp това става с една команда:
+В CloudStrap това става с една команда:
 
     app create myphpapp php-5.5
 
@@ -63,9 +63,9 @@ Your application 'myphpapp' is now available.
 Run 'app show-app myphpapp' for more details about your app.
 {% endhighlight %}
 
-Последните няколко реда казват, че твоето приложение е създадено в StartApp и клонирано на твоя компютър.
+Последните няколко реда казват, че твоето приложение е създадено в CloudStrap и клонирано на твоя компютър.
 
-{% note info, Всяко приложение в StartApp притежава: %}
+{% note info, Всяко приложение в CloudStrap притежава: %}
 
 Собствен домейн адрес (с включен SSL сертификат).
 
@@ -144,7 +144,7 @@ Git хранилище
 
 {% note warning, Важно! %}
 
-StartАpp проверява и изпълнява `index.php` от изброените директории в следната последователност:
+CloudStrap проверява и изпълнява `index.php` от изброените директории в следната последователност:
 
     1. php/             стартова директория за стандартно PHP приложение
     2. public/          стартова директория за Zend Framework v1/v2, Laravel, FuelPHP, Surebert.
@@ -184,7 +184,7 @@ StartАpp проверява и изпълнява `index.php` от изброе
 
 {% section id="deployment" title="Качване на приложение" %}
 
-В StartАpp това става с една команда:
+В CloudStrap това става с една команда:
 
     git push
 
@@ -217,7 +217,7 @@ StartАpp проверява и изпълнява `index.php` от изброе
 - Activating deployment
 - Starting PHP cartridge
 
-Това е нормалното поведение на всеки един `deploy` процес в StartАpp. Разбира се, това поведение може да бъде променяно чрез **маркери**.
+Това е нормалното поведение на всеки един `deploy` процес в CloudStrap. Разбира се, това поведение може да бъде променяно чрез **маркери**.
 
 {% endnote %}
 
@@ -228,7 +228,7 @@ StartАpp проверява и изпълнява `index.php` от изброе
 
 {% section id="add-mysql-to-app" title="Добавяне на MySQL към PHP приложение" %}
 
-В StartАpp това става с една команда:
+В CloudStrap това става с една команда:
 
     app cartridge add mysql-5.5
 
@@ -304,7 +304,7 @@ $link->close();
 
 {% section id="how-to-access-mysql-via-ssh" title="Достъпване на МySQL през SSH" %}
 
-В StartАpp това става с една команда:
+В CloudStrap това става с една команда:
 
     app ssh
 
@@ -356,7 +356,7 @@ $link->close();
 
     mysql   127.0.0.1:3306  =>  127.12.225.130:3306
 
-Можеш да достъпваш MySQL сървъра, който работи на StartАpp от локалната си машина:
+Можеш да достъпваш MySQL сървъра, който работи на CloudStrap от локалната си машина:
 
     mysql -h 127.0.0.1 -P 3306 -u <username> -p <password>
 
@@ -468,7 +468,7 @@ pg_close($connection);
 
 {% section header id="how-to-access-postgresql-via-ssh" title="Достъпване на PostgreSQL през SSH" %}
 
-В StartАpp това става с една команда:
+В CloudStrap това става с една команда:
 
     app ssh
 
@@ -518,7 +518,7 @@ pg_close($connection);
 
     postgresql 127.0.0.1:5432   =>  127.12.225.133:5432
 
-Можеш да достъпваш PostgreSQL сървъра, който работи на StartАpp от локалната си машина:
+Можеш да достъпваш PostgreSQL сървъра, който работи на CloudStrap от локалната си машина:
 
     psql -h 127.0.0.1 -p 5432 -u <username> -w <database>
 
@@ -531,7 +531,7 @@ pg_close($connection);
 {% endsection %}
 
 {% section id="add-mongo-to-app" title="MongoDB и PHP" %}
-В StartАpp това става с една команда:
+В CloudStrap това става с една команда:
 
     app cartridge add mongodb-2.4
 
@@ -602,7 +602,7 @@ $database = $mongo->$db_name;
 
 {% section id="how-to-access-mongodb-via-ssh" title="Достъпване на MongoDB през SSH" %}
 
-В StartАpp това става с една команда:
+В CloudStrap това става с една команда:
 
     app ssh
 
@@ -651,7 +651,7 @@ $database = $mongo->$db_name;
 
     mongodb 127.0.0.1:27017  =>  127.12.225.132:27017
 
-Можеш да достъпваш MongoDB сървъра, който работи на StartАpp от локалната си машина:
+Можеш да достъпваш MongoDB сървъра, който работи на CloudStrap от локалната си машина:
 
     mongo 127.0.0.1:27017/<database> -u <username> -p <password>
 
@@ -665,7 +665,7 @@ $database = $mongo->$db_name;
 
 {% section id="create-codeigniter-app" title="Инсталиране на Codeigniter" %}
 
-Благодарение на **StartApp Quickstarts** може да инсталираш Codeigniter това става с една команда:
+Благодарение на **CloudStrap Quickstarts** може да инсталираш Codeigniter това става с една команда:
 
     app create myciapp codeigniter
 
@@ -677,7 +677,7 @@ $database = $mongo->$db_name;
     -------------------
     Domain:      myciapp
     Cartridges:  php-5.5, mysql-5.1
-    Source Code: http://install.startapp.bg/q/codeigniter.git
+    Source Code: http://install.cloudstrap.io/q/codeigniter.git
     Gear Size:   default
     Scaling:     no
 

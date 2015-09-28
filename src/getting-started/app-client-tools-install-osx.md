@@ -1,29 +1,29 @@
 ---
 layout: document
 
-title:  "Инсталиране на StartApp Client Tools под OS X"
+title:  "Инсталиране на CloudStrap Client Tools под OS X"
 date:   2013-12-02 22:58:04
-header_title:  "> gem install startapp OS X"
+header_title:  "> gem install cloudstrap OS X"
 header_title_fontsize: big
-lead: "Как да инсталираме Ruby, Git и StartApp Tools под OS X"
-keywords: "инсталиран git mac os, инсталиран git os x, инсталиране на startapp"
-description: "Няколко бързи примера как да инсталираме и конфигурираме Ruby, Git и StartApp под Mac OS X"
+lead: "Как да инсталираме Ruby, Git и CloudStrap Tools под OS X"
+keywords: "инсталиран git mac os, инсталиран git os x, инсталиране на cloudstrap"
+description: "Няколко бързи примера как да инсталираме и конфигурираме Ruby, Git и CloudStrap под Mac OS X"
 slug: app-client-tools-install-osx
 noToc: true
 ---
 
 {% capture help_links %}
-  Интерактивният `setup wizard` ще ти помага и насочва през целия процес при настройване на StartApp Client Tools. Ако не можеш да стартираш StartApp Client Tools на този етап драсни на [Startapp общността в Google Groups]({{ site.startapp.groups }}) за съдействие.
+  Интерактивният `setup wizard` ще ти помага и насочва през целия процес при настройване на CloudStrap Client Tools. Ако не можеш да стартираш CloudStrap Client Tools на този етап драсни на [CloudStrap общността в Google Groups]({{ site.cloudstrap.groups }}) за съдействие.
 {% endcapture %}
 
 {% capture after_ruby_and_git_installed %}
-  След като вече сте инсталирал Ruby и Git, използвай RubyGem, (който е вграден в Ruby), за да инсталираш и самите StartApp Client Tools:
+  След като вече сте инсталирал Ruby и Git, използвай RubyGem, (който е вграден в Ruby), за да инсталираш и самите CloudStrap Client Tools:
 {% endcapture %}
 
 <!-- FIXME: Ugly work around -->
 <p style="margin: 25px"></p>
 
-{% section id="install-macos" title="StartApp Client Tools под OS X" %}
+{% section id="install-macos" title="CloudStrap Client Tools под OS X" %}
 
 {% section id="install-ruby-macos" title="Инсталиране на Ruby" %}
 
@@ -53,14 +53,14 @@ git version 2.2.1
 
 {% endsection %}
 
-{% section id="install-app-macos" title="Инсталиране на StartApp Gem" %}
+{% section id="install-app-macos" title="Инсталиране на CloudStrap Gem" %}
 
 {{ after_ruby_and_git_installed }}
 
 Просто използвай тази команда в терминала си:
 
 {% highlight sh %}
-$ sudo gem install startapp
+$ sudo gem install cloudstrap
 {% endhighlight %}
 
 След като инсталацията приключи, използвай тази команда:
@@ -76,29 +76,29 @@ $ app setup
 
 {% section id="rvm" title="Ruby Version Manager" %}
 
-Ruby Version Manager позволява да инсталираш и използваш различни версии на Ruby. Когато инсталираш StartApp Client Tools върху системата използваща RVM, е необходимо да инсталираш `startapp` gem-а в глобалния `gemset`, за да може да го достъпваш от всички Ruby инсталации, които имаш на локалните машини:
+Ruby Version Manager позволява да инсталираш и използваш различни версии на Ruby. Когато инсталираш CloudStrap Client Tools върху системата използваща RVM, е необходимо да инсталираш `cloudstrap` gem-а в глобалния `gemset`, за да може да го достъпваш от всички Ruby инсталации, които имаш на локалните машини:
 
 {% highlight sh %}
 $ rvm gemset use global
-$ gem install startapp
+$ gem install cloudstrap
 {% endhighlight %}
 
 След като направиш това, без значение коя версия на Ruby използваш, `app` командата ще бъде налична.
 
 ### Бъдете винаги up-to-date
 
-След като веднъж си инсталирал `startapp` gem-а, е много лесно да го обновяваш. Ruby има вграден механизъм за обновяване на инсталираните библиотеки. Използвай тази команда:
+След като веднъж си инсталирал `cloudstrap` gem-а, е много лесно да го обновяваш. Ruby има вграден механизъм за обновяване на инсталираните библиотеки. Използвай тази команда:
 
 {% highlight sh %}
-$ gem update startapp
+$ gem update cloudstrap
 {% endhighlight %}
 
 или
 
 {% highlight sh %}
-$ sudo gem update startapp
+$ sudo gem update cloudstrap
 {% endhighlight %}
 
-и ще имаш последната версия на StartApp Client Tools. Ако възникнат някакви проблеми, погледи инструкциите по-горе.
+и ще имаш последната версия на CloudStrap Client Tools. Ако възникнат някакви проблеми, погледи инструкциите по-горе.
 {% endsection %}
 {% endsection %}
