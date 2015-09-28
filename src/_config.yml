@@ -1,9 +1,9 @@
-name: "CloudStrap.bg документация : startapp --help"
+name: "CloudStrap.bg документация : app --help"
 timezone: Europe/Sofia
 permalink: /blog/:title.html
 
 header_title: "> app --help | more"
-header_lead: "Бърз поглед на <strong>StartApp</strong>, как да създаваме и управляваме нашите приложения."
+header_lead: "Бърз поглед на <strong>CloudStrap</strong>, как да създаваме и управляваме нашите приложения."
 
 keywords: ""
 description: ""
@@ -24,12 +24,12 @@ asset_pipeline:
 #Table of content default label
 contentsLabel: "Съдържание"
 
-startapp:
-  groups: "https://groups.google.com/forum/#!forum/startapp-cloud"
-  support_email: "support@startapp.bg"
+cloudstrap:
+  groups: "https://groups.google.com/d/forum/cloudstrapio"
+  support_email: "support@cloudstrap.io"
   github: "https://github.com/startapp-cloud"
   github_docs: "https://github.com/startapp-cloud/docs"
   github_docs_new_issue: "https://github.com/startapp-cloud/docs/issues/new"
   tools_page : "/getting-started/app-client-tools-install.html"
   irc: "http://webchat.freenode.net/?randomnick=1&channels=startapp"
-  new_account: "http://www.startapp.bg/"
+  new_account: "http://www.cloudstrap.io/"

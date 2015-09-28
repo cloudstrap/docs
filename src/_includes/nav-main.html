@@ -7,7 +7,12 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="{{ site.baseurl }}" class="navbar-brand"><img src="/img/logo.png" alt="{{ site.name }}"/><span class="developers">/ developers</span></a>
+      <a href="{{ site.baseurl }}" class="navbar-brand">
+        <svg width="200" height="60" class="logo" alt="{{ site.name }}">
+          <use xlink:href="/img/icons.svg#icon-cloudstrap-logo-text"></use>
+        </svg>
+        <span class="developers">/ developers</span>
+      </a>
     </div>
     <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
       <ul class="nav navbar-nav navbar-right">
