@@ -17,34 +17,34 @@ noToc: true
 
 <p class="lead">Пусни за <= 5.minutes, работещо приложение на Ruby, Python, NodeJS или PHP. Виж как долу.</p>
 
-<div class="row cloudstrap-starters">
+<div class="row start-app-starters">
   <div class="col-xs-6 col-md-3">
-    <a class="thumbnail" href="/getting-started/cloudstrap-with-ruby-quick.html">
+    <a class="thumbnail" href="/getting-started/start-app-with-ruby-quick.html">
       <img src="/img/jumps/ruby.jpg" alt="Ruby Хостинг">
     </a>
-    <h4><a href="/getting-started/cloudstrap-with-ruby-quick.html">Започни с Ruby</a></h4>
+    <h4><a href="/getting-started/start-app-with-ruby-quick.html">Започни с Ruby</a></h4>
     <p>Примери с Rails, Sinatra, PostgreSQL, MySQL, MongoDB</p>
   </div>
   <div class="col-xs-6 col-md-3">
-    <a class="thumbnail" href="/getting-started/cloudstrap-with-php-quick.html">
+    <a class="thumbnail" href="/getting-started/start-app-with-php-quick.html">
       <img src="/img/jumps/php.jpg" alt="PHP Хостинг">
     </a>
-    <h4><a href="/getting-started/cloudstrap-with-php-quick.html">Започни с PHP</a></h4>
+    <h4><a href="/getting-started/start-app-with-php-quick.html">Започни с PHP</a></h4>
     <p>Примери с CakePHP, Codeigniter, Symfony, MySQL, MongoDB</p>
   </div>
   <div class="clearfix visible-xs"></div>
   <div class="col-xs-6 col-md-3">
-    <a class="thumbnail" href="/getting-started/cloudstrap-with-python-quick.html">
+    <a class="thumbnail" href="/getting-started/start-app-with-python-quick.html">
       <img src="/img/jumps/python.jpg" alt="Python Хостинг">
     </a>
-    <h4><a href="/getting-started/cloudstrap-with-python-quick.html">Започни с Python</a></h4>
+    <h4><a href="/getting-started/start-app-with-python-quick.html">Започни с Python</a></h4>
     <p>Примери с Django, WebPy, BottlePy, MySQL, MongoDB</p>
   </div>
   <div class="col-xs-6 col-md-3">
-    <a class="thumbnail" href="/getting-started/cloudstrap-with-nodejs-quick.html">
+    <a class="thumbnail" href="/getting-started/start-app-with-nodejs-quick.html">
       <img src="/img/jumps/node.jpg" alt="NodeJS Хостинг">
     </a>
-    <h4><a href="/getting-started/cloudstrap-with-nodejs-quick.html">Започни с NodeJS</a></h4>
+    <h4><a href="/getting-started/start-app-with-nodejs-quick.html">Започни с NodeJS</a></h4>
     <p>Примери с ExpressJS, MeteorJS, MySQL, MongoDB</p>
   </div>
 

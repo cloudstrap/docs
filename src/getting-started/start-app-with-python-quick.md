@@ -5,7 +5,7 @@ title:  "Python приложения в CloudStrap.io Python хостинг."
 date:   2014-02-10 12:58:04
 header_title:  '> app create &lt;app&gt; with Python'
 lead: "За Python манияци! Създаване на Python приложения в <strong>CloudStrap</strong> cloud за 5 минути"
-slug: cloudstrap-with-python-quick
+slug: start-app-with-python-quick
 keywords: "хостинг, php хостинг, python хостинг, ruby хостинг, nodejs хостинг"
 description: ""
 noToc: true

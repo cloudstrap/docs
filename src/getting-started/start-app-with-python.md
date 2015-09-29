@@ -1,84 +1,86 @@
 ---
 layout: document
 
-title:  "Ruby приложения в Cloudstrap.io"
-date:   2013-11-25 16:58:04
-header_title:  '> app create &lt;app&gt; with Ruby'
-lead: "За Ruby поети! Създаване на Ruby приложения в <strong>CloudStrap</strong> cloud за 5 минути"
-slug: cloudstrap-with-ruby
+title:  "Python приложения в CloudStrap.io Python хостинг."
+date:   2014-02-10 12:58:04
+header_title:  '> app create &lt;app&gt; with Python'
+lead: "За Python манияци! Създаване на Python приложения в <strong>CloudStrap</strong> cloud за 5 минути"
+slug: start-app-with-python
 keywords: "хостинг, php хостинг, python хостинг, ruby хостинг, nodejs хостинг"
 description: ""
 noToc: true
 ---
 
-{% page_header id="quickstart-ruby" title="CloudStrap.io с Ruby" %}
+{% page_header id="quickstart" title="Създаване на приложение с Python" %}
 
 {% note warning, Предварителни изисквания! %}
   {% include customer-requirements.html %}
 {% endnote %}
 
-{% section id="create-ruby-app-in-details" title="Създаване на Ruby приложение" %}
+{% section id="create-python-app-in-details" title="Създаване на Python приложение" %}
 
 В CloudStrap това става с една команда:
 
-    app create myrubyapp ruby-2.0
+    app create mypythonapp python-3.3
 
-Наличните версии на Ruby са `Ruby 1.8`, `Ruby 1.9` и `Ruby 2.0`
+Наличните версии на Python са `python-2.6`, `python-2.7` и `python-3.3`
 
-{% note info, Относно myrubyapp! %}
-Чудите се дали `myrubyapp` е нещо вълшебно, отговорът е НЕ.
+{% note info, Относно mypythonapp! %}
+Чудите се дали `mypythonapp` е нещо вълшебно, отговорът е НЕ.
 Това е името на твоето приложение :)
 {% endnote %}
 
 Резултатът от тази команда е:
 
 {% highlight sh %}
-
 Application Options
 -------------------
 Domain:     demos
-Cartridges: ruby-2.0
+Cartridges: python-3.3
 Gear Size:  default
 Scaling:    no
 
-Creating application 'myrubyapp' ... done
-
+Creating application 'mypythonapp' ... done
 
 Waiting for your DNS name to be available ... done
 
-Cloning into 'myrubyapp'...
+Cloning into 'mypythonapp'...
+The authenticity of host 'mypythonapp-demos.sapp.io (46.4.1.82)' can`t be established.
+RSA key fingerprint is fd:91:73:33:23:3f:cf:ad:ab:0a:c6:d4:4c:ff:d6:7d.
+Are you sure you want to continue connecting (yes/no)?
 
-Your application 'myrubyapp' is now available.
+Потвърждаваме клонирането на новото приложение на локалната машина с 'yes'
 
-  URL:        http://myrubyapp-demos.sapp.io/
-  SSH to:     54a7336a0fe7e6928b0047dd@myrubyapp-demos.sapp.io
-  Git remote: ssh://54a7336a0fe7e6928b0047dd@myrubyapp-demos.sapp.io/~/git/myrubyapp.git/
-  Cloned to:  /Users/MyUser/demos/myrubyapp
+Your application 'mypythonapp' is now available.
 
-Run 'app show-app myrubyapp' for more details about your app.
+  URL:        http://mypythonapp-demos.sapp.io/
+  SSH to:     54e74226ba7eead0b000001a@mypythonapp-demos.sapp.io
+  Git remote: ssh://54e74226ba7eead0b000001a@mypythonapp-demos.sapp.io/~/git/mypythonapp.git/
+
+Run 'app show-app mypythonapp' for more details about your app.
 {% endhighlight %}
+
 Последните няколко реда казват, че твоето приложение е създадено в CloudStrap и клонирано на твоя компютър.
 
 {% note info, Всяко приложение в CloudStrap притежава: %}
 
 Собствен домейн адрес (с включен SSL сертификат).
 
-    URL:        http://myrubyapp-demos.sapp.io/
+    URL:        http://mypythonapp-demos.sapp.io/
 
 SSH достъп
 
-    SSH to:     54a7336a0fe7e6928b0047dd@myrubyapp-demos.sapp.io
+    SSH to:     54e74226ba7eead0b000001a@mypythonapp-demos.sapp.io
 
 Git хранилище
 
-    ssh://52debd81bfbf5aa4ca000482@myrubyapp-demos.sapp.io/~/git/myrubyapp.git/
-
+    Git remote: ssh://54e74226ba7eead0b000001a@mypythonapp-demos.sapp.io/~/git/mypythonapp.git/
 
 {% endnote %}
 {% endsection %}
 
 
-{% section id="file-structure" title="Файлова структура на Ruby приложението" %}
+{% section id="file-structure" title="Файлова структура на Python приложение" %}
 
 След създаване на приложението ще видиш следната файлова структура:
 
@@ -96,52 +98,54 @@ Git хранилище
       </thead>
       <tbody>
 
-        <tr>
-          <td>
-            .openshift/action_hooks/
-          </td>
-          <td>Виж секция <a href="#action-hooks">Action Hooks</a></td>
-        </tr>
+      <tr>
+        <td>
+          wsgi.py
+        </td>
+        <td>Стартиращ файл по подразбиране на WSGI</td>
+      </tr>
 
-        <tr>
-          <td>
-            .openshift/cron
-          </td>
-          <td>Директория за Cron Jobs</td>
-        </tr>
-        <tr>
-          <td>
-            .openshift/markers/
-          </td>
-          <td>Виж секция <a href="#markers">Markers</a></td>
-        </tr>
+      <tr>
+        <td>
+          setup.py
+        </td>
+        <td>Стандартен инсталационен скрипт</td>
+      </tr>
 
-        <tr>
-          <td>
-            config.ru
-          </td>
-          <td>Стартов файл на твоето приложение</td>
-        </tr>
+      <tr>
+        <td>
+          requirements.txt
+        </td>
+        <td>Файл, в който указваш необходимите пакети за твоето приложение.</td>
+      </tr>
 
-        <tr>
-          <td>
-            public/
-          </td>
-          <td>Директория за файлове, които са общодостъпни</td>
-        </tr>
-        <tr>
-          <td>
-            tmp/
-          </td>
-          <td>Директория за временни файлове.</td>
-        </tr>
+      <tr>
+        <td>
+          .openshift/action_hooks/
+        </td>
+        <td>Виж секция <a href="#action-hooks">Action Hooks</a></td>
+      </tr>
 
-        <tr>
-          <td>
-            .git/
-          </td>
-          <td>Това е локалното Git хранилище на приложението.</td>
-        </tr>
+      <tr>
+        <td>
+          .openshift/cron
+        </td>
+        <td>Директория за Cron Jobs</td>
+      </tr>
+
+      <tr>
+        <td>
+          .openshift/markers/
+        </td>
+        <td>Виж секция <a href="#markers">Markers</a></td>
+      </tr>
+
+      <tr>
+        <td>
+          .git/
+        </td>
+         <td>Това е локалното Git хранилище на приложението.</td>
+      </tr>
 
       </tbody>
     </table>
@@ -151,7 +155,7 @@ Git хранилище
 
 {% section id="env-vars" title="Environment променливи" %}
 
-Всяко едно Ruby приложение идва с няколко ENV променливи.
+Всяко Python приложение идва с няколко ENV променливи.
 
 <div class="table-responsive">
   <table class="table table-bordered table-striped">
@@ -168,23 +172,18 @@ Git хранилище
     <tbody>
       <tr>
         <td>
-          OPENSHIFT_RUBY_LOG_DIR
+          OPENSHIFT_PYTHON_WSGI_APPLICATION
         </td>
-        <td>Локация за Ruby log файлове.</td>
+        <td>Можеш да зададеш различен WSGI стартов файл, като използваш следната команда 'app env set OPENSHIFT_PYTHON_WSGI_APPLICATION=app/altenative-wsgi.py'
+        </td>
       </tr>
 
       <tr>
         <td>
-          OPENSHIFT_RUBY_VERSION
+          OPENSHIFT_PYTHON_REQUIREMENTS_PATH
         </td>
-        <td>Версия на Ruby.</td>
-      </tr>
-
-      <tr>
-        <td>
-          BUNDLE_WITHOUT
+        <td>Чрез тази променлива задаваш специфично място, от което да чете 'pip requirements' примерно 'app env set OPENSHIFT_PYTHON_REQUIREMENTS_PATH=requirements/production.txt'.
         </td>
-        <td>Предотвратява използването на Bundler при инсталирането на определени файлови групи, посочени в Gemfile</td>
       </tr>
 
     </tbody>
@@ -194,15 +193,15 @@ Git хранилище
 
 {% section id="make-code-changes" title="Как да правим промени по кода?" %}
 
-Редактирай съдържанието между 'body' таговете във файла 'config.ru':
+Редактирай съдържанието между 'body' таговете във файла 'wsgi.py':
 
     <body>
-         <h1> Моето ruby приложение! </h1>
+      <h1> Моето mypython приложение! </h1>
     </body>
 
 Да запишем промените в `Git`.
 
-    git commit -am "Change content of config.ru"
+    git commit -am "initial"
 
 Браво! Трудната част мина успешно :) Сега остава да качим промените на сървъра.
 
@@ -211,70 +210,99 @@ Git хранилище
 
 {% section id="deployment" title="Качване на сървъра" %}
 
-Качване на промените, които си направил със следната команда:
+В CloudStrap това става с една команда:
 
     git push
 
-Резултатът от `git push` трябва да е подобно на това:
+Резултатът от тази команда е:
 
-    Counting objects: 5, done.
+    Counting objects: 3, done.
     Delta compression using up to 2 threads.
     Compressing objects: 100% (3/3), done.
-    Writing objects: 100% (3/3), 417 bytes | 0 bytes/s, done.
+    Writing objects: 100% (3/3), 333 bytes | 0 bytes/s, done.
     Total 3 (delta 2), reused 0 (delta 0)
-    remote: Stopping Ruby cartridge
+    remote: Stopping Python 3.3 cartridge
     remote: Waiting for stop to finish
-    remote: Building git ref 'master', commit 11e5237
-    remote: Building Ruby cartridge
+    remote: Building git ref 'master', commit 48ecdd1
+    remote: Activating virtenv
+    remote: Checking for pip dependency listed in requirements.txt file..
+    remote: The directory '/var/lib/openshift/54e74226ba7eead0b000001a/.cache/pip/log' or its parent directory is not owned by the current user and the debug log has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want the -H flag.
+    remote: The directory '/var/lib/openshift/54e74226ba7eead0b000001a/.cache/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want the -H flag.
+    remote: The directory '/var/lib/openshift/54e74226ba7eead0b000001a/.cache/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want the -H flag.
+    remote: You must give at least one requirement to install (see "pip help install")
+    remote: Running setup.py script..
+    remote: running develop
+    remote: running egg_info
+    remote: creating myphytonapp.egg-info
+    remote: writing dependency_links to myphytonapp.egg-info/dependency_links.txt
+    remote: writing myphytonapp.egg-info/PKG-INFO
+    remote: writing top-level names to myphytonapp.egg-info/top_level.txt
+    remote: writing manifest file 'myphytonapp.egg-info/SOURCES.txt'
+    remote: reading manifest file 'myphytonapp.egg-info/SOURCES.txt'
+    remote: writing manifest file 'myphytonapp.egg-info/SOURCES.txt'
+    remote: running build_ext
+    remote: Creating /var/lib/openshift/54e74226ba7eead0b000001a/app-root/runtime/dependencies/python/virtenv/venv/lib/python3.3/site-packages/myphytonapp.egg-link (link to .)
+    remote: myphytonapp 1.0 is already the active version in easy-install.pth
+    remote:
+    remote: Installed /var/lib/openshift/54e74226ba7eead0b000001a/app-root/runtime/repo
+    remote: Processing dependencies for myphytonapp==1.0
+    remote: Finished processing dependencies for myphytonapp==1.0
     remote: Preparing build for deployment
-    remote: Deployment id is 0a7a6b2d
+    remote: Deployment id is 4e49ddce
     remote: Activating deployment
-    remote: Starting Ruby cartridge
-    remote: Result: success
+    remote: Starting Python 3.3 cartridge (Apache+mod_wsgi)
+    remote: Application directory "/" selected as DocumentRoot
+    remote: $OPENSHIFT_PYTHON_WSGI_APPLICATION ENV VAR detected
+    remote: Application "wsgi.py" selected as default WSGI entry point
+    remote: -------------------------
+    remote: Git Post-Receive Result: success
     remote: Activation status: success
     remote: Deployment completed with status: success
-    To ssh://54abdee50fe7e6c31c0000c4@myrubyapp-demos.sapp.io/~/git/ruby.git/
-    67878be..11e5237  master -> master
+    To ssh://54e74226ba7eead0b000001a@mypythonapp-demos.sapp.io/~/git/mypythonapp.git/
+       6cda42d..48ecdd1  master -> master
 
 Това е! Можем да отворим приложението в браузър и да се насладим на промените :)
 
 {% note info, За любопитните! %}
 След `git push` се случиха няколко интересни неща:
 
-- Stopping Ruby cartridge
+- Stopping Stopping Python 3.3 cartridge
 - Activating deployment
-- Starting Ruby cartridge
+- Starting Starting Python 3.3 cartridge (Apache+mod_wsgi)
 
 Това е нормалното поведение на всеки един `deploy` процес в CloudStrap. Разбира се, това поведение може да бъде променяно чрез **маркери**.
 {% endnote %}
-{% endsection %}
 
+{% endsection %}
 
 {% include markers.html slug=page.slug %}
 {% include action-hooks.html slug=page.slug %}
 
-{% section id="add-mysql-to-app" title="Добавяне на MySQL към Ruby приложение" %}
+
+{% section id="add-mysql-to-app" title="Добавяне на MySQL към Python приложение" %}
 
 В CloudStrap това става с една команда:
 
     app cartridge add mysql-5.5
 
+Резултатът от тази команда е:
+
 {% highlight sh %}
-Adding mysql-5.5 to application 'myrubyapp' ... done
+Adding mysql-5.5 to application 'mypythonapp' ... done
 
 mysql-5.5 (MySQL 5.5)
 ---------------------
-  Gears:          Located with ruby-2.0
+  Gears:          Located with python-3.3
   Connection URL: mysql://$OPENSHIFT_MYSQL_DB_HOST:$OPENSHIFT_MYSQL_DB_PORT/
-  Database Name:  myrubyapp
-  Password:       gBq1wGX1sKAi
-  Username:       adminrWaKHZ3
+  Database Name:  mypythonapp
+  Password:       Um2xebB4xCUy
+  Username:       adminZgAlDtv
 
-MySQL 5.5 database added. Please make note of these credentials:
+MySQL 5.5 database added.  Please make note of these credentials:
 
-   Root User: adminrWaKHZ3
-   Root Password: gBq1wGX1sKAi
-   Database Name: myrubyapp
+       Root User: adminZgAlDtv
+   Root Password: Um2xebB4xCUy
+   Database Name: mypythonapp
 
 Connection URL: mysql://$OPENSHIFT_MYSQL_DB_HOST:$OPENSHIFT_MYSQL_DB_PORT/
 
@@ -302,8 +330,8 @@ The phpmyadmin username and password will be the same as the MySQL credentials a
 Резултатът от тази команда е:
 
     Welcome to the MySQL monitor.  Commands end with ; or \g.
-    Your MySQL connection id is 1
-    Server version: 5.5.37 MySQL Community Server (GPL)
+    Your MySQL connection id is 3
+    Server version: 5.5.36 Source distribution
 
     Copyright (c) 2000, 2013, Oracle and/or its affiliates. All rights reserved.
 
@@ -327,19 +355,19 @@ The phpmyadmin username and password will be the same as the MySQL credentials a
 
     Checking available ports ... done
     Forwarding ports ...
-    Address already in use - bind(2) while forwarding port 8080. Trying local port 8081
 
     To connect to a service running on OpenShift, use the Local address
 
-    httpd      127.0.0.1:8081   =>  127.11.98.1:8080
-    mysql      127.0.0.1:3307   =>  127.11.98.2:3306
-    ruby       127.0.0.1:21216  =>  127.11.98.1:21216
+    Service Local               OpenShift
+    ------- -------------- ---- -------------------
+    httpd   127.0.0.1:8080  =>  127.9.188.1:8080
+    mysql   127.0.0.1:3306  =>  127.9.188.2:3306
 
     Press CTRL-C to terminate port forwarding
 
 Обърни внимание на реда:
 
-    mysql   127.0.0.1:3306  =>  127.12.225.130:3306
+    mysql   127.0.0.1:3306  =>  127.9.188.2:3306
 
 Можеш да достъпваш MySQL сървъра, който работи на CloudStrap от локалната си машина:
 
@@ -353,7 +381,7 @@ The phpmyadmin username and password will be the same as the MySQL credentials a
 {% endnote %}
 {% endsection %}
 
-{% section id="add-phpmyadmin-to-app" title="Добавяне на phpMyAdmin към Ruby приложение" %}
+{% section id="add-phpmyadmin-to-app" title="Добавяне на phpMyAdmin към Python приложение" %}
 
     app cartridge add phpmyadmin
 
@@ -361,48 +389,47 @@ The phpmyadmin username and password will be the same as the MySQL credentials a
 
 {% highlight sh %}
 Using phpmyadmin-4 (phpMyAdmin 4.0) for 'phpmyadmin'
-Adding phpmyadmin-4 to application 'myrubyapp' ... done
+Adding phpmyadmin-4 to application 'mypythonapp' ... done
 
 phpmyadmin-4 (phpMyAdmin 4.0)
 -----------------------------
-  Gears:          Located with ruby-2.0, mysql-5.5
-  Connection URL: https://myrubyapp-demos.sapp.io/phpmyadmin/
+  Gears:          Located with python-3.3, mysql-5.5
+  Connection URL: https://mypythonapp-demos.sapp.io/phpmyadmin/
 
 Please make note of these MySQL credentials again:
-  Root User: adminUyn43WK
-  Root Password: fMMMBFnuHM7Q
-URL: https://myrubyapp-demos.sapp.io/phpmyadmin/
+  Root User: adminZgAlDtv
+  Root Password: Um2xebB4xCUy
+URL: https://mypythonapp-demos.sapp.io/phpmyadmin/
 {% endhighlight %}
-
 {% note info, Полезно! %}
 Потребителското име и парола за **phpMyAdmin** са същите като тези за **MySQL** базата.
 {% endnote %}
 {% endsection %}
 
 
-{% section id="add-postgresql-to-app" title="PostgreSQL и Ruby" %}
+{% section id="add-postgresql-to-app" title="PostgreSQL и Python" %}
 
-    app cartridge add postgresql-9.2 -a myrubyapp
+    app cartridge add postgresql-9.2
 
 Резултатът от тази команда е:
 
 {% highlight sh %}
 
-Adding postgresql-9.2 to application 'myrubyapp' ... done
+Adding postgresql-9.2 to application 'mypythonapp' ... done
 
 postgresql-9.2 (PostgreSQL 9.2)
 -------------------------------
-  Gears:          Located with ruby-2.0
+  Gears:          Located with python-3.3
   Connection URL: postgresql://$OPENSHIFT_POSTGRESQL_DB_HOST:$OPENSHIFT_POSTGRESQL_DB_PORT
-  Database Name:  myrubyapp
-  Password:       Un_57QGG4kCl
-  Username:       admindxdscu3
+  Database Name:  mypythonapp
+  Password:       h8uZRGKR2BJG
+  Username:       adminafn7htg
 
 PostgreSQL 9.2 database added.  Please make note of these credentials:
 
-   Root User: admindxdscu3
-   Root Password: Un_57QGG4kCl
-   Database Name: ruby
+   Root User: adminafn7htg
+   Root Password: h8uZRGKR2BJG
+   Database Name: mypythonapp
 
 Connection URL: postgresql://$OPENSHIFT_POSTGRESQL_DB_HOST:$OPENSHIFT_POSTGRESQL_DB_PORT
 {% endhighlight %}
@@ -413,6 +440,7 @@ Connection URL: postgresql://$OPENSHIFT_POSTGRESQL_DB_HOST:$OPENSHIFT_POSTGRESQL
 
 {% include env_vars/postgresql.html %}
 {% endsection %}
+
 
 {% section header id="how-to-access-postgresql-via-ssh" title="Достъпване на PostgreSQL през SSH" %}
 
@@ -429,28 +457,25 @@ Connection URL: postgresql://$OPENSHIFT_POSTGRESQL_DB_HOST:$OPENSHIFT_POSTGRESQL
     psql (9.2.7)
     Type "help" for help.
 
-    myrubyapp=# help
+    mypythonapp=# help
     You are using psql, the command-line interface to PostgreSQL.
     Type:  \copyright for distribution terms
            \h for help with SQL commands
            \? for help with psql commands
            \g or terminate with semicolon to execute query
            \q to quit
-    myrubyapp=#
 
 Това означава, че си в интерактивната конзола на PostgreSQL!
 
 {% endsection %}
 
-
-
-{% section id="how-to-access-postgresql-via-devpc" title="Достъпване на PostgreSQL през работната машина" %}
+{% section id="how-to-access-postgresql-via-devpc" title="Достъпване на PostgreSQL през работна машина" %}
 
     app port-forward
 
 Резултатът от тази команда е:
 
-    Checking available ports ... done
+    hecking available ports ... done
     Forwarding ports ...
     Address already in use - bind(2) while forwarding port 8080. Trying local port 8081
 
@@ -458,15 +483,15 @@ Connection URL: postgresql://$OPENSHIFT_POSTGRESQL_DB_HOST:$OPENSHIFT_POSTGRESQL
 
     Service    Local                OpenShift
     ---------- --------------- ---- --------------------
-    httpd      127.0.0.1:8080   =>  127.12.225.129:8080
-    httpd      127.0.0.1:8081   =>  127.12.225.131:8080
-    postgresql 127.0.0.1:5432   =>  127.12.225.133:5432
+    httpd      127.0.0.1:8080  =>  127.9.188.1:8080
+    httpd      127.0.0.1:8081  =>  127.9.188.3:8080
+    postgresql 127.0.0.1:5432  =>  127.9.188.4:5432
 
     Press CTRL-C to terminate port forwarding
 
 Обърни внимание на реда:
 
-    postgresql 127.0.0.1:5432   =>  127.12.225.133:5432
+    postgresql 127.0.0.1:5432  =>  127.9.188.4:5432
 
 Можеш да достъпваш PostgreSQL сървъра, който работи на CloudStrap от локалната си машина:
 
@@ -478,9 +503,10 @@ Connection URL: postgresql://$OPENSHIFT_POSTGRESQL_DB_HOST:$OPENSHIFT_POSTGRESQL
     app show
 
 {% endnote %}
+
 {% endsection %}
 
-{% section id="add-mongo-to-app" title="MongoDB и Ruby" %}
+{% section id="add-mongo-to-app" title="MongoDB и Python" %}
 
 В CloudStrap това става с една команда:
 
@@ -490,21 +516,21 @@ Connection URL: postgresql://$OPENSHIFT_POSTGRESQL_DB_HOST:$OPENSHIFT_POSTGRESQL
 
 {% highlight sh %}
 
-Adding mongodb-2.4 to application 'myrubyapp' ... done
+Adding mongodb-2.4 to application 'mypythonapp' ... done
 
 mongodb-2.4 (MongoDB 2.4)
 -------------------------
-  Gears:          Located with ruby-2.0
+  Gears:          Located with python-3.3
   Connection URL: mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT/
-  Database Name:  myrubyapp
-  Password:       ISKkW-hbMIui
+  Database Name:  mypythonapp
+  Password:       lVvdKJzcVSpJ
   Username:       admin
 
 MongoDB 2.4 database added.  Please make note of these credentials:
 
    Root User:     admin
-   Root Password: ISKkW-hbMIui
-   Database Name: ruby
+   Root Password: lVvdKJzcVSpJ
+   Database Name: mypythonapp
 
 Connection URL: mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT/
 {% endhighlight %}
@@ -516,6 +542,7 @@ Connection URL: mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT/
 {% include env_vars/mongodb.html %}
 
 {% endsection %}
+
 
 {% section id="how-to-access-mongodb-via-ssh" title="Достъпване на MongoDB през SSH" %}
 
@@ -530,44 +557,47 @@ Connection URL: mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT/
 Резултатът от тази команда е:
 
     MongoDB shell version: 2.4.6
-    connecting to: 127.11.98.4:27017/admin
+    connecting to: 127.9.188.5:27017/admin
     Welcome to the MongoDB shell.
     For interactive help, type "help".
     For more comprehensive documentation, see
-    http://docs.mongodb.org/
+      http://docs.mongodb.org/
     Questions? Try the support group
-    http://groups.google.com/group/mongodb-user
+      http://groups.google.com/group/mongodb-user
     >
 
-Това означава, че си в интерактивната конзола на MongoDB!
+Което означава, че си в интерактивната конзола на MongoDB!
 
 {% endsection %}
 
-{% section id="how-to-access-mongodb-via-devpc" title="Достъпване на MongoDB през работна машина" %}
+{% section id="how-to-access-mongodb-via-devpc" title="Достъпване на MongoDB през работната ви машина/лаптоп" %}
+
     app port-forward
 
 Резултатът от тази команда е:
 
     Checking available ports ... done
     Forwarding ports ...
+    Address already in use - bind(2) while forwarding port 8080. Trying
+    local port 8081
 
     To connect to a service running on OpenShift, use the Local address
 
     Service Local                OpenShift
-    ------- --------------- ---- -----------------
-    httpd   127.0.0.1:8080   =>  127.11.98.1:8080
-    mongodb 127.0.0.1:27017  =>  127.11.98.4:27017
-    ruby    127.0.0.1:21216  =>  127.11.98.1:21216
+    ------- --------------- ---- --------------------
+    httpd      127.0.0.1:8080   =>  127.9.188.1:8080
+    httpd      127.0.0.1:8081   =>  127.9.188.3:8080
+    mongodb    127.0.0.1:27017  =>  127.9.188.5:27017
 
     Press CTRL-C to terminate port forwarding
 
 Обърни внимание на реда:
 
-    mongodb 127.0.0.1:27017  =>  127.11.98.4:27017
+    mongodb    127.0.0.1:27017  =>  127.9.188.5:27017
 
 Можеш да достъпваш MongoDB сървъра, който работи на CloudStrap от локалната си машина:
 
-    mongodb 127.0.0.1:27017/<database> --username <username> --password <password>
+    mongo 127.0.0.1:27017/<database> --username <username> --password <password>
 
 {% note info, Полезно! %}
 За да видиш хост, порт, потребителско име и парола на базата изпълни:
@@ -577,38 +607,5 @@ Connection URL: mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT/
 {% endnote %}
 {% endsection %}
 
-{% section id="how-to-bundler" title="Използване на Bundler" %}
 
-CloudStrap.io e с вградена поддръжка за Bundler и можеш просто да започнеш да го използваш. Няма нужда да се занимаваш с нищо, просто го използвай!
-
-Създай Gemfile в главната директория на приложението 'myrubyapp/Gemfile' и добави библиотеките, които използва твоето приложение примерно така (Синатра в този пример)
-
-    source 'https://rubygems.org'
-
-    gem 'sinatra'
-
-и локално да създадеш Gemfile.lock файл, който предоставя актуална версия на библиотеки на твоята заявка
-
-    bundle install
-
-повтори стъпките, за да добавиш кода:
-
-    git add .
-    git commit -m "Dependencies"
-    git push
-
-Твоето приложение ще изглежда подобно на предишното, но ще съдържа Bundler, който работи в средата на CloudStrap и ще пакетира dependencies на твоето приложение. Резултатът е:
-
-    remote: Building Ruby cartridge
-    remote: Bundling RubyGems based on Gemfile/Gemfile.lock to repo/vendor/bundle with 'bundle install --deployment'
-    remote: Fetching gem metadata from http://rubygems.org/..........
-    remote: Installing rack (1.6.0)
-    remote: Installing rack-protection (1.5.3)
-    remote: Installing tilt (1.4.1)
-    remote: Installing sinatra (1.4.5)
-    remote: Using bundler (1.1.4)
-    remote: Your bundle is complete! It was installed into ./vendor/bundle
-
-{% endsection %}
-
-{% include help/ruby.html %}
+{% include help/python.html %}

@@ -5,13 +5,13 @@ title:  "NodeJS приложения в CloudStrap.io NodeJS хостинг."
 date:   2014-03-01 18:58:04
 header_title:  '> app create &lt;app&gt; with NodeJS'
 lead: "За любознателни JavaScript машини! Създаване на NodeJS приложения в <strong>CloudStrap</strong>  Сloud"
-slug: cloudstrap-with-nodejs
+slug: start-app-with-nodejs
 keywords: "хостинг, nodejs хостинг, nodejs mongodb, nodejs mysql, nodejs framework, nodejs приложения, nodejs"
 description: ""
 noToc: true
 ---
 
-{% page_header id="quickstart" title="CloudStrap.io с NodeJS" %}
+{% page_header id="quickstart" title="Създаване на приложение с NodeJS" %}
 
 {% note warning, Предварителни изисквания! %}
   {% include customer-requirements.html %}

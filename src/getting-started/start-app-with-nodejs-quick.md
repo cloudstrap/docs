@@ -5,7 +5,7 @@ title:  "> CloudStrap.io - NodeJS хостинг."
 date:   2014-02-10 12:58:04
 header_title:  '> app create &lt;app&gt; with NodeJS'
 lead: "За JavaScript машини! Създаване на NodeJS приложения в <strong>CloudStrap</strong> cloud за 5 минути"
-slug: cloudstrap-with-nodejs-quick
+slug: start-app-with-nodejs-quick
 keywords: "хостинг, nodejs хостинг, nodejs mongodb, nodejs mysql, nodejs framework, nodejs приложения, nodejs"
 description: ""
 noToc: true

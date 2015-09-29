@@ -5,13 +5,13 @@ title:  "PHP приложения в CloudStrap"
 date:   2013-11-25 16:58:04
 header_title:  '> app create &lt;app&gt; with PHP'
 lead: "За PHP любознайковци! Дисекция на PHP приложенията в <strong>CloudStrap.io</strong> Сloud"
-slug: cloudstrap-with-php
+slug: start-app-with-php
 keywords: "хостинг, php хостинг, python хостинг, ruby хостинг, nodejs хостинг"
 description: ""
 noToc: true
 ---
 
-{% page_header id="quickstart-php" title="CloudStrap.io с PHP" %}
+{% page_header id="quickstart-php" title="Създаване на приложение с PHP" %}
 
 {% note warning, Предварителни изисквания! %}
   {% include customer-requirements.html %}
