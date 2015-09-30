@@ -4,8 +4,8 @@ layout: document
 title:  "> app --help | more"
 date:   2014-02-10 12:58:04
 header_title:  '> app create &lt;app&gt; with Ruby'
-lead: "За Ruby поети! Създаване на Ruby приложения в <strong>StartApp</strong> cloud за 5 минути"
-slug: startapp-with-ruby-quick
+lead: "За Ruby поети! Създаване на Ruby приложения в <strong>CloudStrap</strong> cloud за 5 минути"
+slug: start-app-with-ruby-quick
 keywords: "хостинг, php хостинг, python хостинг, ruby хостинг, nodejs хостинг"
 description: ""
 noToc: true
@@ -14,7 +14,7 @@ noToc: true
 {% section id="fast-create-ruby-app" title="Бързи инструкции" %}
 
 {%assign install_url="/getting-started/app-client-tools-install.html" %}
-{%assign ruby_full="/getting-started/startapp-with-ruby.html" %}
+{%assign ruby_full="/getting-started/cloudstrap-with-ruby.html" %}
 
 За да работят примерите по-долу ти трябва:
 
@@ -63,7 +63,7 @@ noToc: true
     <div class="col-sm-6 col-md-4 col-xs-12">
       <div class="thumbnail">
         <div class="caption">
-          <h3>PHP приложения</h3>
+          <h3>Ruby приложения</h3>
           <ul class="list-unstyled">
               <li><a href="{{ ruby_full }}#create-ruby-app-in-details">Създаване</a></li>
               <li><a href="{{ ruby_full }}#file-structure">Файлова структура</a></li>

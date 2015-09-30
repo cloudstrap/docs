@@ -18,7 +18,7 @@
 docs_port=4100
 
 if [ -d ~/.pow ]; then
-  echo '4100' > ~/.pow/docs.startapp
+  echo '4100' > ~/.pow/docs.cloudstrap
 fi
 
 _develo_actions_server_banner
