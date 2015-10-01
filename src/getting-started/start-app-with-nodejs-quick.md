@@ -1,11 +1,11 @@
 ---
 layout: document
 
-title:  "> StartApp.bg - NodeJS хостинг."
+title:  "> CloudStrap.io - NodeJS хостинг."
 date:   2014-02-10 12:58:04
 header_title:  '> app create &lt;app&gt; with NodeJS'
-lead: "За JavaScript машини! Създаване на NodeJS приложения в <strong>StartApp</strong> cloud за 5 минути"
-slug: startapp-with-nodejs-quick
+lead: "За JavaScript машини! Създаване на NodeJS приложения в <strong>CloudStrap</strong> cloud за 5 минути"
+slug: start-app-with-nodejs-quick
 keywords: "хостинг, nodejs хостинг, nodejs mongodb, nodejs mysql, nodejs framework, nodejs приложения, nodejs"
 description: ""
 noToc: true
@@ -14,7 +14,7 @@ noToc: true
 {% section id="fast-create-app" title="Бързи инструкции" %}
 
 {%assign install_url="/getting-started/app-client-tools-install.html" %}
-{%assign full_docs="/getting-started/startapp-with-nodejs.html" %}
+{%assign full_docs="/getting-started/cloudstrap-with-nodejs.html" %}
 
 За да работят примерите по-долу ти трябва:
 

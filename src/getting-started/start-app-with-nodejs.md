@@ -1,17 +1,17 @@
 ---
 layout: document
 
-title:  "NodeJS приложения в StartApp.bg NodeJS хостинг."
+title:  "NodeJS приложения в CloudStrap.io NodeJS хостинг."
 date:   2014-03-01 18:58:04
 header_title:  '> app create &lt;app&gt; with NodeJS'
-lead: "За любознателни JavaScript машини! Създаване на NodeJS приложения в <strong>StartApp</strong>  Сloud"
-slug: startapp-with-nodejs
+lead: "За любознателни JavaScript машини! Създаване на NodeJS приложения в <strong>CloudStrap</strong>  Сloud"
+slug: start-app-with-nodejs
 keywords: "хостинг, nodejs хостинг, nodejs mongodb, nodejs mysql, nodejs framework, nodejs приложения, nodejs"
 description: ""
 noToc: true
 ---
 
-{% page_header id="quickstart" title="StartApp.bg с NodeJS" %}
+{% page_header id="quickstart" title="Създаване на приложение с NodeJS" %}
 
 {% note warning, Предварителни изисквания! %}
   {% include customer-requirements.html %}
@@ -19,14 +19,14 @@ noToc: true
 
 {% section id="create-app-in-details" title="Създаване на NodeJS приложение" %}
 
-В StartАpp това става с една команда:
+В CloudStrap това става с една команда:
 
     app create mynodejsapp nodejs-0.10
 
 Наличните версии на NodeJS са `nodejs-0.6`, `nodejs-0.10`
 
-{% note info, Относно myphpapp! %}
-Чудите се дали `myphpapp` е нещо вълшебно, отговорът е НЕ.
+{% note info, Относно mynodejsapp! %}
+Чудите се дали `mynodejsapp` е нещо вълшебно, отговорът е НЕ.
 Това е името на твоето приложение :)
 {%endnote%}
 
@@ -62,9 +62,9 @@ Your application 'mynodejsapp' is now available.
 Run 'app show-app mynodejsapp' for more details about your app.
 {% endhighlight %}
 
-Последните няколко реда казват, че твоето приложение е създадено в StartApp и клонирано на твоя компютър.
+Последните няколко реда казват, че твоето приложение е създадено в CloudStrap и клонирано на твоя компютър.
 
-{% note info, Всяко приложение в StartApp притежава: %}
+{% note info, Всяко приложение в CloudStrap притежава: %}
 
 Собствен домейн адрес (с включен SSL сертификат).
 
@@ -139,7 +139,7 @@ Git хранилище
         <td>
           server.js
         </td>
-        <td>Това е файлът, чрез който StartApp ще стартира твоето приложение.</td>
+        <td>Това е файлът, чрез който CloudStrap ще стартира твоето приложение.</td>
       </tr>
 
       <tr>
@@ -154,7 +154,7 @@ Git хранилище
   </div>
 
 {% note warning, Важно! %}
-По подразбиране, StartApp стартира твоето приложение, чрез файл с име <code>server.js</code>. Може да укажеш алтернативен стартиращ файл, чрез промяна на <code>main</code> и <code>scripts.start</code> секциите в твоя <code>package.json</code> файл.
+По подразбиране, CloudStrap стартира твоето приложение, чрез файл с име <code>server.js</code>. Може да укажеш алтернативен стартиращ файл, чрез промяна на <code>main</code> и <code>scripts.start</code> секциите в твоя <code>package.json</code> файл.
 Желателно е да направиш следната малка проверка, за да тестваш за наличните системни променливи, които обикновено се използват от nodejs приложението
 
     var server_port = process.env.OPENSHIFT_NODEJS_PORT || 8080
@@ -164,7 +164,7 @@ Git хранилище
     console.log("Listening on " + server_ip_address + ", server_port " + port)
     });
 
-Горният код задава стойности по подразбиране, които ще позволят на приложението да работи в StartApp и на твоя компютър
+Горният код задава стойности по подразбиране, които ще позволят на приложението да работи в CloudStrap и на твоя компютър
 
 {% endnote %}
 {% endsection %}
@@ -190,14 +190,14 @@ Git хранилище
         <td>
           OPENSHIFT_NODEJS_IP
         </td>
-        <td>Вътрешния IP адрес на NodeJS приложението. Използва се от StartApp.</td>
+        <td>Вътрешния IP адрес на NodeJS приложението. Използва се от CloudStrap.</td>
       </tr>
 
       <tr>
         <td>
           OPENSHIFT_NODEJS_PORT
         </td>
-        <td>Вътрешния порт на NodeJS приложението. Използва се от StartApp.</td>
+        <td>Вътрешния порт на NodeJS приложението. Използва се от CloudStrap.</td>
       </tr>
 
       <tr>
@@ -211,7 +211,7 @@ Git хранилище
         <td>
           NPM_CONFIG_PRODUCTION
         </td>
-        <td>Когато NPM_CONFIG_PRODUCTION е със стойност 'true', StartApp няма да инсталира 'devDependencies', </td>
+        <td>Когато NPM_CONFIG_PRODUCTION е със стойност 'true', CloudStrap няма да инсталира 'devDependencies', </td>
       </tr>
     </tbody>
   </table>
@@ -235,7 +235,7 @@ Git хранилище
 
 {% section id="deployment" title="Качване на сървъра" %}
 
-В StartАpp това става с една команда:
+В CloudStrap това става с една команда:
 
     git push
 
@@ -279,7 +279,7 @@ Git хранилище
 - Activating deployment
 - Starting NodeJS cartridge
 
-Това е нормалното поведение на всеки един `deploy` процес в StartАpp. Разбира се, това поведение може да бъде променяно чрез **маркери**.
+Това е нормалното поведение на всеки един `deploy` процес в CloudStrap. Разбира се, това поведение може да бъде променяно чрез **маркери**.
 {% endnote %}
 
 {% endsection %}
@@ -290,7 +290,7 @@ Git хранилище
 
 {% section id="add-mysql-to-app" title="Добавяне на MySQL към NodeJS приложение" %}
 
-В StartАpp това става с една команда:
+В CloudStrap това става с една команда:
 
     app cartridge add mysql-5.5
 
@@ -372,7 +372,7 @@ connection.query('INSERT INTO users SET ?', req.body,
 
 {% section id="how-to-access-mysql-via-ssh" title="Достъпване на МySQL през SSH" %}
 
-В StartАpp това става с една команда:
+В CloudStrap това става с една команда:
 
     app ssh
 
@@ -424,7 +424,7 @@ connection.query('INSERT INTO users SET ?', req.body,
 
     mysql   127.0.0.1:3306  =>  127.12.225.130:3306
 
-Можеш да достъпваш MySQL сървъра, който работи на StartАpp от локалната си машина:
+Можеш да достъпваш MySQL сървъра, който работи на CloudStrap от локалната си машина:
 
     mysql -h 127.0.0.1 -P 3306 -u<username> -p<password>
 
@@ -535,7 +535,7 @@ client.connect(function(err) {
 
 {% section header id="how-to-access-postgresql-via-ssh" title="Достъпване на PostgreSQL през SSH" %}
 
-В StartАpp това става с една команда:
+В CloudStrap това става с една команда:
 
     app ssh
 
@@ -585,7 +585,7 @@ client.connect(function(err) {
 
     postgresql 127.0.0.1:5432   =>  127.12.225.133:5432
 
-Можеш да достъпваш PostgreSQL сървъра, който работи на StartАpp от локалната си машина:
+Можеш да достъпваш PostgreSQL сървъра, който работи на CloudStrap от локалната си машина:
 
     psql -h 127.0.0.1 -p 5432 -U <username> -W <database>
 
@@ -600,7 +600,7 @@ client.connect(function(err) {
 
 {% section id="add-mongo-to-app" title="MongoDB и NodeJS" %}
 
-В StartАpp това става с една команда:
+В CloudStrap това става с една команда:
 
     app cartridge add mongodb-2.4
 
@@ -671,7 +671,7 @@ MongoClient.connect(uri, function(err, db) {
 
 {% section id="how-to-access-mongodb-via-ssh" title="Достъпване на MongoDB през SSH" %}
 
-В StartАpp това става с една команда:
+В CloudStrap това става с една команда:
 
     app ssh
 
@@ -720,7 +720,7 @@ MongoClient.connect(uri, function(err, db) {
 
     mongodb 127.0.0.1:27017  =>  127.12.225.132:27017
 
-Можеш да достъпваш MongoDB сървъра, който работи на StartАpp от локалната си машина:
+Можеш да достъпваш MongoDB сървъра, който работи на CloudStrap от локалната си машина:
 
     mongo 127.0.0.1:27017/<database> --username <username> --password <password>
 

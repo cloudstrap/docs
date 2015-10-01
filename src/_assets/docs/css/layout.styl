@@ -14,17 +14,30 @@ p
   line-height: 0
 
 /* Topnav */
-.startapp-navbar
+.cloudstrap-navbar
   background: #fff
   border-top: 7px solid
   border-bottom: 1px solid
   border-color: purple_red
 
-.startapp-navbar .developers
+.cloudstrap-navbar .navbar-brand
+  position: relative
+
+.navbar-brand svg
+  position: absolute
+  top:0
+  left: 0
+  width: 200px
+  height: 60px
+
+.cloudstrap-navbar .developers
   color: purple_red
-  padding-left: 6px
+  position: absolute
+  top: 24px
+  left: 196px
+  white-space: nowrap
+  font-size: 16px
   text-shadow: none
-  vertical-align: bottom
 
 .navbar-inverse .navbar-nav > li > a
   color: link_color
@@ -224,7 +237,7 @@ section.read-more
   .bs-sidebar.affix
     top: 80px
 
-.well.well-startapp
+.well.well-cloudstrap
   margin-top: 20px
   background-image: linear-gradient(to bottom, white 0%, #fafafa 100%)
   -webkit-box-shadow: none
