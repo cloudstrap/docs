@@ -1,11 +1,11 @@
 {% assign getting_pages = "PHP|Ruby|Python|NodeJS" | split: "|" %}
 
 {% for page in getting_pages %}
-  {% assign page_slug = {{page | downcase}} | prepend: "startapp-with-"  %}
+  {% assign page_slug = {{page | downcase}} | prepend: "cloudstrap-with-"  %}
   {% assign page_slug_quick = {{page_slug | downcase}} | append: "-quick"  %}
 
   {% if include.slug != page_slug and include.slug != page_slug_quick %}
-    <li><a href="/getting-started/startapp-with-{{page | downcase}}-quick.html">Стартиране с {{page}}</a></li>
+    <li><a href="/getting-started/cloudstrap-with-{{page | downcase}}-quick.html">Стартиране с {{page}}</a></li>
   {% endif %}
 {% endfor %}
 

@@ -4,7 +4,7 @@ layout: document
 title:  "> app --help | more"
 date:   2014-02-10 12:58:04
 header_title:  '> app create &lt;app&gt; with Ruby'
-lead: "За Ruby поети! Създаване на Ruby приложения в <strong>StartApp</strong> cloud за 5 минути"
+lead: "За Ruby поети! Създаване на Ruby приложения в <strong>CloudStrap</strong> cloud за 5 минути"
 slug: startapp-with-ruby-quick
 keywords: "хостинг, php хостинг, python хостинг, ruby хостинг, nodejs хостинг"
 description: ""

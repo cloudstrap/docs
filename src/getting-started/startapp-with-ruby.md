@@ -1,17 +1,17 @@
 ---
 layout: document
 
-title:  "Ruby приложения в StartАpp"
+title:  "Ruby приложения в CloudStrap"
 date:   2013-11-25 16:58:04
 header_title:  '> app create &lt;app&gt; with Ruby'
-lead: "За Ruby поети! Създаване на Ruby приложения в <strong>StartApp</strong> cloud за 5 минути"
+lead: "За Ruby поети! Създаване на Ruby приложения в <strong>CloudStrap</strong> cloud за 5 минути"
 slug: startapp-with-ruby
 keywords: "хостинг, php хостинг, python хостинг, ruby хостинг, nodejs хостинг"
 description: ""
 noToc: true
 ---
 
-{% page_header id="quickstart-ruby" title="StartApp.bg с Ruby" %}
+{% page_header id="quickstart-ruby" title="CloudStrap.io с Ruby" %}
 
 {% note warning, Предварителни изисквания! %}
   {% include customer-requirements.html %}
@@ -19,7 +19,7 @@ noToc: true
 
 {% section id="create-ruby-app-in-details" title="Създаване на Ruby приложение" %}
 
-В StartАpp това става с една команда:
+В CloudStrap това става с една команда:
 
     app create myrubyapp ruby-2.0
 
@@ -57,9 +57,9 @@ Your application 'myrubyapp' is now available.
 
 Run 'app show-app myrubyapp' for more details about your app.
 {% endhighlight %}
-Последните няколко реда казват, че твоето приложение е създадено в StartApp и клонирано на твоя компютър.
+Последните няколко реда казват, че твоето приложение е създадено в CloudStrap и клонирано на твоя компютър.
 
-{% note info, Всяко приложение в StartApp притежава: %}
+{% note info, Всяко приложение в CloudStrap притежава: %}
 
 Собствен домейн адрес (с включен SSL сертификат).
 
@@ -245,7 +245,7 @@ Git хранилище
 - Activating deployment
 - Starting Ruby cartridge
 
-Това е нормалното поведение на всеки един `deploy` процес в StartАpp. Разбира се, това поведение може да бъде променяно чрез **маркери**.
+Това е нормалното поведение на всеки един `deploy` процес в CloudStrap. Разбира се, това поведение може да бъде променяно чрез **маркери**.
 {% endnote %}
 {% endsection %}
 
@@ -255,7 +255,7 @@ Git хранилище
 
 {% section id="add-mysql-to-app" title="Добавяне на MySQL към Ruby приложение" %}
 
-В StartАpp това става с една команда:
+В CloudStrap това става с една команда:
 
     app cartridge add mysql-5.5
 
@@ -291,7 +291,7 @@ The phpmyadmin username and password will be the same as the MySQL credentials a
 
 {% section id="how-to-access-mysql-via-ssh" title="Достъпване на МySQL през SSH" %}
 
-В StartАpp това става с една команда:
+В CloudStrap това става с една команда:
 
     app ssh
 
@@ -341,7 +341,7 @@ The phpmyadmin username and password will be the same as the MySQL credentials a
 
     mysql   127.0.0.1:3306  =>  127.12.225.130:3306
 
-Можеш да достъпваш MySQL сървъра, който работи на StartАpp от локалната си машина:
+Можеш да достъпваш MySQL сървъра, който работи на CloudStrap от локалната си машина:
 
     mysql -h 127.0.0.1 -P 3306 -u<username> -p<password>
 
@@ -416,7 +416,7 @@ Connection URL: postgresql://$OPENSHIFT_POSTGRESQL_DB_HOST:$OPENSHIFT_POSTGRESQL
 
 {% section header id="how-to-access-postgresql-via-ssh" title="Достъпване на PostgreSQL през SSH" %}
 
-В StartАpp това става с една команда:
+В CloudStrap това става с една команда:
 
     app ssh
 
@@ -468,7 +468,7 @@ Connection URL: postgresql://$OPENSHIFT_POSTGRESQL_DB_HOST:$OPENSHIFT_POSTGRESQL
 
     postgresql 127.0.0.1:5432   =>  127.12.225.133:5432
 
-Можеш да достъпваш PostgreSQL сървъра, който работи на StartАpp от локалната си машина:
+Можеш да достъпваш PostgreSQL сървъра, който работи на CloudStrap от локалната си машина:
 
     psql -h 127.0.0.1 -p 5432 -U <username> -W <database>
 
@@ -482,7 +482,7 @@ Connection URL: postgresql://$OPENSHIFT_POSTGRESQL_DB_HOST:$OPENSHIFT_POSTGRESQL
 
 {% section id="add-mongo-to-app" title="MongoDB и Ruby" %}
 
-В StartАpp това става с една команда:
+В CloudStrap това става с една команда:
 
     app cartridge add mongodb-2.4
 
@@ -519,7 +519,7 @@ Connection URL: mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT/
 
 {% section id="how-to-access-mongodb-via-ssh" title="Достъпване на MongoDB през SSH" %}
 
-В StartАpp това става с една команда:
+В CloudStrap това става с една команда:
 
     app ssh
 
@@ -565,7 +565,7 @@ Connection URL: mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT/
 
     mongodb 127.0.0.1:27017  =>  127.11.98.4:27017
 
-Можеш да достъпваш MongoDB сървъра, който работи на StartАpp от локалната си машина:
+Можеш да достъпваш MongoDB сървъра, който работи на CloudStrap от локалната си машина:
 
     mongodb 127.0.0.1:27017/<database> --username <username> --password <password>
 
@@ -579,7 +579,7 @@ Connection URL: mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT/
 
 {% section id="how-to-bundler" title="Използване на Bundler" %}
 
-Startapp.bg идва с вградена поддръжка за Bundler и можеш просто да започнеш да го използваш. Няма нужда да се занимаваш с нищо, просто го използвай!
+CloudStrap.io идва с вградена поддръжка за Bundler и можеш просто да започнеш да го използваш. Няма нужда да се занимаваш с нищо, просто го използвай!
 
 Създай Gemfile в главната директория на приложението 'myrubyapp/Gemfile' и добави библиотеките, които използва твоето приложение примерно така (Синатра в този пример)
 
@@ -597,7 +597,7 @@ Startapp.bg идва с вградена поддръжка за Bundler и мо
     git commit -m "Dependencies"
     git push
 
-Твоето приложение ще изглежда подобно на предишното, но ще съдържа Bundler, който работи в средата на StartApp и ще пакетира dependencies на твоето приложение. Резултатът е:
+Твоето приложение ще изглежда подобно на предишното, но ще съдържа Bundler, който работи в средата на CloudStrap и ще пакетира dependencies на твоето приложение. Резултатът е:
 
     remote: Building Ruby cartridge
     remote: Bundling RubyGems based on Gemfile/Gemfile.lock to repo/vendor/bundle with 'bundle install --deployment'

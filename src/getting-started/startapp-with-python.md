@@ -1,17 +1,17 @@
 ---
 layout: document
 
-title:  "Python приложения в StartApp.bg Python хостинг."
+title:  "Python приложения в CloudStrap.io Python хостинг."
 date:   2014-02-10 12:58:04
 header_title:  '> app create &lt;app&gt; with Python'
-lead: "За Python манияци! Създаване на Python приложения в <strong>StartApp</strong> cloud за 5 минути"
+lead: "За Python манияци! Създаване на Python приложения в <strong>CloudStrap</strong> cloud за 5 минути"
 slug: startapp-with-python
 keywords: "хостинг, php хостинг, python хостинг, ruby хостинг, nodejs хостинг"
 description: ""
 noToc: true
 ---
 
-{% page_header id="quickstart" title="StartApp.bg с Python" %}
+{% page_header id="quickstart" title="CloudStrap.io с Python" %}
 
 {% note warning, Предварителни изисквания! %}
   {% include customer-requirements.html %}
@@ -19,7 +19,7 @@ noToc: true
 
 {% section id="create-python-app-in-details" title="Създаване на Python приложение" %}
 
-В StartАpp това става с една команда:
+В CloudStrap това става с една команда:
 
     app create mypythonapp python-3.3
 
@@ -60,9 +60,9 @@ Your application 'mypythonapp' is now available.
 Run 'app show-app mypythonapp' for more details about your app.
 {% endhighlight %}
 
-Последните няколко реда казват, че твоето приложение е създадено в StartApp и клонирано на твоя компютър.
+Последните няколко реда казват, че твоето приложение е създадено в CloudStrap и клонирано на твоя компютър.
 
-{% note info, Всяко приложение в StartApp притежава: %}
+{% note info, Всяко приложение в CloudStrap притежава: %}
 
 Собствен домейн адрес (с включен SSL сертификат).
 
@@ -210,7 +210,7 @@ Git хранилище
 
 {% section id="deployment" title="Качване на сървъра" %}
 
-В StartАpp това става с една команда:
+В CloudStrap това става с една команда:
 
     git push
 
@@ -270,7 +270,7 @@ Git хранилище
 - Activating deployment
 - Starting Starting Python 3.3 cartridge (Apache+mod_wsgi)
 
-Това е нормалното поведение на всеки един `deploy` процес в StartАpp. Разбира се, това поведение може да бъде променяно чрез **маркери**.
+Това е нормалното поведение на всеки един `deploy` процес в CloudStrap. Разбира се, това поведение може да бъде променяно чрез **маркери**.
 {% endnote %}
 
 {% endsection %}
@@ -281,7 +281,7 @@ Git хранилище
 
 {% section id="add-mysql-to-app" title="Добавяне на MySQL към Python приложение" %}
 
-В StartАpp това става с една команда:
+В CloudStrap това става с една команда:
 
     app cartridge add mysql-5.5
 
@@ -319,7 +319,7 @@ The phpmyadmin username and password will be the same as the MySQL credentials a
 
 {% section id="how-to-access-mysql-via-ssh" title="Достъпване на МySQL през SSH" %}
 
-В StartАpp това става с една команда:
+В CloudStrap това става с една команда:
 
     app ssh
 
@@ -369,7 +369,7 @@ The phpmyadmin username and password will be the same as the MySQL credentials a
 
     mysql   127.0.0.1:3306  =>  127.9.188.2:3306
 
-Можеш да достъпваш MySQL сървъра, който работи на StartАpp от локалната си машина:
+Можеш да достъпваш MySQL сървъра, който работи на CloudStrap от локалната си машина:
 
     mysql -h 127.0.0.1 -P 3306 -u<username> -p<password>
 
@@ -444,7 +444,7 @@ Connection URL: postgresql://$OPENSHIFT_POSTGRESQL_DB_HOST:$OPENSHIFT_POSTGRESQL
 
 {% section header id="how-to-access-postgresql-via-ssh" title="Достъпване на PostgreSQL през SSH" %}
 
-В StartАpp това става с една команда:
+В CloudStrap това става с една команда:
 
     app ssh
 
@@ -493,7 +493,7 @@ Connection URL: postgresql://$OPENSHIFT_POSTGRESQL_DB_HOST:$OPENSHIFT_POSTGRESQL
 
     postgresql 127.0.0.1:5432  =>  127.9.188.4:5432
 
-Можеш да достъпваш PostgreSQL сървъра, който работи на StartАpp от локалната си машина:
+Можеш да достъпваш PostgreSQL сървъра, който работи на CloudStrap от локалната си машина:
 
     psql -h 127.0.0.1 -p 5432 -U <username> -W <database>
 
@@ -508,7 +508,7 @@ Connection URL: postgresql://$OPENSHIFT_POSTGRESQL_DB_HOST:$OPENSHIFT_POSTGRESQL
 
 {% section id="add-mongo-to-app" title="MongoDB и Python" %}
 
-В StartАpp това става с една команда:
+В CloudStrap това става с една команда:
 
     app cartridge add mongodb-2.4
 
@@ -546,7 +546,7 @@ Connection URL: mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT/
 
 {% section id="how-to-access-mongodb-via-ssh" title="Достъпване на MongoDB през SSH" %}
 
-В StartАpp това става с една команда:
+В CloudStrap това става с една команда:
 
     app ssh
 
@@ -595,7 +595,7 @@ Connection URL: mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT/
 
     mongodb    127.0.0.1:27017  =>  127.9.188.5:27017
 
-Можеш да достъпваш MongoDB сървъра, който работи на StartАpp от локалната си машина:
+Можеш да достъпваш MongoDB сървъра, който работи на CloudStrap от локалната си машина:
 
     mongo 127.0.0.1:27017/<database> --username <username> --password <password>
 
